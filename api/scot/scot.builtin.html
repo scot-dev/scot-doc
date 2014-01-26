@@ -1,0 +1,478 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>builtin Package &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="scot Package" href="scot.html" />
+    <link rel="next" title="eegtopo" href="../eegtopo/modules.html" />
+    <link rel="prev" title="backend Package" href="scot.backend.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../eegtopo/modules.html" title="eegtopo"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scot.backend.html" title="backend Package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" >scot</a> &raquo;</li>
+          <li><a href="scot.html" accesskey="U">scot Package</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">builtin Package</a><ul>
+<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scot.backend.html"
+                        title="previous chapter">backend Package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../eegtopo/modules.html"
+                        title="next chapter">eegtopo</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/api/scot/scot.builtin.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="builtin-package">
+<h1>builtin Package<a class="headerlink" href="#builtin-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2><tt class="xref py py-mod docutils literal"><span class="pre">builtin</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-scot.builtin"></span></div>
+<div class="section" id="module-scot.builtin.binica">
+<span id="binica-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">binica</span></tt> Module<a class="headerlink" href="#module-scot.builtin.binica" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scot.builtin.binica.binica">
+<tt class="descclassname">scot.builtin.binica.</tt><tt class="descname">binica</tt><big>(</big><em>data</em>, <em>binary='../scot/builtin/binica/ica_linux'</em><big>)</big><a class="headerlink" href="#scot.builtin.binica.binica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple wrapper for the BINICA binary.</p>
+<p>This function calculates the ICA transformation using the Infomax algorithm implemented in BINICA.</p>
+<dl class="docutils">
+<dt>BINICA is bundled with EEGLAB, or can be downloaded from here:</dt>
+<dd><a class="reference external" href="http://sccn.ucsd.edu/eeglab/binica/">http://sccn.ucsd.edu/eeglab/binica/</a></dd>
+</dl>
+<p>This function attempts to automatically download and extract the BINICA binary.</p>
+<p>By default the binary is expected to be &#8220;binica/ica_linux&#8221; relative
+to the directory where this module lies (typically scot/binica/ica_linux)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>binary</strong> : str</p>
+<blockquote>
+<div><p>Full path to the binica binary</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array, shape = [n_channels, n_channels]</p>
+<blockquote>
+<div><p>ICA weights matrix</p>
+</div></blockquote>
+<p><strong>s</strong> : array, shape = [n_channels, n_channels]</p>
+<blockquote class="last">
+<div><p>Sphering matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The unmixing matrix is obtained by multiplying U = dot(s, w)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.builtin.binica.check_binary_">
+<tt class="descclassname">scot.builtin.binica.</tt><tt class="descname">check_binary_</tt><big>(</big><em>binary</em><big>)</big><a class="headerlink" href="#scot.builtin.binica.check_binary_" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if binary is available, and try to download it if not</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.builtin.pca">
+<span id="pca-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">pca</span></tt> Module<a class="headerlink" href="#module-scot.builtin.pca" title="Permalink to this headline">¶</a></h2>
+<p>principal component analysis (PCA) implementation</p>
+<dl class="function">
+<dt id="scot.builtin.pca.pca">
+<tt class="descclassname">scot.builtin.pca.</tt><tt class="descname">pca</tt><big>(</big><em>x</em>, <em>subtract_mean=False</em>, <em>normalize=False</em>, <em>sort_components=True</em>, <em>reducedim=None</em>, <em>algorithm=&lt;function pca_eig at 0x7fe97ad11d40&gt;</em><big>)</big><a class="headerlink" href="#scot.builtin.pca.pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal component analysis (PCA)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>subtract_mean</strong> : bool, optional</p>
+<blockquote>
+<div><p>Subtract sample mean from x.</p>
+</div></blockquote>
+<p><strong>normalize</strong> : bool, optional</p>
+<blockquote>
+<div><p>Normalize variances to 1 before applying PCA.</p>
+</div></blockquote>
+<p><strong>sort_components</strong> : bool, optional</p>
+<blockquote>
+<div><p>Sort principal components in order of decreasing eigenvalues.</p>
+</div></blockquote>
+<p><strong>reducedim</strong> : {float, int}, optional</p>
+<blockquote>
+<div><p>A number of less than 1 in interpreted as the fraction of variance that should remain in the data. All
+components that describe in total less than <cite>1-reducedim</cite> of the variance are removed by the PCA step.
+An integer numer of 1 or greater is interpreted as the number of components to keep after applying the PCA.</p>
+</div></blockquote>
+<p><strong>algorithm</strong> : func, optional</p>
+<blockquote>
+<div><p>Specify function to use for eigenvalue decomposition (<a class="reference internal" href="#scot.builtin.pca.pca_eig" title="scot.builtin.pca.pca_eig"><tt class="xref py py-func docutils literal"><span class="pre">pca_eig()</span></tt></a> or <a class="reference internal" href="#scot.builtin.pca.pca_svd" title="scot.builtin.pca.pca_svd"><tt class="xref py py-func docutils literal"><span class="pre">pca_svd()</span></tt></a>)</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array, shape = [n_channels, n_components]</p>
+<blockquote>
+<div><p>PCA transformation matrix</p>
+</div></blockquote>
+<p><strong>v</strong> : array, shape = [n_components, n_channels]</p>
+<blockquote class="last">
+<div><p>PCA backtransformation matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.builtin.pca.pca_eig">
+<tt class="descclassname">scot.builtin.pca.</tt><tt class="descname">pca_eig</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#scot.builtin.pca.pca_eig" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate PCA using Eigenvalue decomposition</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Two dimensional data array.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array</p>
+<blockquote>
+<div><p>Eigenvectors</p>
+</div></blockquote>
+<p><strong>s</strong> : array</p>
+<blockquote class="last">
+<div><p>Eigenvalues</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.builtin.pca.pca_svd">
+<tt class="descclassname">scot.builtin.pca.</tt><tt class="descname">pca_svd</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.builtin.pca.pca_svd" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate PCA using SVD</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Two dimensional data array.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array</p>
+<blockquote>
+<div><p>Eigenvectors</p>
+</div></blockquote>
+<p><strong>s</strong> : array</p>
+<blockquote class="last">
+<div><p>Eigenvalues</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.builtin.utils">
+<span id="utils-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">utils</span></tt> Module<a class="headerlink" href="#module-scot.builtin.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scot.builtin.utils.cartesian">
+<tt class="descclassname">scot.builtin.utils.</tt><tt class="descname">cartesian</tt><big>(</big><em>arrays</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scot.builtin.utils.cartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a cartesian product of input arrays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>arrays</strong> : list of array-like</p>
+<blockquote>
+<div><p>1-D arrays to form the cartesian product of.</p>
+</div></blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<div><p>Array to place the cartesian product in.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote class="last">
+<div><p>2-D array of shape (M, len(arrays)) containing cartesian products
+formed of input arrays.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p><a class="reference external" href="http://stackoverflow.com/a/1235363/3005167">http://stackoverflow.com/a/1235363/3005167</a></p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">cartesian</span><span class="p">(([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
+<span class="go">array([[1, 4, 6],</span>
+<span class="go">       [1, 4, 7],</span>
+<span class="go">       [1, 5, 6],</span>
+<span class="go">       [1, 5, 7],</span>
+<span class="go">       [2, 4, 6],</span>
+<span class="go">       [2, 4, 7],</span>
+<span class="go">       [2, 5, 6],</span>
+<span class="go">       [2, 5, 7],</span>
+<span class="go">       [3, 4, 6],</span>
+<span class="go">       [3, 4, 7],</span>
+<span class="go">       [3, 5, 6],</span>
+<span class="go">       [3, 5, 7]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.builtin.var">
+<span id="var-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">var</span></tt> Module<a class="headerlink" href="#module-scot.builtin.var" title="Permalink to this headline">¶</a></h2>
+<p>Vector autoregressive (VAR) model implementation</p>
+<dl class="class">
+<dt id="scot.builtin.var.VAR">
+<em class="property">class </em><tt class="descclassname">scot.builtin.var.</tt><tt class="descname">VAR</tt><a class="headerlink" href="#scot.builtin.var.VAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="scot.html#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">scot.var.VARBase</span></tt></a></p>
+<p>Builtin implementation of VARBase.</p>
+<p>This class provides least squares VAR model fitting with optional ridge regression.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model_order</strong> : int</p>
+<blockquote>
+<div><p>Autoregressive model order</p>
+</div></blockquote>
+<p><strong>delta</strong> : float, optional</p>
+<blockquote>
+<div><p>Ridge penalty parameter</p>
+</div></blockquote>
+<p><strong>xvschema</strong> : func, optional</p>
+<blockquote class="last">
+<div><p>Function that creates training and test sets for cross-validation. The function takes two parameters: the current cross-validation run (int) and the numer of trials (int). It returns a tuple of two arrays: the training set and the testing set.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Examples</p>
+<p>Bla Test
+&gt;&gt;&gt; data = np.random.randn(512, 8, 40)
+&gt;&gt;&gt; v = VAR(5)
+&gt;&gt;&gt; v.optimize(data).fit(data)
+&gt;&gt;&gt; print(&#8220;VAR coefficients: &#8221;, v.coef)
+&gt;&gt;&gt; print(&#8216;Ridge penalty: &#8216;, v.delta)</p>
+<dl class="method">
+<dt id="scot.builtin.var.VAR.fit">
+<tt class="descname">fit</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.builtin.var.VAR.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit VAR model to data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.builtin.var.VAR.optimize">
+<tt class="descname">optimize</tt><big>(</big><em>data</em>, <em>skipstep=1</em><big>)</big><a class="headerlink" href="#scot.builtin.var.VAR.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find optimal ridge penalty with bisection search.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+<p><strong>skipstep</strong> : int, optional</p>
+<blockquote>
+<div><p>Speed up calculation by skipping samples during cost function calculation</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.builtin.var.VAR.optimize_delta_bisection">
+<tt class="descname">optimize_delta_bisection</tt><big>(</big><em>data</em>, <em>skipstep=1</em><big>)</big><a class="headerlink" href="#scot.builtin.var.VAR.optimize_delta_bisection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find optimal ridge penalty with bisection search.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+<p><strong>skipstep</strong> : int, optional</p>
+<blockquote>
+<div><p>Speed up calculation by skipping samples during cost function calculation</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.builtin.var.VAR" title="scot.builtin.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../eegtopo/modules.html" title="eegtopo"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scot.backend.html" title="backend Package"
+             >previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" >scot</a> &raquo;</li>
+          <li><a href="scot.html" >scot Package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Martin Billinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+    </div>
+  </body>
+</html>

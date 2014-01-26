@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>eegtopo Package &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="eegtopo" href="modules.html" />
+    <link rel="next" title="geometry Package" href="eegtopo.geometry.html" />
+    <link rel="prev" title="eegtopo" href="modules.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="eegtopo.geometry.html" title="geometry Package"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="eegtopo"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" accesskey="U">eegtopo</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">eegtopo Package</a><ul>
+<li><a class="reference internal" href="#module-eegtopo.eegpos3d"><tt class="docutils literal"><span class="pre">eegpos3d</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-eegtopo.projections"><tt class="docutils literal"><span class="pre">projections</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-eegtopo.tools"><tt class="docutils literal"><span class="pre">tools</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-eegtopo.topoplot"><tt class="docutils literal"><span class="pre">topoplot</span></tt> Module</a></li>
+<li><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="modules.html"
+                        title="previous chapter">eegtopo</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="eegtopo.geometry.html"
+                        title="next chapter">geometry Package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/api/eegtopo/eegtopo.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="eegtopo-package">
+<h1>eegtopo Package<a class="headerlink" href="#eegtopo-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-eegtopo.eegpos3d">
+<span id="eegpos3d-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">eegpos3d</span></tt> Module<a class="headerlink" href="#module-eegtopo.eegpos3d" title="Permalink to this headline">¶</a></h2>
+<p>Module to generate 3d EEG locations</p>
+<dl class="function">
+<dt id="eegtopo.eegpos3d.construct_1020_easycap">
+<tt class="descclassname">eegtopo.eegpos3d.</tt><tt class="descname">construct_1020_easycap</tt><big>(</big><em>variant=0</em><big>)</big><a class="headerlink" href="#eegtopo.eegpos3d.construct_1020_easycap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eegtopo.eegpos3d.intersection">
+<tt class="descclassname">eegtopo.eegpos3d.</tt><tt class="descname">intersection</tt><big>(</big><em>a</em>, <em>b</em>, <em>expr=&lt;function &lt;lambda&gt; at 0x7fe982935440&gt;</em><big>)</big><a class="headerlink" href="#eegtopo.eegpos3d.intersection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-eegtopo.projections">
+<span id="projections-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">projections</span></tt> Module<a class="headerlink" href="#module-eegtopo.projections" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="eegtopo.projections.array_project_radial_to3d">
+<tt class="descclassname">eegtopo.projections.</tt><tt class="descname">array_project_radial_to3d</tt><big>(</big><em>points_2d</em><big>)</big><a class="headerlink" href="#eegtopo.projections.array_project_radial_to3d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eegtopo.projections.project_radial_to2d">
+<tt class="descclassname">eegtopo.projections.</tt><tt class="descname">project_radial_to2d</tt><big>(</big><em>point_3d</em><big>)</big><a class="headerlink" href="#eegtopo.projections.project_radial_to2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eegtopo.projections.project_radial_to3d">
+<tt class="descclassname">eegtopo.projections.</tt><tt class="descname">project_radial_to3d</tt><big>(</big><em>point_2d</em><big>)</big><a class="headerlink" href="#eegtopo.projections.project_radial_to3d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-eegtopo.tools">
+<span id="tools-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">tools</span></tt> Module<a class="headerlink" href="#module-eegtopo.tools" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="eegtopo.tools.Struct">
+<em class="property">class </em><tt class="descclassname">eegtopo.tools.</tt><tt class="descname">Struct</tt><big>(</big><em>content=None</em><big>)</big><a class="headerlink" href="#eegtopo.tools.Struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="method">
+<dt id="eegtopo.tools.Struct.keys">
+<tt class="descname">keys</tt><big>(</big><big>)</big><a class="headerlink" href="#eegtopo.tools.Struct.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-eegtopo.topoplot">
+<span id="topoplot-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">topoplot</span></tt> Module<a class="headerlink" href="#module-eegtopo.topoplot" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="eegtopo.topoplot.Topoplot">
+<em class="property">class </em><tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">Topoplot</tt><big>(</big><em>m=4</em>, <em>num_lterms=10</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Creates 2D scalp maps.</p>
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.calc_g">
+<tt class="descname">calc_g</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.calc_g" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.calc_gmap">
+<tt class="descname">calc_gmap</tt><big>(</big><em>pixels</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.calc_gmap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="staticmethod">
+<dt id="eegtopo.topoplot.Topoplot.calc_legendre_factors">
+<em class="property">static </em><tt class="descname">calc_legendre_factors</tt><big>(</big><em>m</em>, <em>num_lterms</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.calc_legendre_factors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.create_map">
+<tt class="descname">create_map</tt><big>(</big><em>pixels=32</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.create_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.get_map">
+<tt class="descname">get_map</tt><big>(</big><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.get_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.plot_circles">
+<tt class="descname">plot_circles</tt><big>(</big><em>radius</em>, <em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.plot_circles" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.plot_head">
+<tt class="descname">plot_head</tt><big>(</big><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.plot_head" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.plot_locations">
+<tt class="descname">plot_locations</tt><big>(</big><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.plot_locations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.plot_map">
+<tt class="descname">plot_map</tt><big>(</big><em>axes=None</em>, <em>crange=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.plot_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.set_locations">
+<tt class="descname">set_locations</tt><big>(</big><em>locations</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.set_locations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.set_map">
+<tt class="descname">set_map</tt><big>(</big><em>img</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.set_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="eegtopo.topoplot.Topoplot.set_values">
+<tt class="descname">set_values</tt><big>(</big><em>z</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot.set_values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="eegtopo.topoplot.topoplot">
+<tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">topoplot</tt><big>(</big><em>values</em>, <em>locations</em>, <em>offset=(0</em>, <em>0)</em>, <em>axes=None</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.topoplot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="eegtopo.geometry.html">geometry Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="eegtopo.geometry.html#module-eegtopo.geometry.euclidean"><tt class="docutils literal"><span class="pre">euclidean</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eegtopo.geometry.html#module-eegtopo.geometry.spherical"><tt class="docutils literal"><span class="pre">spherical</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="eegtopo.geometry.html" title="geometry Package"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="modules.html" title="eegtopo"
+             >previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" >eegtopo</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Martin Billinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.
+    </div>
+  </body>
+</html>
