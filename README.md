@@ -1,0 +1,4 @@
+scot-doc
+========
+
+SCoT documentation
