@@ -23,6 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
     <link rel="up" title="scot" href="modules.html" />
     <link rel="next" title="backend Package" href="scot.backend.html" />
@@ -239,13 +240,17 @@ the frequency.</p>
 <dt id="scot.connectivity.Connectivity.A">
 <tt class="descname">A</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.A" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spectral VAR coefficients</p>
-<img src="../../_images/mathmpl/math-668749dda0.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathbf{A}(f) = \mathbf{I} - \sum_{k=1}^{p} \mathbf{a}^{(k)} \mathrm{e}^{-2\pi f}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.COH">
 <tt class="descname">COH</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.COH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Coherence</p>
-<img src="../../_images/mathmpl/math-ca2a7ebc62.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{COH}_{ij}(f) = \frac{S_{ij}(f)}{\sqrt{S_{ii}(f) S_{jj}(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.Cinv">
@@ -257,43 +262,59 @@ the frequency.</p>
 <dt id="scot.connectivity.Connectivity.DTF">
 <tt class="descname">DTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.DTF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Directed transfer function</p>
-<img src="../../_images/mathmpl/math-ca25f6bfcb.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{DTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{H_{i:}(f) H_{i:}'(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.G">
 <tt class="descname">G</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.G" title="Permalink to this definition">¶</a></dt>
 <dd><p>Inverse cross spectral density</p>
-<img src="../../_images/mathmpl/math-0a31bbf2a3.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathbf{G}(f) = \mathbf{A}(f) \mathbf{C}^{-1} \mathbf{A}'(f)\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.GDTF">
 <tt class="descname">GDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.GDTF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generalized directed transfer function</p>
-<img src="../../_images/mathmpl/math-367a74733e.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{GPDC}_{ij}(f) = \frac{\sigma_j |H_{ij}(f)|}
+{\sqrt{H_{i:}(f) \mathrm{diag}(\mathbf{C}) H_{i:}'(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.GPDC">
 <tt class="descname">GPDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.GPDC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Generalized partial directed coherence</p>
-<img src="../../_images/mathmpl/math-5671e74941.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{GPDC}_{ij}(f) = \frac{|A_{ij}(f)|}
+{\sigma_i \sqrt{A_{:j}'(f) \mathrm{diag}(\mathbf{C})^{-1} A_{:j}(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.H">
 <tt class="descname">H</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.H" title="Permalink to this definition">¶</a></dt>
 <dd><p>VAR transfer function</p>
-<img src="../../_images/mathmpl/math-18c1506339.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathbf{H}(f) = \mathbf{A}(f)^{-1}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.PDC">
 <tt class="descname">PDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.PDC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Partial directed coherence</p>
-<img src="../../_images/mathmpl/math-06e0f6b9a2.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{PDC}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) A_{:j}(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.PDCF">
 <tt class="descname">PDCF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.PDCF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Partial directed coherence factor</p>
-<img src="../../_images/mathmpl/math-149ca13b59.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{PDCF}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) \mathbf{C}^{-1} A_{:j}(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.PHI">
@@ -306,49 +327,65 @@ the frequency.</p>
 <dt id="scot.connectivity.Connectivity.S">
 <tt class="descname">S</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.S" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cross spectral density</p>
-<img src="../../_images/mathmpl/math-b75f042090.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathbf{S}(f) = \mathbf{H}(f) \mathbf{C} \mathbf{H}'(f)\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.absS">
 <tt class="descname">absS</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.absS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Absolute cross spectral density</p>
-<img src="../../_images/mathmpl/math-1056b56d46.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{absS}(f) = | \mathbf{S}(f) |\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.dDTF">
 <tt class="descname">dDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.dDTF" title="Permalink to this definition">¶</a></dt>
 <dd><p>&#8221; Direct&#8221; directed transfer function</p>
-<img src="../../_images/mathmpl/math-560c22ff91.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{dDTF}_{ij}(f) = |\mathrm{pCOH}_{ij}(f)| \mathrm{ffDTF}_{ij}(f)\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.ffDTF">
 <tt class="descname">ffDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.ffDTF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full frequency directed transfer function</p>
-<img src="../../_images/mathmpl/math-1fc9e3b530.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{ffDTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{\sum_f H_{i:}(f) H_{i:}'(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.ffPDC">
 <tt class="descname">ffPDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.ffPDC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Full frequency partial directed coherence</p>
-<img src="../../_images/mathmpl/math-f17589ebf8.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{ffPDC}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{\sum_f A_{:j}'(f) A_{:j}(f)}}\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.logG">
 <tt class="descname">logG</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.logG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logarithmic inverse cross spectral density</p>
-<img src="../../_images/mathmpl/math-c9353f2a51.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{logG}(f) = \log | \mathbf{G}(f) |\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.logS">
 <tt class="descname">logS</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.logS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Logarithmic cross spectral density</p>
-<img src="../../_images/mathmpl/math-947d2c05f9.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{logS}(f) = \log | \mathbf{S}(f) |\]</div>
+</dd></dl>
 
 <dl class="method">
 <dt id="scot.connectivity.Connectivity.pCOH">
 <tt class="descname">pCOH</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.connectivity.Connectivity.pCOH" title="Permalink to this definition">¶</a></dt>
 <dd><p>Partial coherence</p>
-<img src="../../_images/mathmpl/math-28ab29d960.png" class="center" /></dd></dl>
+<div class="math">
+\[\mathrm{pCOH}_{ij}(f) = \frac{G_{ij}(f)}{\sqrt{G_{ii}(f) G_{jj}(f)}}\]</div>
+</dd></dl>
 
 </dd></dl>
 
@@ -981,6 +1018,47 @@ Figure object. If set to <strong>None</strong>, a new figure is created.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="scot.ooapi.Workspace.do_cspvarica">
+<tt class="descname">do_cspvarica</tt><big>(</big><em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.do_cspvarica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform CSPVARICA</p>
+<p>Perform CSPVARICA source decomposition and VAR model fitting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>varfit</strong> : string</p>
+<blockquote>
+<div><p>Determines how to calculate the residuals for source decomposition.
+&#8216;ensemble&#8217; (default) fits one model to the whole data set,
+&#8216;class&#8217; fits a different model for each class, and
+&#8216;trial&#8217; fits a different model for each individual trial.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : class</p>
+<blockquote>
+<div><p>see <tt class="xref py py-func docutils literal"><span class="pre">cspvarica()</span></tt> for a description of the return value.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.ooapi.Workspace" title="scot.ooapi.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-func docutils literal"><span class="pre">cspvarica()</span></tt></dt>
+<dd>CSPVARICA implementation</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="method">
 <dt id="scot.ooapi.Workspace.do_ica">
 <tt class="descname">do_ica</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.do_ica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Perform ICA</p>
@@ -1148,7 +1226,7 @@ Figure object. If set to <strong>None</strong>, a new figure is created.</p>
 
 <dl class="method">
 <dt id="scot.ooapi.Workspace.get_surrogate_connectivity">
-<tt class="descname">get_surrogate_connectivity</tt><big>(</big><em>measure_name</em>, <em>repeats=100</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.get_surrogate_connectivity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_surrogate_connectivity</tt><big>(</big><em>measure_name</em>, <em>repeats=100</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.get_surrogate_connectivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate spectral connectivity measure under the assumption of no actual connectivity.</p>
 <p>Repeatedly samples connectivity from phase-randomized data. This provides estimates of the connectivity
 distribution if there was no causal structure in the data.</p>
@@ -1167,14 +1245,8 @@ distribution if there was no causal structure in the data.</p>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>measure</strong> : array, shape = [<cite>repeats</cite>, n_channels, n_channels, nfft]</p>
-<blockquote>
-<div><p>Values of the connectivity measure for each surrogate.</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
 <blockquote class="last">
-<div><p>If the <a class="reference internal" href="#scot.ooapi.Workspace" title="scot.ooapi.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain a fitted VAR model.</p>
+<div><p>Values of the connectivity measure for each surrogate.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1191,7 +1263,7 @@ distribution if there was no causal structure in the data.</p>
 
 <dl class="method">
 <dt id="scot.ooapi.Workspace.get_tf_connectivity">
-<tt class="descname">get_tf_connectivity</tt><big>(</big><em>measure_name</em>, <em>winlen</em>, <em>winstep</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.get_tf_connectivity" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">get_tf_connectivity</tt><big>(</big><em>measure_name</em>, <em>winlen</em>, <em>winstep</em>, <em>plot=False</em>, <em>crange='default'</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.get_tf_connectivity" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate estimate of time-varying connectivity.</p>
 <p>Connectivity is estimated in a sliding window approach on the current data set. The window is stepped
 <cite>n_steps</cite> = (<cite>n_samples</cite> - <cite>winlen</cite>) // <cite>winstep</cite> times.</p>
@@ -1530,9 +1602,9 @@ If matplotlib is not available no error is raised, but plotting functions will n
 </div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fig</strong> : Figure object</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>axes</strong> : Axes object</p>
 <blockquote class="last">
-<div><p>The figure into which was plotted.</p>
+<div><p>The axes into which was plotted.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2403,10 +2475,10 @@ describe the data.</p>
 <div class="section" id="module-scot.varica">
 <span id="varica-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">varica</span></tt> Module<a class="headerlink" href="#module-scot.varica" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
-<dt id="scot.varica.mvarica">
-<tt class="descclassname">scot.varica.</tt><tt class="descname">mvarica</tt><big>(</big><em>x</em>, <em>var</em>, <em>cl=None</em>, <em>reducedim=0.99</em>, <em>optimize_var=False</em>, <em>backend=None</em>, <em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.varica.mvarica" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varica.cspvarica">
+<tt class="descclassname">scot.varica.</tt><tt class="descname">cspvarica</tt><big>(</big><em>x</em>, <em>var</em>, <em>cl</em>, <em>reducedim=inf</em>, <em>optimize_var=False</em>, <em>backend=None</em>, <em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.varica.cspvarica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs joint VAR model fitting and ICA source separation.</p>
-<p>This function implements the MVARICA procedure <a class="reference internal" href="#r11" id="id23">[R11]</a>.</p>
+<p>This function implements the CSPVARICA procedure <a class="reference internal" href="#r11" id="id23">[R11]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2416,6 +2488,99 @@ describe the data.</p>
 <div><p>data set</p>
 </div></blockquote>
 <p><strong>cl</strong> : list of valid dict keys</p>
+<blockquote>
+<div><p>Class labels associated with each trial.</p>
+</div></blockquote>
+<p><strong>reducedim</strong> : {int}, optional</p>
+<blockquote>
+<div><p>Number of (most discriminative) components to keep after applying the CSP.</p>
+</div></blockquote>
+<p><strong>optimize_var</strong> : bool, optional</p>
+<blockquote>
+<div><p>Whether to call automatic optimization of the VAR fitting routine.</p>
+</div></blockquote>
+<p><strong>backend</strong> : dict-like, optional</p>
+<blockquote>
+<div><p>Specify backend to use. When set to None the backend configured in config.backend is used.</p>
+</div></blockquote>
+<p><strong>varfit</strong> : string</p>
+<blockquote>
+<div><p>Determines how to calculate the residuals for source decomposition.
+&#8216;ensemble&#8217; (default) fits one model to the whole data set,
+&#8216;class&#8217; fits a different model for each class, and
+&#8216;trial&#8217; fits a different model for each individual trial.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>Result</strong> : class</p>
+<blockquote class="last">
+<div><p>A class with the following attributes is returned:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="21%" />
+<col width="79%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>mixing</td>
+<td>Source mixing matrix</td>
+</tr>
+<tr class="row-even"><td>unmixing</td>
+<td>Source unmixing matrix</td>
+</tr>
+<tr class="row-odd"><td>residuals</td>
+<td>Residuals of the VAR model(s) in source space</td>
+</tr>
+<tr class="row-even"><td>var_residuals</td>
+<td>Residuals of the VAR model(s) in EEG space (before ICA)</td>
+</tr>
+<tr class="row-odd"><td>c</td>
+<td>Noise covariance of the VAR model(s) in source space</td>
+</tr>
+<tr class="row-even"><td>b</td>
+<td>VAR model coefficients (source space)</td>
+</tr>
+<tr class="row-odd"><td>a</td>
+<td>VAR model coefficients (EEG space)</td>
+</tr>
+</tbody>
+</table>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>CSPVARICA is performed with the following steps:
+1. Dimensionality reduction with CSP
+2. Fitting a VAR model tho the data
+3. Decomposing the VAR model residuals with ICA
+4. Correcting the VAR coefficients</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[R11]</td><td><em>(<a class="fn-backref" href="#id23">1</a>, <a class="fn-backref" href="#id24">2</a>)</em> <ol class="last upperalpha simple" start="13">
+<li>Billinger et al. &#8220;SCoT: A Python Toolbox for EEG Source Connectivity&#8221;, Frontiers in Neuroinformatics, 2014</li>
+</ol>
+</td></tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.varica.mvarica">
+<tt class="descclassname">scot.varica.</tt><tt class="descname">mvarica</tt><big>(</big><em>x</em>, <em>var</em>, <em>cl=None</em>, <em>reducedim=0.99</em>, <em>optimize_var=False</em>, <em>backend=None</em>, <em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.varica.mvarica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Performs joint VAR model fitting and ICA source separation.</p>
+<p>This function implements the MVARICA procedure <a class="reference internal" href="#r12" id="id25">[R12]</a>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>data set</p>
+</div></blockquote>
+<p><strong>cl</strong> : list of valid dict keys, optional</p>
 <blockquote>
 <div><p>Class labels associated with each trial.</p>
 </div></blockquote>
@@ -2487,10 +2652,10 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 3. Decomposing the VAR model residuals with ICA
 4. Correcting the VAR coefficients</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r11" rules="none">
+<table class="docutils citation" frame="void" id="r12" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R11]</td><td><em>(<a class="fn-backref" href="#id23">1</a>, <a class="fn-backref" href="#id24">2</a>)</em> <ol class="last upperalpha simple" start="7">
+<tr><td class="label">[R12]</td><td><em>(<a class="fn-backref" href="#id25">1</a>, <a class="fn-backref" href="#id26">2</a>)</em> <ol class="last upperalpha simple" start="7">
 <li>Gomez-Herrero et al. &#8220;Measuring directional coupling between EEG sources&#8221;, NeuroImage, 2008</li>
 </ol>
 </td></tr>

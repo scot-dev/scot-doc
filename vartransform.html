@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Is VAR model fitting invariant to PCA transformations? &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="index.html" />
+    <link rel="up" title="Miscellaneous Topics" href="misc.html" />
+    <link rel="next" title="Testing SPHINX Features" href="mytest.html" />
+    <link rel="prev" title="Miscellaneous Topics" href="misc.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mytest.html" title="Testing SPHINX Features"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="misc.html" title="Miscellaneous Topics"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+
+          <li><a href="misc.html" accesskey="U">Miscellaneous Topics</a> &raquo;</li> 
+      </ul>
+    </div>
+
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Is VAR model fitting invariant to PCA transformations?</a><ul>
+<li><a class="reference internal" href="#linear-transformation-of-a-var-model">Linear transformation of a VAR model</a></li>
+<li><a class="reference internal" href="#covariance-of-a-bivariate-ar-1-process">Covariance of a bivariate AR(1) process</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="misc.html"
+                        title="previous chapter">Miscellaneous Topics</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="mytest.html"
+                        title="next chapter">Testing SPHINX Features</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/vartransform.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="is-var-model-fitting-invariant-to-pca-transformations">
+<h1>Is VAR model fitting invariant to PCA transformations?<a class="headerlink" href="#is-var-model-fitting-invariant-to-pca-transformations" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="glossary.html#term-mvarica"><em class="xref std std-term">MVARICA</em></a> usually applies a PCA transform to the EEG prior to VAR model fitting. This is intended as a
+dimensionality reduction step; PCA components that contribute little to total EEG variance are removed. However, the PCA
+produces orthogonal components. In other words, PCA transformed signals are uncorrelated.</p>
+<p>The question was raised whether it is possible to reconstruct (fit) a VAR model from PCA transformed signals. Here we
+show that this is, in fact, the case.</p>
+<p>We will denote a var model with coefficients <span class="math">\(\mathbf{C}\)</span> and innovation process <span class="math">\(\vec{\epsilon}\)</span> as
+<span class="math">\(\mathrm{VAR}(\mathbf{C},\vec{\epsilon})\)</span>.</p>
+<p>Let&#8217;s start with a VAR process <span class="math">\(\vec{x}_n = \mathrm{VAR}(\mathbf{A},\vec{e})\)</span>. If the model
+contains causal structure, elements of <span class="math">\(\vec{x}\)</span> will in most cases show some degree of correlation. Let
+<span class="math">\(\vec{y}_n = \mathbf{W} \vec{x}_n\)</span> be the PCA transformed signal. Furthermore, assume that <span class="math">\(\vec{y}\)</span> is a
+VAR process too: <span class="math">\(\vec{y}_n = \mathrm{VAR}(\mathbf{B},\vec{r})\)</span>.</p>
+<p>In order to reconstruct the original VAR model <span class="math">\(\mathrm{VAR}(\mathbf{A},\vec{e})\)</span> from
+<span class="math">\(\mathrm{VAR}(\mathbf{B},\vec{r})\)</span> the following requirements need to be met:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><span class="math">\(\mathrm{VAR}(\mathbf{B},\vec{r})\)</span> can be transformed into <span class="math">\(\mathrm{VAR}(\mathbf{A},\vec{e})\)</span> when the PCA transform <span class="math">\(\mathbf{W}\)</span> is known.</li>
+<li>A VAR model can have zero cross-correlation despite having causal structure.</li>
+</ol>
+</div></blockquote>
+<p>The first requirement is obvious. Only when the models can be transformed into each other it is possible to reconstruct one model from another.
+Since the PCA transformation <span class="math">\(\mathbf{W}\)</span> is a rotation matrix, its inverse is the transpose <span class="math">\(\mathbf{W}^{-1} = \mathbf{W}^\intercal\)</span>.
+In section <a class="reference internal" href="#lintransvar"><em>Linear transformation of a VAR model</em></a> we show that transformation of VAR models is possible if <span class="math">\(\mathbf{S} \mathbf{R} = \mathbf{I}\)</span> and <span class="math">\(\mathbf{R} \mathbf{S} = \mathbf{I}\)</span>.
+This is the case with PCA since <span class="math">\(\mathbf{W}^\intercal \mathbf{W} = \mathbf{W} \mathbf{W}^\intercal = \mathbf{I}\)</span>.</p>
+<p>The second requirement relates to the fact that in order to reconstruct model A from model B all information about A must be present in B.
+Thus, information about the causal structure of A must be preserved in B, although <span class="math">\(\vec{y}_n = \mathrm{VAR}(\mathbf{B},\vec{r})\)</span> is uncorrelated.
+<a class="reference internal" href="#covbivar1"><em>Covariance of a bivariate AR(1) process</em></a> shows that it is possible to construct models where causal structure cancels cross-correlation.</p>
+<p>In conclusion, it is possible to fit VAR models on PCA transformed signals and reconstruct the original model.</p>
+<div class="section" id="linear-transformation-of-a-var-model">
+<span id="lintransvar"></span><h2>Linear transformation of a VAR model<a class="headerlink" href="#linear-transformation-of-a-var-model" title="Permalink to this headline">¶</a></h2>
+<p>We start with a two VAR models; one for each vector signal <span class="math">\(\vec{x}\)</span> and <span class="math">\(\vec{y}\)</span>:</p>
+<div class="math">
+\[\begin{split}\vec{x}_n &amp;= \sum_{k=1}^{p}\mathbf{A}^{(k)}\vec{x}_{n-k} + \vec{e}_n \\
+\vec{y}_n &amp;= \sum_{k=1}^{p}\mathbf{B}^{(k)}\vec{y}_{n-k} + \vec{r}_n\end{split}\]</div>
+<p>Now assume that <span class="math">\(\vec{x}\)</span> and <span class="math">\(\vec{y}\)</span> can be transformed into each other by linear transformations:</p>
+<div class="math">
+\[\begin{split}\vec{y}_n &amp;= \mathbf{R} \vec{x}_n \\
+\vec{x}_n &amp;= \mathbf{S} \vec{y}_n\end{split}\]</div>
+<p>Note that</p>
+<div class="math">
+\[\begin{split}\left.
+\begin{matrix}
+    \vec{y}_n = \mathbf{R} \mathbf{S} \vec{y}_n \\
+    \vec{x}_n = \mathbf{S} \mathbf{R} \vec{x}_n
+\end{matrix}
+\right\} \Rightarrow \mathbf{R} \mathbf{S} = \mathbf{I}, \mathbf{S} \mathbf{R} = \mathbf{I}\end{split}\]</div>
+<p>By substituting the transformations into the VAR model equations we obtain</p>
+<div class="math">
+\[\begin{split}\vec{x}_n &amp;= \sum_{k=1}^{p}\mathbf{S}\mathbf{B}^{(k)}\mathbf{R} \vec{x}_{n-k} + \mathbf{S} \vec{r}_n \\
+\vec{y}_n &amp;= \sum_{k=1}^{p}\mathbf{R}\mathbf{A}^{(k)}\mathbf{S} \vec{y}_{n-k} + \mathbf{R} \vec{e}_n\end{split}\]</div>
+<p>Thus, each model can be transformed into the other by</p>
+<div class="math">
+\[\begin{split}\mathbf{A}^{(k)} &amp;= \mathbf{S}\mathbf{B}^{(k)}\mathbf{R},\; \vec{e}_n = \mathbf{S} \vec{r}_n \\
+\mathbf{B}^{(k)} &amp;= \mathbf{R}\mathbf{A}^{(k)}\mathbf{S},\; \vec{r}_n = \mathbf{R} \vec{e}_n\end{split}\]</div>
+<p>Conclusion: We can equivalently formulate VAR models for vector signals, if these signals are related by linear
+transformations that satisfy <span class="math">\(\mathbf{S} \mathbf{R} = \mathbf{I}\)</span> and <span class="math">\(\mathbf{R} \mathbf{S} = \mathbf{I}\)</span>.</p>
+</div>
+<div class="section" id="covariance-of-a-bivariate-ar-1-process">
+<span id="covbivar1"></span><h2>Covariance of a bivariate AR(1) process<a class="headerlink" href="#covariance-of-a-bivariate-ar-1-process" title="Permalink to this headline">¶</a></h2>
+<p>Consider the bivariate AR(1) process given by</p>
+<div class="math">
+\[\begin{split}\left[ \begin{matrix} x_1(n) \\ x_2(n)  \end{matrix} \right] =
+\left[ \begin{matrix} a_{11} &amp; a_{12} \\  a_{21} &amp; a_{22} \end{matrix} \right]
+\left[ \begin{matrix} x_1(n-1) \\ x_2(n-1)  \end{matrix} \right] +
+\left[ \begin{matrix} c_{11} &amp; c_{12} \\  c_{21} &amp; c_{22} \end{matrix} \right]
+\left[ \begin{matrix} e_1(n) \\ e_2(n)  \end{matrix} \right]\end{split}\]</div>
+<p>where <span class="math">\(e_1\)</span> and <span class="math">\(e_2\)</span> are uncorrelated Gaussian white noise processes with zero mean and unit variance.</p>
+<p>The process variances <span class="math">\(s_i^2\)</span> and covariance <span class="math">\(r\)</span> are obtained by solving the following system of equations <a class="footnote-reference" href="#id2" id="id1">[1]</a>:</p>
+<div class="math">
+\[\begin{split}\left( \mathbf{I} - \left[ \begin{matrix} a_{11}^2 &amp; a_{12}^2 &amp; 2a_{11}a_{12} \\
+                                          a_{21}^2 &amp; a_{22}^2 &amp; 2a_{21}a_{22} \\
+                                          a_{11}a_{21} &amp; a_{12}a_{22} &amp; a_{11}a_{22} + a_{12}a_{21}
+                           \end{matrix} \right]
+\right)
+\left[ \begin{matrix} s_1^2 \\ s_2^2 \\ r \end{matrix} \right] = \left[ \begin{matrix} c_{11}^2 + c_{12}^2 \\ c_{21}^2 + c_{22}^2 \\ c_{11}c_{21} + c_{12}c_{22} \end{matrix} \right]\end{split}\]</div>
+<p>In general, a VAR model with causal structure (<span class="math">\(a_{12} \neq 0\)</span> and/or <span class="math">\(a_{21} \neq 0\)</span>) has some instantaneous correlation (non-zero covariance <span class="math">\(r \neq 0\)</span>) between signals.</p>
+<p>Now, let&#8217;s constrain the system to zero covariance <span class="math">\(r = 0\)</span>.</p>
+<div class="math">
+\[c_{11}c_{21} + c_{12}c_{22} + a_{11}a_{21}s_1^2 + a_{12}a_{22}s_2^2 = 0\]\[\begin{split}\left( \mathbf{I} - \left[ \begin{matrix} a_{11}^2 &amp; a_{12}^2 \\
+                                          a_{21}^2 &amp; a_{22}^2
+                           \end{matrix} \right]
+\right)
+\left[ \begin{matrix} s_1^2 \\ s_2^2 \end{matrix} \right] = \left[ \begin{matrix} c_{11}^2 + c_{12}^2 \\ c_{21}^2 + c_{22}^2 \end{matrix} \right]\end{split}\]</div>
+<p>Conclusion: it is possible to construct special cases where VAR processes with causal structure have no instantaneous correlation.</p>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td><a class="reference external" href="http://books.google.at/books?id=_VHxE26QvXgC&amp;pg=PA230&amp;lpg=PA230&amp;dq=cross-covariance+of+bivariate+AR%281%29+process&amp;source=bl&amp;ots=EiwYr1CA6x&amp;sig=zMJwf8s1MXk5CTyf6CKw9JfKBDU&amp;hl=en&amp;sa=X&amp;ei=cLnqUsqRO6ve7Aan84DYDQ&amp;ved=0CDIQ6AEwAQ#v=onepage&amp;q=cross-covariance%20of%20bivariate%20AR%281%29%20process&amp;f=false">http://books.google.at/books?id=_VHxE26QvXgC&amp;pg=PA230&amp;lpg=PA230&amp;dq=cross-covariance+of+bivariate+AR%281%29+process&amp;source=bl&amp;ots=EiwYr1CA6x&amp;sig=zMJwf8s1MXk5CTyf6CKw9JfKBDU&amp;hl=en&amp;sa=X&amp;ei=cLnqUsqRO6ve7Aan84DYDQ&amp;ved=0CDIQ6AEwAQ#v=onepage&amp;q=cross-covariance%20of%20bivariate%20AR%281%29%20process&amp;f=false</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="mytest.html" title="Testing SPHINX Features"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="misc.html" title="Miscellaneous Topics"
+             >previous</a> |</li>
+        <li><a href="index.html">home</a>|&nbsp;</li>
+        <li><a href="search.html">search</a>|&nbsp;</li>
+
+          <li><a href="misc.html" >Miscellaneous Topics</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Martin Billinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+    </div>
+  </body>
+</html>

@@ -23,6 +23,7 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
     <link rel="up" title="eegtopo" href="modules.html" />
     <link rel="next" title="geometry Package" href="eegtopo.geometry.html" />
@@ -115,12 +116,17 @@
 
 <dl class="function">
 <dt id="eegtopo.eegpos3d.intersection">
-<tt class="descclassname">eegtopo.eegpos3d.</tt><tt class="descname">intersection</tt><big>(</big><em>a</em>, <em>b</em>, <em>expr=&lt;function &lt;lambda&gt; at 0x7fd15dabb8c0&gt;</em><big>)</big><a class="headerlink" href="#eegtopo.eegpos3d.intersection" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">eegtopo.eegpos3d.</tt><tt class="descname">intersection</tt><big>(</big><em>a</em>, <em>b</em>, <em>expr=&lt;function &lt;lambda&gt; at 0x7f5bc36a35f0&gt;</em><big>)</big><a class="headerlink" href="#eegtopo.eegpos3d.intersection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
 <div class="section" id="module-eegtopo.projections">
 <span id="projections-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">projections</span></tt> Module<a class="headerlink" href="#module-eegtopo.projections" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="eegtopo.projections.array_project_radial_to2d">
+<tt class="descclassname">eegtopo.projections.</tt><tt class="descname">array_project_radial_to2d</tt><big>(</big><em>points_3d</em><big>)</big><a class="headerlink" href="#eegtopo.projections.array_project_radial_to2d" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="function">
 <dt id="eegtopo.projections.array_project_radial_to3d">
 <tt class="descclassname">eegtopo.projections.</tt><tt class="descname">array_project_radial_to3d</tt><big>(</big><em>points_2d</em><big>)</big><a class="headerlink" href="#eegtopo.projections.array_project_radial_to3d" title="Permalink to this definition">¶</a></dt>
@@ -155,7 +161,7 @@
 <span id="topoplot-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">topoplot</span></tt> Module<a class="headerlink" href="#module-eegtopo.topoplot" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="eegtopo.topoplot.Topoplot">
-<em class="property">class </em><tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">Topoplot</tt><big>(</big><em>m=4</em>, <em>num_lterms=10</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">Topoplot</tt><big>(</big><em>m=4, num_lterms=10, headcolor=[0, 0, 0, 1]</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.Topoplot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Creates 2D scalp maps.</p>
 <dl class="method">
@@ -222,7 +228,7 @@
 
 <dl class="function">
 <dt id="eegtopo.topoplot.topoplot">
-<tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">topoplot</tt><big>(</big><em>values</em>, <em>locations</em>, <em>offset=(0</em>, <em>0)</em>, <em>axes=None</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.topoplot" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">eegtopo.topoplot.</tt><tt class="descname">topoplot</tt><big>(</big><em>values, locations, headcolor=[0, 0, 0, 1], axes=None, offset=(0, 0)</em><big>)</big><a class="headerlink" href="#eegtopo.topoplot.topoplot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
