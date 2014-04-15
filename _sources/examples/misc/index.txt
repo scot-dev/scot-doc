@@ -1,0 +1,21 @@
+.. _misc-examples-index:
+
+##############################################
+misc Examples
+##############################################
+
+.. htmlonly::
+
+    :Release: |version|
+    :Date: |today|
+
+.. toctree::
+    :maxdepth: 1
+
+    MVARICAvsCSPVARICA <MVARICAvsCSPVARICA.rst>
+    circular <circular.rst>
+    connectivity <connectivity.rst>
+    features <features.rst>
+    statistics <statistics.rst>
+    timefrequency <timefrequency.rst>
+    validation <validation.rst>

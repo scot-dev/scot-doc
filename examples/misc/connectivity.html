@@ -1,0 +1,210 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>misc example code: connectivity.py &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="misc Examples" href="index.html" />
+    <link rel="next" title="misc example code: features.py" href="features.html" />
+    <link rel="prev" title="misc example code: circular.py" href="circular.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="misc example code: features.py"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="circular.html" title="misc example code: circular.py"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="misc-example-code-connectivity-py">
+<span id="misc-connectivity"></span><h1>misc example code: connectivity.py<a class="headerlink" href="#misc-example-code-connectivity-py" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="../../scot_examples/misc/connectivity.py">Source code</a>, <a class="reference external" href="../../scot_examples/misc/connectivity.png">png</a>, <a class="reference external" href="../../scot_examples/misc/connectivity.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/connectivity.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/connectivity.png" src="../../_images/connectivity.png" />
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This example shows how to decompose EEG signals into source activations with</span>
+<span class="sd">MVARICA, and visualize a connectivity.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">scot.backend.sklearn</span>     <span class="c"># use builtin (default) backend</span>
+<span class="kn">import</span> <span class="nn">scot</span>
+
+<span class="c"># The example data set contains a continuous 45 channel EEG recording of a motor</span>
+<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement artifacts</span>
+<span class="c"># and resampled to a sampling rate of 100 Hz.</span>
+<span class="c"># With a visual cue the subject was instructed to perform either hand of foot</span>
+<span class="c"># motor imagery. The the trigger time points of the cues are stored in &#39;tr&#39;, and</span>
+<span class="c"># &#39;cl&#39; contains the class labels (hand: 1, foot: -1). Duration of the motor</span>
+<span class="c"># imagery period was approximately 6 seconds.</span>
+<span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
+
+<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
+<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">triggers</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">samplerate</span>
+<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
+
+
+<span class="c"># Prepare the data</span>
+<span class="c">#</span>
+<span class="c"># Here we cut segments from 3s to 4s following each trigger out of the EEG. This</span>
+<span class="c"># is right in the middle of the motor imagery period.</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+
+
+<span class="c"># Set up the analysis object</span>
+<span class="c">#</span>
+<span class="c"># We simply choose a VAR model order of 35, and reduction to 4 components (that&#39;s not a lot!).</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="n">locs</span><span class="p">)</span>
+
+
+<span class="c"># Perform MVARICA and plot the components</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">do_cspvarica</span><span class="p">()</span>
+
+<span class="n">p</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">var_</span><span class="o">.</span><span class="n">test_whiteness</span><span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;Whiteness:&#39;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+
+<span class="c"># Configure plotting options</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">plot_f_range</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">30</span><span class="p">]</span>       <span class="c"># Only show 0 - 30 Hz</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">plot_diagonal</span> <span class="o">=</span> <span class="s">&#39;S&#39;</span>          <span class="c"># Put spectral density plots on the diagonal</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">plot_outside_topo</span> <span class="o">=</span> <span class="bp">True</span>     <span class="c"># Plot topos above and to the left</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">plot_connectivity_topos</span><span class="p">()</span>
+
+<span class="c"># Connectivity Analysis</span>
+<span class="c">#</span>
+<span class="c"># Extract the full frequency directed transfer function (ffDTF) from the</span>
+<span class="c"># activations of each class and plot them.</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">set_used_labels</span><span class="p">([</span><span class="s">&#39;foot&#39;</span><span class="p">])</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">fit_var</span><span class="p">()</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">get_connectivity</span><span class="p">(</span><span class="s">&#39;ffDTF&#39;</span><span class="p">,</span> <span class="n">fig</span><span class="p">)</span>
+
+<span class="n">ws</span><span class="o">.</span><span class="n">set_used_labels</span><span class="p">([</span><span class="s">&#39;hand&#39;</span><span class="p">])</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">fit_var</span><span class="p">()</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">get_connectivity</span><span class="p">(</span><span class="s">&#39;ffDTF&#39;</span><span class="p">,</span> <span class="n">fig</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s">&#39;CSPVARICA&#39;</span><span class="p">)</span>
+
+<span class="n">ws</span><span class="o">.</span><span class="n">show_plots</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="circular.html"
+                        title="previous chapter">misc example code: circular.py</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="features.html"
+                        title="next chapter">misc example code: features.py</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/examples/misc/connectivity.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="features.html" title="misc example code: features.py"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="circular.html" title="misc example code: circular.py"
+             >previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li><a href="index.html" >misc Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Martin Billinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

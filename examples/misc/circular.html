@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>misc example code: circular.py &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="misc Examples" href="index.html" />
+    <link rel="next" title="misc example code: connectivity.py" href="connectivity.html" />
+    <link rel="prev" title="misc example code: MVARICAvsCSPVARICA.py" href="MVARICAvsCSPVARICA.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="connectivity.html" title="misc example code: connectivity.py"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="MVARICAvsCSPVARICA.html" title="misc example code: MVARICAvsCSPVARICA.py"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="misc-example-code-circular-py">
+<span id="misc-circular"></span><h1>misc example code: circular.py<a class="headerlink" href="#misc-example-code-circular-py" title="Permalink to this headline">¶</a></h1>
+<p>(<a class="reference external" href="../../scot_examples/misc/circular.py">Source code</a>)</p>
+<div class="figure">
+<img alt="../../_images/circular_00.png" src="../../_images/circular_00.png" />
+<p class="caption">(<a class="reference external" href="../../scot_examples/misc/circular_00.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.pdf">pdf</a>)</p>
+</div>
+<div class="figure">
+<img alt="../../_images/circular_01.png" src="../../_images/circular_01.png" />
+<p class="caption">(<a class="reference external" href="../../scot_examples/misc/circular_01.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.pdf">pdf</a>)</p>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">This example shows how to decompose EEG signals into source activations with</span>
+<span class="sd">MVARICA, and visualize a connectivity.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">scot.backend.builtin</span>     <span class="c"># use builtin (default) backend</span>
+<span class="kn">import</span> <span class="nn">scot</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scot.utils</span> <span class="kn">import</span> <span class="n">cuthill_mckee</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">eegtopo.topoplot</span> <span class="kn">import</span> <span class="n">Topoplot</span>
+<span class="kn">from</span> <span class="nn">scot</span> <span class="kn">import</span> <span class="n">plotting</span>
+
+
+<span class="c"># The example data set contains a continuous 45 channel EEG recording of a motor</span>
+<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement artifacts</span>
+<span class="c"># and resampled to a sampling rate of 100 Hz.</span>
+<span class="c"># With a visual cue the subject was instructed to perform either hand of foot</span>
+<span class="c"># motor imagery. The the trigger time points of the cues are stored in &#39;tr&#39;, and</span>
+<span class="c"># &#39;cl&#39; contains the class labels (hand: 1, foot: -1). Duration of the motor</span>
+<span class="c"># imagery period was approximately 6 seconds.</span>
+<span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
+
+<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
+<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">triggers</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">samplerate</span>
+<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
+
+
+<span class="c"># Prepare the data</span>
+<span class="c">#</span>
+<span class="c"># Here we cut segments from 2s to 5s following each trigger out of the EEG. This</span>
+<span class="c"># is right in the middle of the motor imagery period.</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
+
+
+<span class="c"># Set up the analysis object</span>
+<span class="c">#</span>
+<span class="c"># We simply choose a VAR model order of 30, and reduction to 15 components.</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="n">locs</span><span class="p">)</span>
+
+
+<span class="c"># Perform MVARICA to obtain</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span>
+<span class="n">ws</span><span class="o">.</span><span class="n">do_cspvarica</span><span class="p">()</span>
+
+
+<span class="c"># Connectivity Analysis</span>
+<span class="c">#</span>
+<span class="c"># Extract the full frequency directed transfer function (ffDTF) from the</span>
+<span class="c"># activations of each class and calculate the average value over the alpha band (8-12Hz).</span>
+
+<span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">nfft_</span><span class="p">)</span>
+<span class="n">alpha</span><span class="p">,</span> <span class="n">beta</span> <span class="o">=</span> <span class="p">{},</span> <span class="p">{}</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">classes</span><span class="p">):</span>
+    <span class="n">ws</span><span class="o">.</span><span class="n">set_used_labels</span><span class="p">([</span><span class="n">c</span><span class="p">])</span>
+    <span class="n">ws</span><span class="o">.</span><span class="n">fit_var</span><span class="p">()</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_connectivity</span><span class="p">(</span><span class="s">&#39;ffDTF&#39;</span><span class="p">)</span>
+    <span class="n">alpha</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">con</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">8</span> <span class="o">&lt;</span> <span class="n">freq</span><span class="p">,</span> <span class="n">freq</span> <span class="o">&lt;</span> <span class="mi">12</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="c"># Prepare topography plots</span>
+<span class="n">topo</span> <span class="o">=</span> <span class="n">Topoplot</span><span class="p">()</span>
+<span class="n">topo</span><span class="o">.</span><span class="n">set_locations</span><span class="p">(</span><span class="n">locs</span><span class="p">)</span>
+<span class="n">mixmaps</span> <span class="o">=</span> <span class="n">plotting</span><span class="o">.</span><span class="n">prepare_topoplots</span><span class="p">(</span><span class="n">topo</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">mixing_</span><span class="p">)</span>
+
+<span class="c"># Force diagonal (self-connectivity) to 0</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s">&#39;hand&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s">&#39;foot&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+<span class="n">order</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="k">for</span> <span class="n">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="s">&#39;hand&#39;</span><span class="p">,</span> <span class="s">&#39;foot&#39;</span><span class="p">]:</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+
+    <span class="n">w</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">4</span>
+
+    <span class="c"># use same ordering of components for each class</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">order</span><span class="p">:</span>
+        <span class="n">order</span> <span class="o">=</span> <span class="n">cuthill_mckee</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+    <span class="c"># fixed color, but alpha varies with connectivity strength</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s">&#39;hand&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s">&#39;foot&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">([</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">])</span>
+
+    <span class="n">plotting</span><span class="o">.</span><span class="n">plot_circular</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">topo</span><span class="o">=</span><span class="n">topo</span><span class="p">,</span> <span class="n">topomaps</span><span class="o">=</span><span class="n">mixmaps</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">cls</span><span class="p">)</span>
+
+<span class="n">plotting</span><span class="o">.</span><span class="n">show_plots</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="MVARICAvsCSPVARICA.html"
+                        title="previous chapter">misc example code: MVARICAvsCSPVARICA.py</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="connectivity.html"
+                        title="next chapter">misc example code: connectivity.py</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/examples/misc/circular.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="connectivity.html" title="misc example code: connectivity.py"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="MVARICAvsCSPVARICA.html" title="misc example code: MVARICAvsCSPVARICA.py"
+             >previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li><a href="index.html" >misc Examples</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2014, Martin Billinger.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+    </div>
+  </body>
+</html>

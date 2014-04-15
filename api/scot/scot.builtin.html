@@ -51,6 +51,8 @@
           <a href="scot.backend.html" title="backend Package"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
           <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
@@ -58,47 +60,7 @@
           <li><a href="scot.html" accesskey="U">scot Package</a> &raquo;</li> 
       </ul>
     </div>
-
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">builtin Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="scot.backend.html"
-                        title="previous chapter">backend Package</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="../eegtopo/modules.html"
-                        title="next chapter">eegtopo</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/api/scot/scot.builtin.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -114,7 +76,7 @@
 <span id="binica-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">binica</span></tt> Module<a class="headerlink" href="#module-scot.builtin.binica" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="scot.builtin.binica.binica">
-<tt class="descclassname">scot.builtin.binica.</tt><tt class="descname">binica</tt><big>(</big><em>data</em>, <em>binary='../scot/builtin/binica/ica_linux'</em><big>)</big><a class="headerlink" href="#scot.builtin.binica.binica" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">scot.builtin.binica.</tt><tt class="descname">binica</tt><big>(</big><em>data</em>, <em>binary='../../scot/builtin/binica/ica_linux'</em><big>)</big><a class="headerlink" href="#scot.builtin.binica.binica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simple wrapper for the BINICA binary.</p>
 <p>This function calculates the ICA transformation using the Infomax algorithm implemented in BINICA.</p>
 <dl class="docutils">
@@ -166,7 +128,7 @@ to the directory where this module lies (typically scot/binica/ica_linux)</p>
 <p>principal component analysis (PCA) implementation</p>
 <dl class="function">
 <dt id="scot.builtin.pca.pca">
-<tt class="descclassname">scot.builtin.pca.</tt><tt class="descname">pca</tt><big>(</big><em>x</em>, <em>subtract_mean=False</em>, <em>normalize=False</em>, <em>sort_components=True</em>, <em>reducedim=None</em>, <em>algorithm=&lt;function pca_eig at 0x7f5bbb932320&gt;</em><big>)</big><a class="headerlink" href="#scot.builtin.pca.pca" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">scot.builtin.pca.</tt><tt class="descname">pca</tt><big>(</big><em>x</em>, <em>subtract_mean=False</em>, <em>normalize=False</em>, <em>sort_components=True</em>, <em>reducedim=None</em>, <em>algorithm=&lt;function pca_eig at 0x7fa8f4e21730&gt;</em><big>)</big><a class="headerlink" href="#scot.builtin.pca.pca" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate principal component analysis (PCA)</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -326,7 +288,7 @@ formed of input arrays.</p>
 <p>Vector autoregressive (VAR) model implementation</p>
 <dl class="class">
 <dt id="scot.builtin.var.VAR">
-<em class="property">class </em><tt class="descclassname">scot.builtin.var.</tt><tt class="descname">VAR</tt><a class="headerlink" href="#scot.builtin.var.VAR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">scot.builtin.var.</tt><tt class="descname">VAR</tt><big>(</big><em>model_order</em>, <em>delta=0</em>, <em>xvschema=&lt;function multitrial at 0x7fa8f4e21c80&gt;</em><big>)</big><a class="headerlink" href="#scot.builtin.var.VAR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="scot.html#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">scot.var.VARBase</span></tt></a></p>
 <p>Builtin implementation of VARBase.</p>
 <p>This class provides least squares VAR model fitting with optional ridge regression.</p>
@@ -446,6 +408,46 @@ formed of input arrays.</p>
           </div>
         </div>
       </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">builtin Package</a><ul>
+<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scot.backend.html"
+                        title="previous chapter">backend Package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../eegtopo/modules.html"
+                        title="next chapter">eegtopo</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/api/scot/scot.builtin.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -464,6 +466,8 @@ formed of input arrays.</p>
           <a href="scot.backend.html" title="backend Package"
              >previous</a> |</li>
         <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
           <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
@@ -473,7 +477,7 @@ formed of input arrays.</p>
     </div>
     <div class="footer">
         &copy; Copyright 2014, Martin Billinger.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>

@@ -1,0 +1,15 @@
+.. _test-examples-index:
+
+##############################################
+test Examples
+##############################################
+
+.. htmlonly::
+
+    :Release: |version|
+    :Date: |today|
+
+.. toctree::
+    :maxdepth: 1
+
+    plot_test <plot_test.rst>

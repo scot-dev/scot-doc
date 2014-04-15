@@ -51,6 +51,8 @@
           <a href="scot.html" title="scot Package"
              accesskey="P">previous</a> |</li>
         <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
           <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
@@ -58,46 +60,7 @@
           <li><a href="scot.html" accesskey="U">scot Package</a> &raquo;</li> 
       </ul>
     </div>
-
-      <div class="sphinxsidebar">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table Of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">backend Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">backend</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-scot.backend.builtin"><tt class="docutils literal"><span class="pre">builtin</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.backend.sklearn"><tt class="docutils literal"><span class="pre">sklearn</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.backend.sklearn_utils"><tt class="docutils literal"><span class="pre">sklearn_utils</span></tt> Module</a></li>
-</ul>
-</li>
-</ul>
-
-  <h4>Previous topic</h4>
-  <p class="topless"><a href="scot.html"
-                        title="previous chapter">scot Package</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="scot.builtin.html"
-                        title="next chapter">builtin Package</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/api/scot/scot.backend.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
-  <h3>Quick search</h3>
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
-      <input type="hidden" name="check_keywords" value="yes" />
-      <input type="hidden" name="area" value="default" />
-    </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -141,7 +104,7 @@
 <p>Use scikit-learn routines as backend.</p>
 <dl class="class">
 <dt id="scot.backend.sklearn.VAR">
-<em class="property">class </em><tt class="descclassname">scot.backend.sklearn.</tt><tt class="descname">VAR</tt><a class="headerlink" href="#scot.backend.sklearn.VAR" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">scot.backend.sklearn.</tt><tt class="descname">VAR</tt><big>(</big><em>model_order</em>, <em>fitobj=LinearRegression(copy_X=True</em>, <em>fit_intercept=True</em>, <em>normalize=False)</em><big>)</big><a class="headerlink" href="#scot.backend.sklearn.VAR" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="scot.html#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">scot.var.VARBase</span></tt></a></p>
 <p>Scikit-learn based implementation of VARBase.</p>
 <p>This class fits VAR models using various implementations of generalized linear model fitting available in scikit-learn.</p>
@@ -216,6 +179,45 @@
           </div>
         </div>
       </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">backend Package</a><ul>
+<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">backend</span></tt> Package</a></li>
+<li><a class="reference internal" href="#module-scot.backend.builtin"><tt class="docutils literal"><span class="pre">builtin</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.backend.sklearn"><tt class="docutils literal"><span class="pre">sklearn</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-scot.backend.sklearn_utils"><tt class="docutils literal"><span class="pre">sklearn_utils</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scot.html"
+                        title="previous chapter">scot Package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="scot.builtin.html"
+                        title="next chapter">builtin Package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/api/scot/scot.backend.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
       <div class="clearer"></div>
     </div>
     <div class="related">
@@ -234,6 +236,8 @@
           <a href="scot.html" title="scot Package"
              >previous</a> |</li>
         <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
           <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
@@ -243,7 +247,7 @@
     </div>
     <div class="footer">
         &copy; Copyright 2014, Martin Billinger.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.1.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
     </div>
   </body>
 </html>
