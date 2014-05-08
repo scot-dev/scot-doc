@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>scot Package &mdash; SCoT 0.1.0 documentation</title>
+    <title>scot package &mdash; SCoT 0.1.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -67,17 +67,38 @@
           <div class="body">
             
   <div class="section" id="scot-package">
-<h1>scot Package<a class="headerlink" href="#scot-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
-<h2><tt class="xref py py-mod docutils literal"><span class="pre">scot</span></tt> Package<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-scot.__init__"></span><p>SCoT: The Source Connectivity Toolbox</p>
+<h1>scot package<a class="headerlink" href="#scot-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="scot.backend.html">backend Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#id1"><tt class="docutils literal"><span class="pre">backend</span></tt> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.builtin"><tt class="docutils literal"><span class="pre">builtin</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn"><tt class="docutils literal"><span class="pre">sklearn</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn_utils"><tt class="docutils literal"><span class="pre">sklearn_utils</span></tt> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="scot.builtin.html">builtin Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="module-scot.config">
-<span id="config-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">config</span></tt> Module<a class="headerlink" href="#module-scot.config" title="Permalink to this headline">¶</a></h2>
+<span id="scot-config-module"></span><h2>scot.config module<a class="headerlink" href="#module-scot.config" title="Permalink to this headline">¶</a></h2>
 <p>Global configuration</p>
 </div>
 <div class="section" id="module-scot.connectivity">
-<span id="connectivity-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">connectivity</span></tt> Module<a class="headerlink" href="#module-scot.connectivity" title="Permalink to this headline">¶</a></h2>
+<span id="scot-connectivity-module"></span><h2>scot.connectivity module<a class="headerlink" href="#module-scot.connectivity" title="Permalink to this headline">¶</a></h2>
 <p>Connectivity Analysis</p>
 <dl class="class">
 <dt id="scot.connectivity.Connectivity">
@@ -110,12 +131,12 @@ sampling rate.</p>
 <p>Connectivity measures are returned by member functions that take no arguments and return a matrix of
 shape [m,m,nfft]. The first dimension is the sink, the second dimension is the source, and the third dimension is
 the frequency.</p>
-<p>A summary of most supported measures can be found in <a class="reference internal" href="#r1" id="id2">[R1]</a>.</p>
+<p>A summary of most supported measures can be found in <a class="reference internal" href="#r1" id="id1">[R1]</a>.</p>
 <p class="rubric">References</p>
 <table class="docutils citation" frame="void" id="r1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R1]</td><td><em>(<a class="fn-backref" href="#id2">1</a>, <a class="fn-backref" href="#id3">2</a>)</em> M. Billinger et al, “Single-trial connectivity estimation for classification of motor imagery data”,
+<tr><td class="label">[R1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> M. Billinger et al, “Single-trial connectivity estimation for classification of motor imagery data”,
 <em>J. Neural Eng.</em> 10, 2013.</td></tr>
 </tbody>
 </table>
@@ -193,6 +214,11 @@ the frequency.</p>
 <dd><p>Coherence</p>
 <div class="math">
 \[\mathrm{COH}_{ij}(f) = \frac{S_{ij}(f)}{\sqrt{S_{ii}(f) S_{jj}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>P. L. Nunez, R. Srinivasan, A. F. Westdorp, R. S. Wijesinghe, D. M. Tucker,
+R. B. Silverstein, P. J. Cadusch. EEG coherency: I: statistics, reference electrode,
+volume conduction, Laplacians, cortical imaging, and interpretation at multiple scales.
+Electroenceph. Clin. Neurophysiol. 103(5): 499-515, 1997.</p>
 </dd></dl>
 
 <dl class="method">
@@ -207,6 +233,9 @@ the frequency.</p>
 <dd><p>Directed transfer function</p>
 <div class="math">
 \[\mathrm{DTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{H_{i:}(f) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>M. J. Kaminski, K. J. Blinowska. A new method of the description of the information flow
+in the brain structures. Biol. Cybernetics 65(3): 203-210, 1991.</p>
 </dd></dl>
 
 <dl class="method">
@@ -224,6 +253,9 @@ the frequency.</p>
 <div class="math">
 \[\mathrm{GPDC}_{ij}(f) = \frac{\sigma_j |H_{ij}(f)|}
 {\sqrt{H_{i:}(f) \mathrm{diag}(\mathbf{C}) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. Faes, S. Erla, G. Nollo. Measuring Connectivity in Linear Multivariate Processes:
+Definitions, Interpretation, and Practical Analysis. Comput. Math. Meth. Med. 2012:140513, 2012.</p>
 </dd></dl>
 
 <dl class="method">
@@ -233,6 +265,9 @@ the frequency.</p>
 <div class="math">
 \[\mathrm{GPDC}_{ij}(f) = \frac{|A_{ij}(f)|}
 {\sigma_i \sqrt{A_{:j}'(f) \mathrm{diag}(\mathbf{C})^{-1} A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. Faes, S. Erla, G. Nollo. Measuring Connectivity in Linear Multivariate Processes:
+Definitions, Interpretation, and Practical Analysis. Comput. Math. Meth. Med. 2012:140513, 2012.</p>
 </dd></dl>
 
 <dl class="method">
@@ -249,6 +284,9 @@ the frequency.</p>
 <dd><p>Partial directed coherence</p>
 <div class="math">
 \[\mathrm{PDC}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. A. Baccalá, K. Sameshima. Partial directed coherence: a new concept in neural structure
+determination. Biol. Cybernetics 84(6):463-474, 2001.</p>
 </dd></dl>
 
 <dl class="method">
@@ -257,6 +295,9 @@ the frequency.</p>
 <dd><p>Partial directed coherence factor</p>
 <div class="math">
 \[\mathrm{PDCF}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) \mathbf{C}^{-1} A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. A. Baccalá, K. Sameshima. Partial directed coherence: a new concept in neural structure
+determination. Biol. Cybernetics 84(6):463-474, 2001.</p>
 </dd></dl>
 
 <dl class="method">
@@ -288,6 +329,10 @@ the frequency.</p>
 <dd><p>&#8221; Direct&#8221; directed transfer function</p>
 <div class="math">
 \[\mathrm{dDTF}_{ij}(f) = |\mathrm{pCOH}_{ij}(f)| \mathrm{ffDTF}_{ij}(f)\]</div>
+<p class="rubric">References</p>
+<p>A. Korzeniewska, M. Mańczak, M. Kaminski, K. J. Blinowska, S. Kasicki. Determination of
+information flow direction among brain structures by a modified directed transfer 
+function (dDTF) method. J. Neurosci. Meth. 125(1-2): 195-207, 2003.</p>
 </dd></dl>
 
 <dl class="method">
@@ -296,6 +341,10 @@ the frequency.</p>
 <dd><p>Full frequency directed transfer function</p>
 <div class="math">
 \[\mathrm{ffDTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{\sum_f H_{i:}(f) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>A. Korzeniewska, M. Mańczak, M. Kaminski, K. J. Blinowska, S. Kasicki. Determination of
+information flow direction among brain structures by a modified directed transfer 
+function (dDTF) method. J. Neurosci. Meth. 125(1-2): 195-207, 2003.</p>
 </dd></dl>
 
 <dl class="method">
@@ -328,6 +377,9 @@ the frequency.</p>
 <dd><p>Partial coherence</p>
 <div class="math">
 \[\mathrm{pCOH}_{ij}(f) = \frac{G_{ij}(f)}{\sqrt{G_{ii}(f) G_{jj}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>P. J. Franaszczuk, K. J. Blinowska, M. Kowalczyk. The application of parametric multichannel
+spectral estimates in the study of electrical brain activity. Biol. Cybernetics 51(4): 239-247, 1985.</p>
 </dd></dl>
 
 </dd></dl>
@@ -379,7 +431,7 @@ of shape [m, m, nfft].</p>
 
 </div>
 <div class="section" id="module-scot.connectivity_statistics">
-<span id="connectivity-statistics-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">connectivity_statistics</span></tt> Module<a class="headerlink" href="#module-scot.connectivity_statistics" title="Permalink to this headline">¶</a></h2>
+<span id="scot-connectivity-statistics-module"></span><h2>scot.connectivity_statistics module<a class="headerlink" href="#module-scot.connectivity_statistics" title="Permalink to this headline">¶</a></h2>
 <p>Routines for statistical evaluation of connectivity.</p>
 <dl class="function">
 <dt id="scot.connectivity_statistics.bootstrap_connectivity">
@@ -490,7 +542,7 @@ is returned, where each key is the name of the measure, and the corresponding va
 <dd><p>Calculate significance by controlling for the false discovery rate.</p>
 <p>This function determines which of the <em>p</em>-values in <cite>p</cite> can be considered significant. Correction for multiple
 comparisons is performed by controlling the false discovery rate (FDR). The FDR is the maximum fraction of
-<em>p</em>-values that are wrongly considered significant <a class="reference internal" href="#r2" id="id4">[R2]</a>.</p>
+<em>p</em>-values that are wrongly considered significant <a class="reference internal" href="#r2" id="id3">[R2]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -517,7 +569,7 @@ comparisons is performed by controlling the false discovery rate (FDR). The FDR 
 <table class="docutils citation" frame="void" id="r2" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R2]</td><td><em>(<a class="fn-backref" href="#id4">1</a>, <a class="fn-backref" href="#id5">2</a>)</em> Y. Benjamini, Y. Hochberg, &#8220;Controlling the false discovery rate: a practical and powerful approach to
+<tr><td class="label">[R2]</td><td><em>(<a class="fn-backref" href="#id3">1</a>, <a class="fn-backref" href="#id4">2</a>)</em> Y. Benjamini, Y. Hochberg, &#8220;Controlling the false discovery rate: a practical and powerful approach to
 multiple testing&#8221;, Journal of the Royal Statistical Society, Series B 57(1), pp 289-300, 1995</td></tr>
 </tbody>
 </table>
@@ -526,7 +578,7 @@ multiple testing&#8221;, Journal of the Royal Statistical Society, Series B 57(1
 <dl class="function">
 <dt id="scot.connectivity_statistics.surrogate_connectivity">
 <tt class="descclassname">scot.connectivity_statistics.</tt><tt class="descname">surrogate_connectivity</tt><big>(</big><em>measure_names</em>, <em>data</em>, <em>var</em>, <em>nfft=512</em>, <em>repeats=100</em><big>)</big><a class="headerlink" href="#scot.connectivity_statistics.surrogate_connectivity" title="Permalink to this definition">¶</a></dt>
-<dd><p>Calculates surrogate connectivity for a multivariate time series by phase randomization <a class="reference internal" href="#r3" id="id6">[R3]</a>.</p>
+<dd><p>Calculates surrogate connectivity for a multivariate time series by phase randomization <a class="reference internal" href="#r3" id="id5">[R3]</a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Parameter <cite>var</cite> will be modified by the function. Treat as undefined after the function returned.</p>
@@ -567,7 +619,7 @@ is returned, where each key is the name of the measure, and the corresponding va
 <table class="last docutils citation" frame="void" id="r3" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label"><a class="fn-backref" href="#id6">[R3]</a></td><td><ol class="first upperalpha simple" start="10">
+<tr><td class="label"><a class="fn-backref" href="#id5">[R3]</a></td><td><ol class="first upperalpha simple" start="10">
 <li>Theiler et al. &#8220;Testing for nonlinearity in time series: the method of surrogate data&#8221;, Physica D,</li>
 </ol>
 <p class="last">vol 58, pp. 77-94, 1992</p>
@@ -625,16 +677,9 @@ and <cite>j</cite>. The total number of difference samples available is therefor
 The <em>p</em>-value is calculated as the smallest percentile of that distribution that does not contain 0.</p>
 </dd></dl>
 
-<dl class="function">
-<dt id="scot.connectivity_statistics.test_rank_difference_a">
-<tt class="descclassname">scot.connectivity_statistics.</tt><tt class="descname">test_rank_difference_a</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#scot.connectivity_statistics.test_rank_difference_a" title="Permalink to this definition">¶</a></dt>
-<dd><p>Test for difference between two statistics with Mann-Whitney-U test.
-Samples along first dimension. p-values returned.</p>
-</dd></dl>
-
 </div>
 <div class="section" id="module-scot.datatools">
-<span id="datatools-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">datatools</span></tt> Module<a class="headerlink" href="#module-scot.datatools" title="Permalink to this headline">¶</a></h2>
+<span id="scot-datatools-module"></span><h2>scot.datatools module<a class="headerlink" href="#module-scot.datatools" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="summary">
 <h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
 <p>Tools for basic data manipulation.</p>
@@ -815,9 +860,9 @@ The dot product is calculated for each trial.</p>
 </div>
 </div>
 <div class="section" id="module-scot.matfiles">
-<span id="matfiles-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">matfiles</span></tt> Module<a class="headerlink" href="#module-scot.matfiles" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id7">
-<h3>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+<span id="scot-matfiles-module"></span><h2>scot.matfiles module<a class="headerlink" href="#module-scot.matfiles" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>Summary<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <p>Routines for loading and saving Matlab&#8217;s .mat files.</p>
 <dl class="function">
 <dt id="scot.matfiles.loadmat">
@@ -831,9 +876,9 @@ which are still mat-objects</p>
 </div>
 </div>
 <div class="section" id="module-scot.ooapi">
-<span id="ooapi-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">ooapi</span></tt> Module<a class="headerlink" href="#module-scot.ooapi" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id8">
-<h3>Summary<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<span id="scot-ooapi-module"></span><h2>scot.ooapi module<a class="headerlink" href="#module-scot.ooapi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>Summary<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
 <p>Object oriented API to SCoT.</p>
 </div>
 <div class="section" id="extended-summary">
@@ -1406,6 +1451,45 @@ connectivity estimates, and activations.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="scot.ooapi.Workspace.set_locations">
+<tt class="descname">set_locations</tt><big>(</big><em>locations</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.set_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set sensor locations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>locations</strong> : array_like</p>
+<blockquote class="last">
+<div><p>3D Electrode locations. Each row holds the x, y, and z coordinates of an electrode.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.ooapi.Workspace.set_premixing">
+<tt class="descname">set_premixing</tt><big>(</big><em>premixing</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.set_premixing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set premixing matrix.</p>
+<p>The premixing matrix maps data to physical channels. If the data is actual channel data,
+the premixing matrix can be set to identity. Use this functionality if the data was pre-
+transformed with e.g. PCA.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>premixing</strong> : array_like, shape = [n_signals, n_channels]</p>
+<blockquote class="last">
+<div><p>Matrix that maps data signals to physical channels.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
 <dt id="scot.ooapi.Workspace.set_used_labels">
 <tt class="descname">set_used_labels</tt><big>(</big><em>labels</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.set_used_labels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Specify which trials to use in subsequent analysis steps.</p>
@@ -1436,7 +1520,7 @@ connectivity estimates, and activations.</p>
 </div>
 </div>
 <div class="section" id="module-scot.plainica">
-<span id="plainica-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">plainica</span></tt> Module<a class="headerlink" href="#module-scot.plainica" title="Permalink to this headline">¶</a></h2>
+<span id="scot-plainica-module"></span><h2>scot.plainica module<a class="headerlink" href="#module-scot.plainica" title="Permalink to this headline">¶</a></h2>
 <p>Source decomposition with ICA.</p>
 <dl class="class">
 <dt id="scot.plainica.ResultICA">
@@ -1498,7 +1582,7 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 
 </div>
 <div class="section" id="module-scot.plotting">
-<span id="plotting-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">plotting</span></tt> Module<a class="headerlink" href="#module-scot.plotting" title="Permalink to this headline">¶</a></h2>
+<span id="scot-plotting-module"></span><h2>scot.plotting module<a class="headerlink" href="#module-scot.plotting" title="Permalink to this headline">¶</a></h2>
 <p>Graphical output with matplotlib</p>
 <p>This module attempts to import matplotlib for plotting functionality.
 If matplotlib is not available no error is raised, but plotting functions will not be available.</p>
@@ -1913,36 +1997,8 @@ If set to None, [-max(abs(topomap)), max(abs(topomap))] is substituted.</p>
 
 </div>
 <div class="section" id="module-scot.utils">
-<span id="utils-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">utils</span></tt> Module<a class="headerlink" href="#module-scot.utils" title="Permalink to this headline">¶</a></h2>
+<span id="scot-utils-module"></span><h2>scot.utils module<a class="headerlink" href="#module-scot.utils" title="Permalink to this headline">¶</a></h2>
 <p>Utility functions</p>
-<dl class="class">
-<dt id="scot.utils.DocStringInheritor">
-<em class="property">class </em><tt class="descclassname">scot.utils.</tt><tt class="descname">DocStringInheritor</tt><a class="headerlink" href="#scot.utils.DocStringInheritor" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
-<p>The most base type</p>
-</dd></dl>
-
-<dl class="class">
-<dt id="scot.utils.DocStringInheritorMeta">
-<em class="property">class </em><tt class="descclassname">scot.utils.</tt><tt class="descname">DocStringInheritorMeta</tt><a class="headerlink" href="#scot.utils.DocStringInheritorMeta" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.type</span></tt></p>
-<p>Inherit doc strings from base class.</p>
-<p>Based on unutbu&#8217;s DocStringInheritor <a class="reference internal" href="#r4" id="id9">[R4]</a> which is a variation of Paul McGuire&#8217;s DocStringInheritor <a class="reference internal" href="#r5" id="id10">[R5]</a></p>
-<p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r4" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[R4]</td><td><em>(<a class="fn-backref" href="#id9">1</a>, <a class="fn-backref" href="#id11">2</a>)</em> <a class="reference external" href="http://stackoverflow.com/a/8101118">http://stackoverflow.com/a/8101118</a></td></tr>
-</tbody>
-</table>
-<table class="docutils citation" frame="void" id="r5" rules="none">
-<colgroup><col class="label" /><col /></colgroup>
-<tbody valign="top">
-<tr><td class="label">[R5]</td><td><em>(<a class="fn-backref" href="#id10">1</a>, <a class="fn-backref" href="#id12">2</a>)</em> <a class="reference external" href="http://groups.google.com/group/comp.lang.python/msg/26f7b4fcb4d66c95">http://groups.google.com/group/comp.lang.python/msg/26f7b4fcb4d66c95</a></td></tr>
-</tbody>
-</table>
-</dd></dl>
-
 <dl class="function">
 <dt id="scot.utils.acm">
 <tt class="descclassname">scot.utils.</tt><tt class="descname">acm</tt><big>(</big><em>x</em>, <em>l</em><big>)</big><a class="headerlink" href="#scot.utils.acm" title="Permalink to this definition">¶</a></dt>
@@ -2037,7 +2093,7 @@ be cached. Instead the method will be invoked like a static method:</p>
 
 </div>
 <div class="section" id="module-scot.var">
-<span id="var-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">var</span></tt> Module<a class="headerlink" href="#module-scot.var" title="Permalink to this headline">¶</a></h2>
+<span id="scot-var-module"></span><h2>scot.var module<a class="headerlink" href="#module-scot.var" title="Permalink to this headline">¶</a></h2>
 <p>vector autoregressive (VAR) model</p>
 <dl class="class">
 <dt id="scot.var.Defaults">
@@ -2081,7 +2137,7 @@ be cached. Instead the method will be invoked like a static method:</p>
 <dl class="class">
 <dt id="scot.var.VARBase">
 <em class="property">class </em><tt class="descclassname">scot.var.</tt><tt class="descname">VARBase</tt><big>(</big><em>model_order</em><big>)</big><a class="headerlink" href="#scot.var.VARBase" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference internal" href="#scot.utils.DocStringInheritor" title="scot.utils.DocStringInheritor"><tt class="xref py py-class docutils literal"><span class="pre">scot.utils.DocStringInheritor</span></tt></a></p>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Represents a vector autoregressive (VAR) model.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2172,7 +2228,7 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 <dt id="scot.var.VARBase.is_stable">
 <tt class="descname">is_stable</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.var.VARBase.is_stable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if the VAR model is stable.</p>
-<p>This function tests stability of the VAR model as described in <a class="reference internal" href="#r6" id="id13">[R6]</a>.</p>
+<p>This function tests stability of the VAR model as described in <a class="reference internal" href="#r4" id="id8">[R4]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2186,10 +2242,10 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </tbody>
 </table>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r6" rules="none">
+<table class="docutils citation" frame="void" id="r4" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R6]</td><td><em>(<a class="fn-backref" href="#id13">1</a>, <a class="fn-backref" href="#id14">2</a>)</em> <ol class="last upperalpha simple" start="8">
+<tr><td class="label">[R4]</td><td><em>(<a class="fn-backref" href="#id8">1</a>, <a class="fn-backref" href="#id9">2</a>)</em> <ol class="last upperalpha simple" start="8">
 <li>Lütkepohl, &#8220;New Introduction to Multiple Time Series Analysis&#8221;, 2005, Springer, Berlin, Germany</li>
 </ol>
 </td></tr>
@@ -2277,7 +2333,7 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 <tt class="descname">test_whiteness</tt><big>(</big><em>h</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.test_whiteness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if the VAR model residuals are white (uncorrelated up to a lag of h).</p>
 <p>This function calculates the Li-McLeod as Portmanteau test statistic Q to
-test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r7" id="id15">[R7]</a>.
+test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r5" id="id10">[R5]</a>.
 Surrogate data for H0 is created by sampling from random permutations of
 the residuals.</p>
 <p>Usually the returned p-value is compared against a pre-defined type 1 error
@@ -2319,21 +2375,21 @@ describe the data.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>According to <a class="reference internal" href="#r8" id="id16">[R8]</a> h must satisfy h = O(n^0.5), where n is the length (time samples) of the residuals.</p>
+<p>According to <a class="reference internal" href="#r6" id="id11">[R6]</a> h must satisfy h = O(n^0.5), where n is the length (time samples) of the residuals.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r7" rules="none">
+<table class="docutils citation" frame="void" id="r5" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R7]</td><td><em>(<a class="fn-backref" href="#id15">1</a>, <a class="fn-backref" href="#id17">2</a>)</em> <ol class="last upperalpha simple" start="8">
+<tr><td class="label">[R5]</td><td><em>(<a class="fn-backref" href="#id10">1</a>, <a class="fn-backref" href="#id12">2</a>)</em> <ol class="last upperalpha simple" start="8">
 <li>Lütkepohl, &#8220;New Introduction to Multiple Time Series Analysis&#8221;, 2005, Springer, Berlin, Germany</li>
 </ol>
 </td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r8" rules="none">
+<table class="docutils citation" frame="void" id="r6" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R8]</td><td><em>(<a class="fn-backref" href="#id16">1</a>, <a class="fn-backref" href="#id18">2</a>)</em> J.R.M. Hosking, &#8220;The Multivariate Portmanteau Statistic&#8221;, 1980, J. Am. Statist. Assoc.</td></tr>
+<tr><td class="label">[R6]</td><td><em>(<a class="fn-backref" href="#id11">1</a>, <a class="fn-backref" href="#id13">2</a>)</em> J.R.M. Hosking, &#8220;The Multivariate Portmanteau Statistic&#8221;, 1980, J. Am. Statist. Assoc.</td></tr>
 </tbody>
 </table>
 </dd></dl>
@@ -2345,7 +2401,7 @@ describe the data.</p>
 <tt class="descclassname">scot.var.</tt><tt class="descname">test_whiteness</tt><big>(</big><em>data</em>, <em>h</em>, <em>p=0</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.var.test_whiteness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if signals are white (serially uncorrelated up to a lag of h).</p>
 <p>This function calculates the Li-McLeod as Portmanteau test statistic Q to
-test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r9" id="id19">[R9]</a>.
+test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r7" id="id14">[R7]</a>.
 Surrogate data for H0 is created by sampling from random permutations of
 the residuals.</p>
 <p>Usually the returned p-value is compared against a pre-defined type 1 error
@@ -2395,33 +2451,33 @@ describe the data.</p>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>According to <a class="reference internal" href="#r10" id="id20">[R10]</a> h must satisfy h = O(n^0.5), where n is the length (time samples) of the residuals.</p>
+<p>According to <a class="reference internal" href="#r8" id="id15">[R8]</a> h must satisfy h = O(n^0.5), where n is the length (time samples) of the residuals.</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r9" rules="none">
+<table class="docutils citation" frame="void" id="r7" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R9]</td><td><em>(<a class="fn-backref" href="#id19">1</a>, <a class="fn-backref" href="#id21">2</a>)</em> <ol class="last upperalpha simple" start="8">
+<tr><td class="label">[R7]</td><td><em>(<a class="fn-backref" href="#id14">1</a>, <a class="fn-backref" href="#id16">2</a>)</em> <ol class="last upperalpha simple" start="8">
 <li>Lütkepohl, &#8220;New Introduction to Multiple Time Series Analysis&#8221;, 2005, Springer, Berlin, Germany</li>
 </ol>
 </td></tr>
 </tbody>
 </table>
-<table class="docutils citation" frame="void" id="r10" rules="none">
+<table class="docutils citation" frame="void" id="r8" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R10]</td><td><em>(<a class="fn-backref" href="#id20">1</a>, <a class="fn-backref" href="#id22">2</a>)</em> J.R.M. Hosking, &#8220;The Multivariate Portmanteau Statistic&#8221;, 1980, J. Am. Statist. Assoc.</td></tr>
+<tr><td class="label">[R8]</td><td><em>(<a class="fn-backref" href="#id15">1</a>, <a class="fn-backref" href="#id17">2</a>)</em> J.R.M. Hosking, &#8220;The Multivariate Portmanteau Statistic&#8221;, 1980, J. Am. Statist. Assoc.</td></tr>
 </tbody>
 </table>
 </dd></dl>
 
 </div>
 <div class="section" id="module-scot.varica">
-<span id="varica-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">varica</span></tt> Module<a class="headerlink" href="#module-scot.varica" title="Permalink to this headline">¶</a></h2>
+<span id="scot-varica-module"></span><h2>scot.varica module<a class="headerlink" href="#module-scot.varica" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="scot.varica.cspvarica">
 <tt class="descclassname">scot.varica.</tt><tt class="descname">cspvarica</tt><big>(</big><em>x</em>, <em>var</em>, <em>cl</em>, <em>reducedim=inf</em>, <em>optimize_var=False</em>, <em>backend=None</em>, <em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.varica.cspvarica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs joint VAR model fitting and ICA source separation.</p>
-<p>This function implements the CSPVARICA procedure <a class="reference internal" href="#r11" id="id23">[R11]</a>.</p>
+<p>This function implements the CSPVARICA procedure <a class="reference internal" href="#r9" id="id18">[R9]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2429,6 +2485,10 @@ describe the data.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
 <blockquote>
 <div><p>data set</p>
+</div></blockquote>
+<p><strong>var</strong> : <a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object</p>
+<blockquote>
+<div><p>Vector autoregressive model (VAR) object that is used for model fitting.</p>
 </div></blockquote>
 <p><strong>cl</strong> : list of valid dict keys</p>
 <blockquote>
@@ -2450,8 +2510,8 @@ describe the data.</p>
 <blockquote>
 <div><p>Determines how to calculate the residuals for source decomposition.
 &#8216;ensemble&#8217; (default) fits one model to the whole data set,
-&#8216;class&#8217; fits a different model for each class, and
-&#8216;trial&#8217; fits a different model for each individual trial.</p>
+&#8216;class&#8217; fits a new model for each class, and
+&#8216;trial&#8217; fits a new model for each individual trial.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2499,10 +2559,10 @@ describe the data.</p>
 3. Decomposing the VAR model residuals with ICA
 4. Correcting the VAR coefficients</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r11" rules="none">
+<table class="docutils citation" frame="void" id="r9" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R11]</td><td><em>(<a class="fn-backref" href="#id23">1</a>, <a class="fn-backref" href="#id24">2</a>)</em> <ol class="last upperalpha simple" start="13">
+<tr><td class="label">[R9]</td><td><em>(<a class="fn-backref" href="#id18">1</a>, <a class="fn-backref" href="#id19">2</a>)</em> <ol class="last upperalpha simple" start="13">
 <li>Billinger et al. &#8220;SCoT: A Python Toolbox for EEG Source Connectivity&#8221;, Frontiers in Neuroinformatics, 2014</li>
 </ol>
 </td></tr>
@@ -2514,7 +2574,7 @@ describe the data.</p>
 <dt id="scot.varica.mvarica">
 <tt class="descclassname">scot.varica.</tt><tt class="descname">mvarica</tt><big>(</big><em>x</em>, <em>var</em>, <em>cl=None</em>, <em>reducedim=0.99</em>, <em>optimize_var=False</em>, <em>backend=None</em>, <em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.varica.mvarica" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs joint VAR model fitting and ICA source separation.</p>
-<p>This function implements the MVARICA procedure <a class="reference internal" href="#r12" id="id25">[R12]</a>.</p>
+<p>This function implements the MVARICA procedure <a class="reference internal" href="#r10" id="id20">[R10]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -2522,6 +2582,10 @@ describe the data.</p>
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
 <blockquote>
 <div><p>data set</p>
+</div></blockquote>
+<p><strong>var</strong> : <a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object</p>
+<blockquote>
+<div><p>Vector autoregressive model (VAR) object that is used for model fitting.</p>
 </div></blockquote>
 <p><strong>cl</strong> : list of valid dict keys, optional</p>
 <blockquote>
@@ -2546,8 +2610,8 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 <blockquote>
 <div><p>Determines how to calculate the residuals for source decomposition.
 &#8216;ensemble&#8217; (default) fits one model to the whole data set,
-&#8216;class&#8217; fits a different model for each class, and
-&#8216;trial&#8217; fits a different model for each individual trial.</p>
+&#8216;class&#8217; fits a new model for each class, and
+&#8216;trial&#8217; fits a new model for each individual trial.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2595,10 +2659,10 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 3. Decomposing the VAR model residuals with ICA
 4. Correcting the VAR coefficients</p>
 <p class="rubric">References</p>
-<table class="docutils citation" frame="void" id="r12" rules="none">
+<table class="docutils citation" frame="void" id="r10" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
-<tr><td class="label">[R12]</td><td><em>(<a class="fn-backref" href="#id25">1</a>, <a class="fn-backref" href="#id26">2</a>)</em> <ol class="last upperalpha simple" start="7">
+<tr><td class="label">[R10]</td><td><em>(<a class="fn-backref" href="#id20">1</a>, <a class="fn-backref" href="#id21">2</a>)</em> <ol class="last upperalpha simple" start="7">
 <li>Gomez-Herrero et al. &#8220;Measuring directional coupling between EEG sources&#8221;, NeuroImage, 2008</li>
 </ol>
 </td></tr>
@@ -2608,7 +2672,7 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 
 </div>
 <div class="section" id="module-scot.xvschema">
-<span id="xvschema-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">xvschema</span></tt> Module<a class="headerlink" href="#module-scot.xvschema" title="Permalink to this headline">¶</a></h2>
+<span id="scot-xvschema-module"></span><h2>scot.xvschema module<a class="headerlink" href="#module-scot.xvschema" title="Permalink to this headline">¶</a></h2>
 <p>Cross-validation schemas</p>
 <dl class="function">
 <dt id="scot.xvschema.multitrial">
@@ -2677,27 +2741,925 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="scot.backend.html">backend Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#id1"><tt class="docutils literal"><span class="pre">backend</span></tt> Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.builtin"><tt class="docutils literal"><span class="pre">builtin</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn"><tt class="docutils literal"><span class="pre">sklearn</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn_utils"><tt class="docutils literal"><span class="pre">sklearn_utils</span></tt> Module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="scot.builtin.html">builtin Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
-</ul>
-</li>
-</ul>
+<div class="section" id="module-scot">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scot" title="Permalink to this headline">¶</a></h2>
+<p>SCoT: The Source Connectivity Toolbox</p>
+<dl class="class">
+<dt id="scot.Workspace">
+<em class="property">class </em><tt class="descclassname">scot.</tt><tt class="descname">Workspace</tt><big>(</big><em>var</em>, <em>locations=None</em>, <em>reducedim=0.99</em>, <em>nfft=512</em>, <em>fs=2</em>, <em>backend=None</em><big>)</big><a class="headerlink" href="#scot.Workspace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>SCoT Workspace</p>
+<p>This class provides high-level functionality for source identification, connectivity estimation, and visualization.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : {<a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object, dict}</p>
+<blockquote>
+<div><p>Vector autoregressive model (VAR) object that is used for model fitting.
+This can also be a dictionary that is passed as <cite>**kwargs</cite> to backend[&#8216;var&#8217;]() in order to
+construct a new VAR model object.</p>
+</div></blockquote>
+<p><strong>locations</strong> : array_like, optional</p>
+<blockquote>
+<div><p>3D Electrode locations. Each row holds the x, y, and z coordinates of an electrode.</p>
+</div></blockquote>
+<p><strong>reducedim</strong> : {int, float, &#8216;no_pca&#8217;}, optional</p>
+<blockquote>
+<div><p>A number of less than 1 in interpreted as the fraction of variance that should remain in the data. All
+components that describe in total less than <cite>1-reducedim</cite> of the variance are removed by the PCA step.
+An integer numer of 1 or greater is interpreted as the number of components to keep after applying the PCA.
+If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
+</div></blockquote>
+<p><strong>nfft</strong> : int, optional</p>
+<blockquote>
+<div><p>Number of frequency bins for connectivity estimation.</p>
+</div></blockquote>
+<p><strong>backend</strong> : dict-like, optional</p>
+<blockquote class="last">
+<div><p>Specify backend to use. When set to None the backend configured in config.backend is used.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="8%" />
+<col width="92%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><cite>unmixing_</cite></td>
+<td>(array) Estimated unmixing matrix.</td>
+</tr>
+<tr class="row-even"><td><cite>mixing_</cite></td>
+<td>(array) Estimated mixing matrix.</td>
+</tr>
+<tr class="row-odd"><td><cite>plot_diagonal</cite></td>
+<td>(str) Configures what is plotted in the diagonal subplots. <strong>&#8216;topo&#8217;</strong> (default) plots topoplots on the diagonal, <strong>&#8216;S&#8217;</strong> plots the spectral density of each component, and <strong>&#8216;fill&#8217;</strong> plots connectivity on the diagonal.</td>
+</tr>
+<tr class="row-even"><td><cite>plot_outside_topo</cite></td>
+<td>(bool) Whether to place topoplots in the left column and top row.</td>
+</tr>
+<tr class="row-odd"><td><cite>plot_f_range</cite></td>
+<td>((int, int)) Lower and upper frequency limits for plotting. Defaults to [0, fs/2].</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="scot.Workspace.compare_conditions">
+<tt class="descname">compare_conditions</tt><big>(</big><em>labels1</em>, <em>labels2</em>, <em>measure_name</em>, <em>alpha=0.01</em>, <em>repeats=100</em>, <em>num_samples=None</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.Workspace.compare_conditions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for significant difference in connectivity of two sets of class labels.</p>
+<p>Connectivity estimates are obtained by bootstrapping. Correction for multiple testing is performed by
+controlling the false discovery rate (FDR).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>labels1, labels2</strong> : list of class labels</p>
+<blockquote>
+<div><p>The two sets of class labels to compare. Each set may contain more than one label.</p>
+</div></blockquote>
+<p><strong>measure_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the connectivity measure to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>alpha</strong> : float, optional</p>
+<blockquote>
+<div><p>Maximum allowed FDR. The ratio of falsely detected significant differences is guaranteed to be less than
+<cite>alpha</cite>.</p>
+</div></blockquote>
+<p><strong>repeats</strong> : int, optional</p>
+<blockquote>
+<div><p>How many bootstrap estimates to take.</p>
+</div></blockquote>
+<p><strong>num_samples</strong> : int, optional</p>
+<blockquote>
+<div><p>How many samples to take for each bootstrap estimates. Defaults to the same number of trials as present in
+the data.</p>
+</div></blockquote>
+<p><strong>plot</strong> : {False, None, Figure object}, optional</p>
+<blockquote>
+<div><p>Whether and where to plot the connectivity. If set to <strong>False</strong>, nothing is plotted. Otherwise set to the
+Figure object. If set to <strong>None</strong>, a new figure is created.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>p</strong> : array, shape = [n_channels, n_channels, nfft]</p>
+<blockquote>
+<div><p>Uncorrected p-values.</p>
+</div></blockquote>
+<p><strong>s</strong> : array, dtype=bool, shape = [n_channels, n_channels, nfft]</p>
+<blockquote>
+<div><p>FDR corrected significance. True means the difference is significant in this location.</p>
+</div></blockquote>
+<p><strong>fig</strong> : Figure object, optional</p>
+<blockquote class="last">
+<div><p>Instance of the figure in which was plotted. This is only returned if <cite>plot</cite> is not <strong>False</strong>.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.do_cspvarica">
+<tt class="descname">do_cspvarica</tt><big>(</big><em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.Workspace.do_cspvarica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform CSPVARICA</p>
+<p>Perform CSPVARICA source decomposition and VAR model fitting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>varfit</strong> : string</p>
+<blockquote>
+<div><p>Determines how to calculate the residuals for source decomposition.
+&#8216;ensemble&#8217; (default) fits one model to the whole data set,
+&#8216;class&#8217; fits a different model for each class, and
+&#8216;trial&#8217; fits a different model for each individual trial.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : class</p>
+<blockquote>
+<div><p>see <tt class="xref py py-func docutils literal"><span class="pre">cspvarica()</span></tt> for a description of the return value.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-func docutils literal"><span class="pre">cspvarica()</span></tt></dt>
+<dd>CSPVARICA implementation</dd>
+</dl>
 </div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.do_ica">
+<tt class="descname">do_ica</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.do_ica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform ICA</p>
+<p>Perform plain ICA source decomposition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : class</p>
+<blockquote>
+<div><p>see <a class="reference internal" href="#module-scot.plainica" title="scot.plainica"><tt class="xref py py-func docutils literal"><span class="pre">plainica()</span></tt></a> for a description of the return value.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.do_mvarica">
+<tt class="descname">do_mvarica</tt><big>(</big><em>varfit='ensemble'</em><big>)</big><a class="headerlink" href="#scot.Workspace.do_mvarica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform MVARICA</p>
+<p>Perform MVARICA source decomposition and VAR model fitting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>varfit</strong> : string</p>
+<blockquote>
+<div><p>Determines how to calculate the residuals for source decomposition.
+&#8216;ensemble&#8217; (default) fits one model to the whole data set,
+&#8216;class&#8217; fits a different model for each class, and
+&#8216;trial&#8217; fits a different model for each individual trial.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : class</p>
+<blockquote>
+<div><p>see <tt class="xref py py-func docutils literal"><span class="pre">mvarica()</span></tt> for a description of the return value.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain data.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><tt class="xref py py-func docutils literal"><span class="pre">mvarica()</span></tt></dt>
+<dd>MVARICA implementation</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.fit_var">
+<tt class="descname">fit_var</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.fit_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit a var model to the source activations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain source activations.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.get_bootstrap_connectivity">
+<tt class="descname">get_bootstrap_connectivity</tt><big>(</big><em>measure_names</em>, <em>repeats=100</em>, <em>num_samples=None</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.Workspace.get_bootstrap_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate bootstrap estimates of spectral connectivity measures.</p>
+<p>Bootstrapping is performed on trial level.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>measure_names</strong> : {str, list of str}</p>
+<blockquote>
+<div><p>Name(s) of the connectivity measure(s) to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>repeats</strong> : int, optional</p>
+<blockquote>
+<div><p>How many bootstrap estimates to take.</p>
+</div></blockquote>
+<p><strong>num_samples</strong> : int, optional</p>
+<blockquote>
+<div><p>How many samples to take for each bootstrap estimates. Defaults to the same number of trials as present in
+the data.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>measure</strong> : array, shape = [<cite>repeats</cite>, n_channels, n_channels, nfft]</p>
+<blockquote class="last">
+<div><p>Values of the connectivity measure for each bootstrap estimate. If <cite>measure_names</cite> is a list of strings a
+dictionary is returned, where each key is the name of the measure, and the corresponding values are
+ndarrays of shape [<cite>repeats</cite>, n_channels, n_channels, nfft].</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#scot.connectivity_statistics.bootstrap_connectivity" title="scot.connectivity_statistics.bootstrap_connectivity"><tt class="xref py py-func docutils literal"><span class="pre">scot.connectivity_statistics.bootstrap_connectivity()</span></tt></a></dt>
+<dd>Calculates bootstrap connectivity</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.get_connectivity">
+<tt class="descname">get_connectivity</tt><big>(</big><em>measure_name</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.Workspace.get_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate spectral connectivity measure.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>measure_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the connectivity measure to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>plot</strong> : {False, None, Figure object}, optional</p>
+<blockquote>
+<div><p>Whether and where to plot the connectivity. If set to <strong>False</strong>, nothing is plotted. Otherwise set to the
+Figure object. If set to <strong>None</strong>, a new figure is created.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>measure</strong> : array, shape = [n_channels, n_channels, nfft]</p>
+<blockquote>
+<div><p>Values of the connectivity measure.</p>
+</div></blockquote>
+<p><strong>fig</strong> : Figure object</p>
+<blockquote>
+<div><p>Instance of the figure in which was plotted. This is only returned if <cite>plot</cite> is not <strong>False</strong>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain a fitted VAR model.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.get_surrogate_connectivity">
+<tt class="descname">get_surrogate_connectivity</tt><big>(</big><em>measure_name</em>, <em>repeats=100</em>, <em>plot=False</em><big>)</big><a class="headerlink" href="#scot.Workspace.get_surrogate_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate spectral connectivity measure under the assumption of no actual connectivity.</p>
+<p>Repeatedly samples connectivity from phase-randomized data. This provides estimates of the connectivity
+distribution if there was no causal structure in the data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>measure_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the connectivity measure to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>repeats</strong> : int, optional</p>
+<blockquote>
+<div><p>How many surrogate samples to take.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>measure</strong> : array, shape = [<cite>repeats</cite>, n_channels, n_channels, nfft]</p>
+<blockquote class="last">
+<div><p>Values of the connectivity measure for each surrogate.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<dl class="last docutils">
+<dt><a class="reference internal" href="#scot.connectivity_statistics.surrogate_connectivity" title="scot.connectivity_statistics.surrogate_connectivity"><tt class="xref py py-func docutils literal"><span class="pre">scot.connectivity_statistics.surrogate_connectivity()</span></tt></a></dt>
+<dd>Calculates surrogate connectivity</dd>
+</dl>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.get_tf_connectivity">
+<tt class="descname">get_tf_connectivity</tt><big>(</big><em>measure_name</em>, <em>winlen</em>, <em>winstep</em>, <em>plot=False</em>, <em>crange='default'</em><big>)</big><a class="headerlink" href="#scot.Workspace.get_tf_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate estimate of time-varying connectivity.</p>
+<p>Connectivity is estimated in a sliding window approach on the current data set. The window is stepped
+<cite>n_steps</cite> = (<cite>n_samples</cite> - <cite>winlen</cite>) // <cite>winstep</cite> times.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>measure_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the connectivity measure to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>winlen</strong> : int</p>
+<blockquote>
+<div><p>Length of the sliding window (in samples).</p>
+</div></blockquote>
+<p><strong>winstep</strong> : int</p>
+<blockquote>
+<div><p>Step size for sliding window (in samples).</p>
+</div></blockquote>
+<p><strong>plot</strong> : {False, None, Figure object}, optional</p>
+<blockquote>
+<div><p>Whether and where to plot the connectivity. If set to <strong>False</strong>, nothing is plotted. Otherwise set to the
+Figure object. If set to <strong>None</strong>, a new figure is created.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>result</strong> : array, shape = [n_channels, n_channels, nfft, n_steps]</p>
+<blockquote>
+<div><p>Values of the connectivity measure.</p>
+</div></blockquote>
+<p><strong>fig</strong> : Figure object, optional</p>
+<blockquote>
+<div><p>Instance of the figure in which was plotted. This is only returned if <cite>plot</cite> is not <strong>False</strong>.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain a fitted VAR model.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.optimize_var">
+<tt class="descname">optimize_var</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.optimize_var" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimize the var model&#8217;s hyperparameters (such as regularization).</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain source activations.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.plot_connectivity_surrogate">
+<tt class="descname">plot_connectivity_surrogate</tt><big>(</big><em>measure_name</em>, <em>repeats=100</em>, <em>fig=None</em><big>)</big><a class="headerlink" href="#scot.Workspace.plot_connectivity_surrogate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot spectral connectivity measure under the assumption of no actual connectivity.</p>
+<p>Repeatedly samples connectivity from phase-randomized data. This provides estimates of the connectivity
+distribution if there was no causal structure in the data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>measure_name</strong> : str</p>
+<blockquote>
+<div><p>Name of the connectivity measure to calculate. See <a class="reference internal" href="#scot.Connectivity" title="scot.Connectivity"><tt class="xref py py-class docutils literal"><span class="pre">Connectivity</span></tt></a> for supported measures.</p>
+</div></blockquote>
+<p><strong>repeats</strong> : int, optional</p>
+<blockquote>
+<div><p>How many surrogate samples to take.</p>
+</div></blockquote>
+<p><strong>fig</strong> : {None, Figure object}, optional</p>
+<blockquote>
+<div><p>Where to plot the topos. f set to <strong>None</strong>, a new figure is created. Otherwise plot into the provided
+figure object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fig</strong> : Figure object</p>
+<blockquote class="last">
+<div><p>Instance of the figure in which was plotted.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.plot_connectivity_topos">
+<tt class="descname">plot_connectivity_topos</tt><big>(</big><em>fig=None</em><big>)</big><a class="headerlink" href="#scot.Workspace.plot_connectivity_topos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot scalp projections of the sources.</p>
+<p>This function only plots the topos. Use in combination with connectivity plotting.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>fig</strong> : {None, Figure object}, optional</p>
+<blockquote>
+<div><p>Where to plot the topos. f set to <strong>None</strong>, a new figure is created. Otherwise plot into the provided
+figure object.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>fig</strong> : Figure object</p>
+<blockquote class="last">
+<div><p>Instance of the figure in which was plotted.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.plot_source_topos">
+<tt class="descname">plot_source_topos</tt><big>(</big><em>common_scale=None</em><big>)</big><a class="headerlink" href="#scot.Workspace.plot_source_topos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Plot topography of the Source decomposition.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>common_scale</strong> : float, optional</p>
+<blockquote class="last">
+<div><p>If set to None, each topoplot&#8217;s color axis is scaled individually. Otherwise specifies the percentile
+(1-99) of values in all plot. This value is taken as the maximum color scale.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.remove_sources">
+<tt class="descname">remove_sources</tt><big>(</big><em>sources</em><big>)</big><a class="headerlink" href="#scot.Workspace.remove_sources" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove sources from the decomposition.</p>
+<p>This function removes sources from the decomposition. Doing so invalidates currently fitted VAR models and
+connectivity estimates.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>sources</strong> : {slice, int, array of ints}</p>
+<blockquote>
+<div><p>Indices of components to remove.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Raises:</th><td class="field-body"><p class="first"><strong>RuntimeError</strong></p>
+<blockquote class="last">
+<div><p>If the <a class="reference internal" href="#scot.Workspace" title="scot.Workspace"><tt class="xref py py-class docutils literal"><span class="pre">Workspace</span></tt></a> instance does not contain a source decomposition.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.set_data">
+<tt class="descname">set_data</tt><big>(</big><em>data</em>, <em>cl=None</em>, <em>time_offset=0</em><big>)</big><a class="headerlink" href="#scot.Workspace.set_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assign data to the workspace.</p>
+<p>This function assigns a new data set to the workspace. Doing so invalidates currently fitted VAR models,
+connectivity estimates, and activations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>cl</strong> : list of valid dict keys</p>
+<blockquote>
+<div><p>Class labels associated with each trial.</p>
+</div></blockquote>
+<p><strong>time_offset</strong> : float, optional</p>
+<blockquote class="last">
+<div><p>Trial starting time; used for labelling the x-axis of time/frequency plots.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.set_locations">
+<tt class="descname">set_locations</tt><big>(</big><em>locations</em><big>)</big><a class="headerlink" href="#scot.Workspace.set_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set sensor locations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>locations</strong> : array_like</p>
+<blockquote class="last">
+<div><p>3D Electrode locations. Each row holds the x, y, and z coordinates of an electrode.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.set_premixing">
+<tt class="descname">set_premixing</tt><big>(</big><em>premixing</em><big>)</big><a class="headerlink" href="#scot.Workspace.set_premixing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set premixing matrix.</p>
+<p>The premixing matrix maps data to physical channels. If the data is actual channel data,
+the premixing matrix can be set to identity. Use this functionality if the data was pre-
+transformed with e.g. PCA.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>premixing</strong> : array_like, shape = [n_signals, n_channels]</p>
+<blockquote class="last">
+<div><p>Matrix that maps data signals to physical channels.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Workspace.set_used_labels">
+<tt class="descname">set_used_labels</tt><big>(</big><em>labels</em><big>)</big><a class="headerlink" href="#scot.Workspace.set_used_labels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Specify which trials to use in subsequent analysis steps.</p>
+<p>This function masks trials based on their class labels.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>labels</strong> : list of class labels</p>
+<blockquote class="last">
+<div><p>Marks all trials that have a label that is in the <cite>labels</cite> list for further processing.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="staticmethod">
+<dt id="scot.Workspace.show_plots">
+<em class="property">static </em><tt class="descname">show_plots</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.show_plots" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show current plots.</p>
+<p>This is only a convenience wrapper around <tt class="xref py py-func docutils literal"><span class="pre">matplotlib.pyplot.show_plots()</span></tt>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="scot.Connectivity">
+<em class="property">class </em><tt class="descclassname">scot.</tt><tt class="descname">Connectivity</tt><big>(</big><em>b</em>, <em>c=None</em>, <em>nfft=512</em><big>)</big><a class="headerlink" href="#scot.Connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<p>Calculation of connectivity measures</p>
+<p>This class calculates various spectral connectivity measures from a vector autoregressive (VAR) model.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>b</strong> : ndarray, shape = [n_channels, n_channels*model_order]</p>
+<blockquote>
+<div><p>VAR model coefficients. See <a class="reference internal" href="../../var.html#var-model-coefficients"><em>On the arrangement of VAR model coefficients</em></a> for details about the arrangement of coefficients.</p>
+</div></blockquote>
+<p><strong>c</strong> : ndarray, shape = [n_channels, n_channels], optional</p>
+<blockquote>
+<div><p>Covariance matrix of the driving noise process. Identity matrix is used if set to None.</p>
+</div></blockquote>
+<p><strong>nfft</strong> : int, optional</p>
+<blockquote class="last">
+<div><p>Number of frequency bins to calculate. Note that these points cover the range between 0 and half the
+sampling rate.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Connectivity measures are returned by member functions that take no arguments and return a matrix of
+shape [m,m,nfft]. The first dimension is the sink, the second dimension is the source, and the third dimension is
+the frequency.</p>
+<p>A summary of most supported measures can be found in <a class="reference internal" href="#r11" id="id22">[R11]</a>.</p>
+<p class="rubric">References</p>
+<table class="docutils citation" frame="void" id="r11" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[R11]</td><td><em>(<a class="fn-backref" href="#id22">1</a>, <a class="fn-backref" href="#id23">2</a>)</em> M. Billinger et al, “Single-trial connectivity estimation for classification of motor imagery data”,
+<em>J. Neural Eng.</em> 10, 2013.</td></tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="15%" />
+<col width="85%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.A" title="scot.Connectivity.A"><tt class="xref py py-func docutils literal"><span class="pre">A()</span></tt></a></td>
+<td>Spectral representation of the VAR coefficients</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.H" title="scot.Connectivity.H"><tt class="xref py py-func docutils literal"><span class="pre">H()</span></tt></a></td>
+<td>Transfer function that turns the innovation process into the VAR process</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.S" title="scot.Connectivity.S"><tt class="xref py py-func docutils literal"><span class="pre">S()</span></tt></a></td>
+<td>Cross spectral density</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.logS" title="scot.Connectivity.logS"><tt class="xref py py-func docutils literal"><span class="pre">logS()</span></tt></a></td>
+<td>Logarithm of the cross spectral density (S), for convenience.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.G" title="scot.Connectivity.G"><tt class="xref py py-func docutils literal"><span class="pre">G()</span></tt></a></td>
+<td>Inverse cross spectral density</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.logG" title="scot.Connectivity.logG"><tt class="xref py py-func docutils literal"><span class="pre">logG()</span></tt></a></td>
+<td>Logarithm of the inverse cross spectral density</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.PHI" title="scot.Connectivity.PHI"><tt class="xref py py-func docutils literal"><span class="pre">PHI()</span></tt></a></td>
+<td>Phase angle</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.COH" title="scot.Connectivity.COH"><tt class="xref py py-func docutils literal"><span class="pre">COH()</span></tt></a></td>
+<td>Coherence</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.pCOH" title="scot.Connectivity.pCOH"><tt class="xref py py-func docutils literal"><span class="pre">pCOH()</span></tt></a></td>
+<td>Partial coherence</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.PDC" title="scot.Connectivity.PDC"><tt class="xref py py-func docutils literal"><span class="pre">PDC()</span></tt></a></td>
+<td>Partial directed coherence</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.ffPDC" title="scot.Connectivity.ffPDC"><tt class="xref py py-func docutils literal"><span class="pre">ffPDC()</span></tt></a></td>
+<td>Full frequency partial directed coherence</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.PDCF" title="scot.Connectivity.PDCF"><tt class="xref py py-func docutils literal"><span class="pre">PDCF()</span></tt></a></td>
+<td>PDC factor</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.GPDC" title="scot.Connectivity.GPDC"><tt class="xref py py-func docutils literal"><span class="pre">GPDC()</span></tt></a></td>
+<td>Generalized partial directed coherence</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.DTF" title="scot.Connectivity.DTF"><tt class="xref py py-func docutils literal"><span class="pre">DTF()</span></tt></a></td>
+<td>Directed transfer function</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.ffDTF" title="scot.Connectivity.ffDTF"><tt class="xref py py-func docutils literal"><span class="pre">ffDTF()</span></tt></a></td>
+<td>Full frequency directed transfer function</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#scot.Connectivity.dDTF" title="scot.Connectivity.dDTF"><tt class="xref py py-func docutils literal"><span class="pre">dDTF()</span></tt></a></td>
+<td>Direct directed transfer function</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#scot.Connectivity.GDTF" title="scot.Connectivity.GDTF"><tt class="xref py py-func docutils literal"><span class="pre">GDTF()</span></tt></a></td>
+<td>Generalized directed transfer function</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="scot.Connectivity.A">
+<tt class="descname">A</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Spectral VAR coefficients</p>
+<div class="math">
+\[\mathbf{A}(f) = \mathbf{I} - \sum_{k=1}^{p} \mathbf{a}^{(k)} \mathrm{e}^{-2\pi f}\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.COH">
+<tt class="descname">COH</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.COH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Coherence</p>
+<div class="math">
+\[\mathrm{COH}_{ij}(f) = \frac{S_{ij}(f)}{\sqrt{S_{ii}(f) S_{jj}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>P. L. Nunez, R. Srinivasan, A. F. Westdorp, R. S. Wijesinghe, D. M. Tucker,
+R. B. Silverstein, P. J. Cadusch. EEG coherency: I: statistics, reference electrode,
+volume conduction, Laplacians, cortical imaging, and interpretation at multiple scales.
+Electroenceph. Clin. Neurophysiol. 103(5): 499-515, 1997.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.Cinv">
+<tt class="descname">Cinv</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.Cinv" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse of the noise covariance</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.DTF">
+<tt class="descname">DTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.DTF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Directed transfer function</p>
+<div class="math">
+\[\mathrm{DTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{H_{i:}(f) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>M. J. Kaminski, K. J. Blinowska. A new method of the description of the information flow
+in the brain structures. Biol. Cybernetics 65(3): 203-210, 1991.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.G">
+<tt class="descname">G</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.G" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inverse cross spectral density</p>
+<div class="math">
+\[\mathbf{G}(f) = \mathbf{A}(f) \mathbf{C}^{-1} \mathbf{A}'(f)\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.GDTF">
+<tt class="descname">GDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.GDTF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generalized directed transfer function</p>
+<div class="math">
+\[\mathrm{GPDC}_{ij}(f) = \frac{\sigma_j |H_{ij}(f)|}
+{\sqrt{H_{i:}(f) \mathrm{diag}(\mathbf{C}) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. Faes, S. Erla, G. Nollo. Measuring Connectivity in Linear Multivariate Processes:
+Definitions, Interpretation, and Practical Analysis. Comput. Math. Meth. Med. 2012:140513, 2012.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.GPDC">
+<tt class="descname">GPDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.GPDC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generalized partial directed coherence</p>
+<div class="math">
+\[\mathrm{GPDC}_{ij}(f) = \frac{|A_{ij}(f)|}
+{\sigma_i \sqrt{A_{:j}'(f) \mathrm{diag}(\mathbf{C})^{-1} A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. Faes, S. Erla, G. Nollo. Measuring Connectivity in Linear Multivariate Processes:
+Definitions, Interpretation, and Practical Analysis. Comput. Math. Meth. Med. 2012:140513, 2012.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.H">
+<tt class="descname">H</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.H" title="Permalink to this definition">¶</a></dt>
+<dd><p>VAR transfer function</p>
+<div class="math">
+\[\mathbf{H}(f) = \mathbf{A}(f)^{-1}\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.PDC">
+<tt class="descname">PDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.PDC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partial directed coherence</p>
+<div class="math">
+\[\mathrm{PDC}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. A. Baccalá, K. Sameshima. Partial directed coherence: a new concept in neural structure
+determination. Biol. Cybernetics 84(6):463-474, 2001.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.PDCF">
+<tt class="descname">PDCF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.PDCF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partial directed coherence factor</p>
+<div class="math">
+\[\mathrm{PDCF}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{A_{:j}'(f) \mathbf{C}^{-1} A_{:j}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>L. A. Baccalá, K. Sameshima. Partial directed coherence: a new concept in neural structure
+determination. Biol. Cybernetics 84(6):463-474, 2001.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.PHI">
+<tt class="descname">PHI</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.PHI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Phase angle</p>
+<p>Returns the phase angle of complex <a class="reference internal" href="#scot.Connectivity.S" title="scot.Connectivity.S"><tt class="xref py py-func docutils literal"><span class="pre">S()</span></tt></a>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.S">
+<tt class="descname">S</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.S" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cross spectral density</p>
+<div class="math">
+\[\mathbf{S}(f) = \mathbf{H}(f) \mathbf{C} \mathbf{H}'(f)\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.absS">
+<tt class="descname">absS</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.absS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Absolute cross spectral density</p>
+<div class="math">
+\[\mathrm{absS}(f) = | \mathbf{S}(f) |\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.dDTF">
+<tt class="descname">dDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.dDTF" title="Permalink to this definition">¶</a></dt>
+<dd><p>&#8221; Direct&#8221; directed transfer function</p>
+<div class="math">
+\[\mathrm{dDTF}_{ij}(f) = |\mathrm{pCOH}_{ij}(f)| \mathrm{ffDTF}_{ij}(f)\]</div>
+<p class="rubric">References</p>
+<p>A. Korzeniewska, M. Mańczak, M. Kaminski, K. J. Blinowska, S. Kasicki. Determination of
+information flow direction among brain structures by a modified directed transfer 
+function (dDTF) method. J. Neurosci. Meth. 125(1-2): 195-207, 2003.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.ffDTF">
+<tt class="descname">ffDTF</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.ffDTF" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full frequency directed transfer function</p>
+<div class="math">
+\[\mathrm{ffDTF}_{ij}(f) = \frac{H_{ij}(f)}{\sqrt{\sum_f H_{i:}(f) H_{i:}'(f)}}\]</div>
+<p class="rubric">References</p>
+<p>A. Korzeniewska, M. Mańczak, M. Kaminski, K. J. Blinowska, S. Kasicki. Determination of
+information flow direction among brain structures by a modified directed transfer 
+function (dDTF) method. J. Neurosci. Meth. 125(1-2): 195-207, 2003.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.ffPDC">
+<tt class="descname">ffPDC</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.ffPDC" title="Permalink to this definition">¶</a></dt>
+<dd><p>Full frequency partial directed coherence</p>
+<div class="math">
+\[\mathrm{ffPDC}_{ij}(f) = \frac{A_{ij}(f)}{\sqrt{\sum_f A_{:j}'(f) A_{:j}(f)}}\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.logG">
+<tt class="descname">logG</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.logG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logarithmic inverse cross spectral density</p>
+<div class="math">
+\[\mathrm{logG}(f) = \log | \mathbf{G}(f) |\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.logS">
+<tt class="descname">logS</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.logS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logarithmic cross spectral density</p>
+<div class="math">
+\[\mathrm{logS}(f) = \log | \mathbf{S}(f) |\]</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.Connectivity.pCOH">
+<tt class="descname">pCOH</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Connectivity.pCOH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Partial coherence</p>
+<div class="math">
+\[\mathrm{pCOH}_{ij}(f) = \frac{G_{ij}(f)}{\sqrt{G_{ii}(f) G_{jj}(f)}}\]</div>
+<p class="rubric">References</p>
+<p>P. J. Franaszczuk, K. J. Blinowska, M. Kowalczyk. The application of parametric multichannel
+spectral estimates in the study of electrical brain activity. Biol. Cybernetics 51(4): 239-247, 1985.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 </div>
 
@@ -2709,31 +3671,32 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">scot Package</a><ul>
-<li><a class="reference internal" href="#id1"><tt class="docutils literal"><span class="pre">scot</span></tt> Package</a></li>
-<li><a class="reference internal" href="#module-scot.config"><tt class="docutils literal"><span class="pre">config</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.connectivity"><tt class="docutils literal"><span class="pre">connectivity</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.connectivity_statistics"><tt class="docutils literal"><span class="pre">connectivity_statistics</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.datatools"><tt class="docutils literal"><span class="pre">datatools</span></tt> Module</a><ul>
+<li><a class="reference internal" href="#">scot package</a><ul>
+<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-scot.config">scot.config module</a></li>
+<li><a class="reference internal" href="#module-scot.connectivity">scot.connectivity module</a></li>
+<li><a class="reference internal" href="#module-scot.connectivity_statistics">scot.connectivity_statistics module</a></li>
+<li><a class="reference internal" href="#module-scot.datatools">scot.datatools module</a><ul>
 <li><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-scot.matfiles"><tt class="docutils literal"><span class="pre">matfiles</span></tt> Module</a><ul>
-<li><a class="reference internal" href="#id7">Summary</a></li>
+<li><a class="reference internal" href="#module-scot.matfiles">scot.matfiles module</a><ul>
+<li><a class="reference internal" href="#id6">Summary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-scot.ooapi"><tt class="docutils literal"><span class="pre">ooapi</span></tt> Module</a><ul>
-<li><a class="reference internal" href="#id8">Summary</a></li>
+<li><a class="reference internal" href="#module-scot.ooapi">scot.ooapi module</a><ul>
+<li><a class="reference internal" href="#id7">Summary</a></li>
 <li><a class="reference internal" href="#extended-summary">Extended Summary</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#module-scot.plainica"><tt class="docutils literal"><span class="pre">plainica</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.plotting"><tt class="docutils literal"><span class="pre">plotting</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.varica"><tt class="docutils literal"><span class="pre">varica</span></tt> Module</a></li>
-<li><a class="reference internal" href="#module-scot.xvschema"><tt class="docutils literal"><span class="pre">xvschema</span></tt> Module</a></li>
-<li><a class="reference internal" href="#subpackages">Subpackages</a></li>
+<li><a class="reference internal" href="#module-scot.plainica">scot.plainica module</a></li>
+<li><a class="reference internal" href="#module-scot.plotting">scot.plotting module</a></li>
+<li><a class="reference internal" href="#module-scot.utils">scot.utils module</a></li>
+<li><a class="reference internal" href="#module-scot.var">scot.var module</a></li>
+<li><a class="reference internal" href="#module-scot.varica">scot.varica module</a></li>
+<li><a class="reference internal" href="#module-scot.xvschema">scot.xvschema module</a></li>
+<li><a class="reference internal" href="#module-scot">Module contents</a></li>
 </ul>
 </li>
 </ul>

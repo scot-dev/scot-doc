@@ -13,3 +13,4 @@ test Examples
     :maxdepth: 1
 
     plot_test <plot_test.rst>
+    premixing <premixing.rst>
