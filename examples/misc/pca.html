@@ -76,9 +76,14 @@
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
-<span class="kn">from</span> <span class="nn">scot.builtin.var</span> <span class="kn">import</span> <span class="n">VAR</span>
-<span class="kn">from</span> <span class="nn">scot.builtin.pca</span> <span class="kn">import</span> <span class="n">pca</span>
+
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">scot</span> <span class="kn">import</span> <span class="n">pca</span>
+
+<span class="kn">from</span> <span class="nn">scot.var</span> <span class="kn">import</span> <span class="n">VAR</span>
+
+
 
 <span class="c"># Generate data from a VAR(1) process</span>
 <span class="n">model0</span> <span class="o">=</span> <span class="n">VAR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>

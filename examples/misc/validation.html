@@ -69,17 +69,22 @@
             
   <div class="section" id="misc-example-code-validation-py">
 <span id="misc-validation"></span><h1>misc example code: validation.py<a class="headerlink" href="#misc-example-code-validation-py" title="Permalink to this headline">¶</a></h1>
-<p>(<a class="reference external" href="../../scot_examples/misc/validation.py">Source code</a>)</p>
+<p>(<a class="reference external" href="../../scot_examples/misc/validation.py">Source code</a>, <a class="reference external" href="../../scot_examples/misc/validation.png">png</a>, <a class="reference external" href="../../scot_examples/misc/validation.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/validation.pdf">pdf</a>)</p>
+<div class="figure">
+<img alt="../../_images/validation.png" src="../../_images/validation.png" />
+</div>
 <div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This example shows how to decompose EEG signals into source activations with</span>
 <span class="sd">MVARICA, and visualize a connectivity.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">scot.backend.sklearn</span>     <span class="c"># use builtin (default) backend</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
+<span class="kn">import</span> <span class="nn">scot.backend_sklearn</span>  <span class="c"># use builtin (default) backend</span>
 <span class="kn">from</span> <span class="nn">scot.varica</span> <span class="kn">import</span> <span class="n">cspvarica</span>
 <span class="kn">from</span> <span class="nn">scot.datatools</span> <span class="kn">import</span> <span class="n">cut_segments</span>
 <span class="kn">import</span> <span class="nn">scot.plotting</span> <span class="kn">as</span> <span class="nn">splot</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+
 
 <span class="c"># The example data set contains a continuous 45 channel EEG recording of a motor</span>
 <span class="c"># imagery experiment. The data was preprocessed to reduce eye movement artifacts</span>

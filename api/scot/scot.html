@@ -26,7 +26,7 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
     <link rel="up" title="scot" href="modules.html" />
-    <link rel="next" title="backend Package" href="scot.backend.html" />
+    <link rel="next" title="scot.eegtopo package" href="scot.eegtopo.html" />
     <link rel="prev" title="scot" href="modules.html" /> 
   </head>
   <body>
@@ -45,7 +45,7 @@
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="scot.backend.html" title="backend Package"
+          <a href="scot.eegtopo.html" title="scot.eegtopo package"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="scot"
@@ -72,19 +72,15 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="scot.backend.html">backend Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#id1"><tt class="docutils literal"><span class="pre">backend</span></tt> Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.builtin"><tt class="docutils literal"><span class="pre">builtin</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn"><tt class="docutils literal"><span class="pre">sklearn</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.backend.html#module-scot.backend.sklearn_utils"><tt class="docutils literal"><span class="pre">sklearn_utils</span></tt> Module</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="scot.builtin.html">builtin Package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#id1"><tt class="docutils literal"><span class="pre">builtin</span></tt> Package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.binica"><tt class="docutils literal"><span class="pre">binica</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.pca"><tt class="docutils literal"><span class="pre">pca</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.utils"><tt class="docutils literal"><span class="pre">utils</span></tt> Module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="scot.builtin.html#module-scot.builtin.var"><tt class="docutils literal"><span class="pre">var</span></tt> Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scot.eegtopo.html">scot.eegtopo package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.eegpos3d">scot.eegtopo.eegpos3d module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.geo_euclidean">scot.eegtopo.geo_euclidean module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.geo_spherical">scot.eegtopo.geo_spherical module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.projections">scot.eegtopo.projections module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.tools">scot.eegtopo.tools module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.topoplot">scot.eegtopo.topoplot module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -92,6 +88,153 @@
 </div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-scot.backend_builtin">
+<span id="scot-backend-builtin-module"></span><h2>scot.backend_builtin module<a class="headerlink" href="#module-scot.backend_builtin" title="Permalink to this headline">¶</a></h2>
+<p>Use internally implemented functions as backend.</p>
+<dl class="function">
+<dt id="scot.backend_builtin.activate">
+<tt class="descclassname">scot.backend_builtin.</tt><tt class="descname">activate</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.backend_builtin.activate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_builtin.wrapper_binica">
+<tt class="descclassname">scot.backend_builtin.</tt><tt class="descname">wrapper_binica</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.backend_builtin.wrapper_binica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call binica for ICA calculation.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_builtin.wrapper_csp">
+<tt class="descclassname">scot.backend_builtin.</tt><tt class="descname">wrapper_csp</tt><big>(</big><em>x</em>, <em>cl</em>, <em>reducedim</em><big>)</big><a class="headerlink" href="#scot.backend_builtin.wrapper_csp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_builtin.wrapper_pca">
+<tt class="descclassname">scot.backend_builtin.</tt><tt class="descname">wrapper_pca</tt><big>(</big><em>x</em>, <em>reducedim</em><big>)</big><a class="headerlink" href="#scot.backend_builtin.wrapper_pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call SCoT&#8217;s PCA algorithm.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.backend_sklearn">
+<span id="scot-backend-sklearn-module"></span><h2>scot.backend_sklearn module<a class="headerlink" href="#module-scot.backend_sklearn" title="Permalink to this headline">¶</a></h2>
+<p>Use scikit-learn routines as backend.</p>
+<dl class="class">
+<dt id="scot.backend_sklearn.VAR">
+<em class="property">class </em><tt class="descclassname">scot.backend_sklearn.</tt><tt class="descname">VAR</tt><big>(</big><em>model_order</em>, <em>fitobj=None</em><big>)</big><a class="headerlink" href="#scot.backend_sklearn.VAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scot.varbase.VARBase" title="scot.varbase.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">scot.varbase.VARBase</span></tt></a></p>
+<p>Scikit-learn based implementation of VARBase.</p>
+<p>This class fits VAR models using various implementations of generalized linear model fitting available in scikit-learn.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model_order</strong> : int</p>
+<blockquote>
+<div><p>Autoregressive model order</p>
+</div></blockquote>
+<p><strong>fitobj</strong> : class, optional</p>
+<blockquote class="last">
+<div><p>Instance of a linear model implementation.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="scot.backend_sklearn.VAR.fit">
+<tt class="descname">fit</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.backend_sklearn.VAR.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit VAR model to data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.backend_sklearn.VAR" title="scot.backend_sklearn.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.backend_sklearn.VAR" title="scot.backend_sklearn.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_sklearn.activate">
+<tt class="descclassname">scot.backend_sklearn.</tt><tt class="descname">activate</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.backend_sklearn.activate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set backend attribute in the config module.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_sklearn.wrapper_fastica">
+<tt class="descclassname">scot.backend_sklearn.</tt><tt class="descname">wrapper_fastica</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.backend_sklearn.wrapper_fastica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call FastICA implementation from scikit-learn.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.backend_sklearn.wrapper_pca">
+<tt class="descclassname">scot.backend_sklearn.</tt><tt class="descname">wrapper_pca</tt><big>(</big><em>x</em>, <em>reducedim</em><big>)</big><a class="headerlink" href="#scot.backend_sklearn.wrapper_pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Call PCA implementation from scikit-learn.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.binica">
+<span id="scot-binica-module"></span><h2>scot.binica module<a class="headerlink" href="#module-scot.binica" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scot.binica.binica">
+<tt class="descclassname">scot.binica.</tt><tt class="descname">binica</tt><big>(</big><em>data</em>, <em>binary='/home/billinger/git-working/SCoT/scot/binica/ica_linux'</em><big>)</big><a class="headerlink" href="#scot.binica.binica" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simple wrapper for the BINICA binary.</p>
+<p>This function calculates the ICA transformation using the Infomax algorithm implemented in BINICA.</p>
+<dl class="docutils">
+<dt>BINICA is bundled with EEGLAB, or can be downloaded from here:</dt>
+<dd><a class="reference external" href="http://sccn.ucsd.edu/eeglab/binica/">http://sccn.ucsd.edu/eeglab/binica/</a></dd>
+</dl>
+<p>This function attempts to automatically download and extract the BINICA binary.</p>
+<p>By default the binary is expected to be &#8220;binica/ica_linux&#8221; relative
+to the directory where this module lies (typically scot/binica/ica_linux)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>binary</strong> : str</p>
+<blockquote>
+<div><p>Full path to the binica binary</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array, shape = [n_channels, n_channels]</p>
+<blockquote>
+<div><p>ICA weights matrix</p>
+</div></blockquote>
+<p><strong>s</strong> : array, shape = [n_channels, n_channels]</p>
+<blockquote class="last">
+<div><p>Sphering matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>The unmixing matrix is obtained by multiplying U = dot(s, w)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.binica.check_binary_">
+<tt class="descclassname">scot.binica.</tt><tt class="descname">check_binary_</tt><big>(</big><em>binary</em><big>)</big><a class="headerlink" href="#scot.binica.check_binary_" title="Permalink to this definition">¶</a></dt>
+<dd><p>check if binary is available, and try to download it if not</p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-scot.config">
 <span id="scot-config-module"></span><h2>scot.config module<a class="headerlink" href="#module-scot.config" title="Permalink to this headline">¶</a></h2>
@@ -678,6 +821,47 @@ The <em>p</em>-value is calculated as the smallest percentile of that distributi
 </dd></dl>
 
 </div>
+<div class="section" id="module-scot.csp">
+<span id="scot-csp-module"></span><h2>scot.csp module<a class="headerlink" href="#module-scot.csp" title="Permalink to this headline">¶</a></h2>
+<p>common spatial patterns (CSP) implementation</p>
+<dl class="function">
+<dt id="scot.csp.csp">
+<tt class="descclassname">scot.csp.</tt><tt class="descname">csp</tt><big>(</big><em>x</em>, <em>cl</em>, <em>numcomp=inf</em><big>)</big><a class="headerlink" href="#scot.csp.csp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate common spatial patterns (CSP)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>cl</strong> : list of valid dict keys</p>
+<blockquote>
+<div><p>Class labels associated with each trial. Currently only two classes are supported.</p>
+</div></blockquote>
+<p><strong>numcomp</strong> : {int}, optional</p>
+<blockquote>
+<div><p>Number of patterns to keep after applying the CSP. If <cite>numcomp</cite> is greater than n_channels, all n_channels
+patterns are returned.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array, shape = [n_channels, n_components]</p>
+<blockquote>
+<div><p>CSP weight matrix</p>
+</div></blockquote>
+<p><strong>v</strong> : array, shape = [n_components, n_channels]</p>
+<blockquote class="last">
+<div><p>CSP projection matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 <div class="section" id="module-scot.datatools">
 <span id="scot-datatools-module"></span><h2>scot.datatools module<a class="headerlink" href="#module-scot.datatools" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="summary">
@@ -895,7 +1079,7 @@ example usage of the low-level API.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : {<a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object, dict}</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : {<tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt>-like object, dict}</p>
 <blockquote>
 <div><p>Vector autoregressive model (VAR) object that is used for model fitting.
 This can also be a dictionary that is passed as <cite>**kwargs</cite> to backend[&#8216;var&#8217;]() in order to
@@ -1396,6 +1580,11 @@ figure object.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="scot.ooapi.Workspace.plotting">
+<tt class="descname">plotting</tt><a class="headerlink" href="#scot.ooapi.Workspace.plotting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="scot.ooapi.Workspace.remove_sources">
 <tt class="descname">remove_sources</tt><big>(</big><em>sources</em><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.remove_sources" title="Permalink to this definition">¶</a></dt>
@@ -1508,9 +1697,9 @@ transformed with e.g. PCA.</p>
 </table>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="scot.ooapi.Workspace.show_plots">
-<em class="property">static </em><tt class="descname">show_plots</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.show_plots" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">show_plots</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.ooapi.Workspace.show_plots" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show current plots.</p>
 <p>This is only a convenience wrapper around <tt class="xref py py-func docutils literal"><span class="pre">matplotlib.pyplot.show_plots()</span></tt>.</p>
 </dd></dl>
@@ -1518,6 +1707,116 @@ transformed with e.g. PCA.</p>
 </dd></dl>
 
 </div>
+</div>
+<div class="section" id="module-scot.pca">
+<span id="scot-pca-module"></span><h2>scot.pca module<a class="headerlink" href="#module-scot.pca" title="Permalink to this headline">¶</a></h2>
+<p>principal component analysis (PCA) implementation</p>
+<dl class="function">
+<dt id="scot.pca.pca">
+<tt class="descclassname">scot.pca.</tt><tt class="descname">pca</tt><big>(</big><em>x</em>, <em>subtract_mean=False</em>, <em>normalize=False</em>, <em>sort_components=True</em>, <em>reducedim=None</em>, <em>algorithm=&lt;function pca_eig at 0x7fde0498da60&gt;</em><big>)</big><a class="headerlink" href="#scot.pca.pca" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate principal component analysis (PCA)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>x</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>EEG data set</p>
+</div></blockquote>
+<p><strong>subtract_mean</strong> : bool, optional</p>
+<blockquote>
+<div><p>Subtract sample mean from x.</p>
+</div></blockquote>
+<p><strong>normalize</strong> : bool, optional</p>
+<blockquote>
+<div><p>Normalize variances to 1 before applying PCA.</p>
+</div></blockquote>
+<p><strong>sort_components</strong> : bool, optional</p>
+<blockquote>
+<div><p>Sort principal components in order of decreasing eigenvalues.</p>
+</div></blockquote>
+<p><strong>reducedim</strong> : {float, int}, optional</p>
+<blockquote>
+<div><p>A number of less than 1 in interpreted as the fraction of variance that should remain in the data. All
+components that describe in total less than <cite>1-reducedim</cite> of the variance are removed by the PCA step.
+An integer numer of 1 or greater is interpreted as the number of components to keep after applying the PCA.</p>
+</div></blockquote>
+<p><strong>algorithm</strong> : func, optional</p>
+<blockquote>
+<div><p>Specify function to use for eigenvalue decomposition (<a class="reference internal" href="#scot.pca.pca_eig" title="scot.pca.pca_eig"><tt class="xref py py-func docutils literal"><span class="pre">pca_eig()</span></tt></a> or <a class="reference internal" href="#scot.pca.pca_svd" title="scot.pca.pca_svd"><tt class="xref py py-func docutils literal"><span class="pre">pca_svd()</span></tt></a>)</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array, shape = [n_channels, n_components]</p>
+<blockquote>
+<div><p>PCA transformation matrix</p>
+</div></blockquote>
+<p><strong>v</strong> : array, shape = [n_components, n_channels]</p>
+<blockquote class="last">
+<div><p>PCA backtransformation matrix</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.pca.pca_eig">
+<tt class="descclassname">scot.pca.</tt><tt class="descname">pca_eig</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#scot.pca.pca_eig" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate PCA using Eigenvalue decomposition</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Two dimensional data array.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array</p>
+<blockquote>
+<div><p>Eigenvectors</p>
+</div></blockquote>
+<p><strong>s</strong> : array</p>
+<blockquote class="last">
+<div><p>Eigenvalues</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.pca.pca_svd">
+<tt class="descclassname">scot.pca.</tt><tt class="descname">pca_svd</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.pca.pca_svd" title="Permalink to this definition">¶</a></dt>
+<dd><p>calculate PCA using SVD</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array, shape = [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Two dimensional data array.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>w</strong> : array</p>
+<blockquote>
+<div><p>Eigenvectors</p>
+</div></blockquote>
+<p><strong>s</strong> : array</p>
+<blockquote class="last">
+<div><p>Eigenvalues</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 </div>
 <div class="section" id="module-scot.plainica">
 <span id="scot-plainica-module"></span><h2>scot.plainica module<a class="headerlink" href="#module-scot.plainica" title="Permalink to this headline">¶</a></h2>
@@ -1587,6 +1886,21 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 <p>This module attempts to import matplotlib for plotting functionality.
 If matplotlib is not available no error is raised, but plotting functions will not be available.</p>
 <dl class="function">
+<dt id="scot.plotting.MaxNLocator">
+<tt class="descclassname">scot.plotting.</tt><tt class="descname">MaxNLocator</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#scot.plotting.MaxNLocator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="scot.plotting.current_axis">
+<tt class="descclassname">scot.plotting.</tt><tt class="descname">current_axis</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.plotting.current_axis" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="scot.plotting.new_figure">
+<tt class="descclassname">scot.plotting.</tt><tt class="descname">new_figure</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#scot.plotting.new_figure" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
 <dt id="scot.plotting.plot_circular">
 <tt class="descclassname">scot.plotting.</tt><tt class="descname">plot_circular</tt><big>(</big><em>widths</em>, <em>colors</em>, <em>curviness=0.2</em>, <em>mask=True</em>, <em>topo=None</em>, <em>topomaps=None</em>, <em>axes=None</em>, <em>order=None</em><big>)</big><a class="headerlink" href="#scot.plotting.plot_circular" title="Permalink to this definition">¶</a></dt>
 <dd><p>Circluar connectivity plot</p>
@@ -1611,7 +1925,7 @@ If matplotlib is not available no error is raised, but plotting functions will n
 <blockquote>
 <div><p>Enable or disable individual arrows</p>
 </div></blockquote>
-<p><strong>topo</strong> : <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot" title="eegtopo.topoplot.Topoplot"><tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></a></p>
+<p><strong>topo</strong> : <tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></p>
 <blockquote>
 <div><p>This object draws the topo plot</p>
 </div></blockquote>
@@ -1797,7 +2111,7 @@ if diagonal == 1, a is plotted on the diagonal only (only a[i,i,:] are plotted)<
 <dd><p>Place topo plots in a figure suitable for connectivity visualization.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot.set_map" title="eegtopo.topoplot.Topoplot.set_map"><tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt></a>.</p>
+<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1808,7 +2122,7 @@ if diagonal == 1, a is plotted on the diagonal only (only a[i,i,:] are plotted)<
 <div><p>&#8216;diagonal&#8217; -&gt; place topo plots on diagonal.
 otherwise -&gt; place topo plots in left column and top row.</p>
 </div></blockquote>
-<p><strong>topo</strong> : <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot" title="eegtopo.topoplot.Topoplot"><tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></a></p>
+<p><strong>topo</strong> : <tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></p>
 <blockquote>
 <div><p>This object draws the topo plot</p>
 </div></blockquote>
@@ -1838,13 +2152,13 @@ otherwise -&gt; place topo plots in left column and top row.</p>
 <dd><p>Plot all scalp projections of mixing- and unmixing-maps.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot.set_map" title="eegtopo.topoplot.Topoplot.set_map"><tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt></a>.</p>
+<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>topo</strong> : <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot" title="eegtopo.topoplot.Topoplot"><tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>topo</strong> : <tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></p>
 <blockquote>
 <div><p>This object draws the topo plot</p>
 </div></blockquote>
@@ -1883,7 +2197,7 @@ otherwise -&gt; place topo plots in left column and top row.</p>
 <dd><p>Draw a topoplot in given axis.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot.set_map" title="eegtopo.topoplot.Topoplot.set_map"><tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt></a>.</p>
+<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <tt class="xref py py-func docutils literal"><span class="pre">set_map()</span></tt>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1893,7 +2207,7 @@ otherwise -&gt; place topo plots in left column and top row.</p>
 <blockquote>
 <div><p>Axis to draw into.</p>
 </div></blockquote>
-<p><strong>topo</strong> : <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot" title="eegtopo.topoplot.Topoplot"><tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></a></p>
+<p><strong>topo</strong> : <tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></p>
 <blockquote>
 <div><p>This object draws the topo plot</p>
 </div></blockquote>
@@ -1930,7 +2244,7 @@ If set to None, [-max(abs(topomap)), max(abs(topomap))] is substituted.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : <a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : <tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt>-like object</p>
 <blockquote>
 <div><p>Vector autoregressive model (VAR) object whose residuals are tested for whiteness.</p>
 </div></blockquote>
@@ -1964,13 +2278,13 @@ If set to None, [-max(abs(topomap)), max(abs(topomap))] is substituted.</p>
 <dd><p>Prepare multiple topo maps for cached plotting.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot.set_values" title="eegtopo.topoplot.Topoplot.set_values"><tt class="xref py py-func docutils literal"><span class="pre">set_values()</span></tt></a>.</p>
+<p class="last">Parameter <cite>topo</cite> is modified by the function by calling <tt class="xref py py-func docutils literal"><span class="pre">set_values()</span></tt>.</p>
 </div>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>topo</strong> : <a class="reference internal" href="../eegtopo/eegtopo.html#eegtopo.topoplot.Topoplot" title="eegtopo.topoplot.Topoplot"><tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></a></p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>topo</strong> : <tt class="xref py py-class docutils literal"><span class="pre">Topoplot</span></tt></p>
 <blockquote>
 <div><p>Scalp maps are created with this class</p>
 </div></blockquote>
@@ -2029,6 +2343,53 @@ If set to None, [-max(abs(topomap)), max(abs(topomap))] is substituted.</p>
 </dd></dl>
 
 <dl class="function">
+<dt id="scot.utils.cartesian">
+<tt class="descclassname">scot.utils.</tt><tt class="descname">cartesian</tt><big>(</big><em>arrays</em>, <em>out=None</em><big>)</big><a class="headerlink" href="#scot.utils.cartesian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a cartesian product of input arrays.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>arrays</strong> : list of array-like</p>
+<blockquote>
+<div><p>1-D arrays to form the cartesian product of.</p>
+</div></blockquote>
+<p><strong>out</strong> : ndarray</p>
+<blockquote>
+<div><p>Array to place the cartesian product in.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>out</strong> : ndarray</p>
+<blockquote class="last">
+<div><p>2-D array of shape (M, len(arrays)) containing cartesian products
+formed of input arrays.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p><a class="reference external" href="http://stackoverflow.com/a/1235363/3005167">http://stackoverflow.com/a/1235363/3005167</a></p>
+<p class="rubric">Examples</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">cartesian</span><span class="p">(([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">]))</span>
+<span class="go">array([[1, 4, 6],</span>
+<span class="go">       [1, 4, 7],</span>
+<span class="go">       [1, 5, 6],</span>
+<span class="go">       [1, 5, 7],</span>
+<span class="go">       [2, 4, 6],</span>
+<span class="go">       [2, 4, 7],</span>
+<span class="go">       [2, 5, 6],</span>
+<span class="go">       [2, 5, 7],</span>
+<span class="go">       [3, 4, 6],</span>
+<span class="go">       [3, 4, 7],</span>
+<span class="go">       [3, 5, 6],</span>
+<span class="go">       [3, 5, 7]])</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="function">
 <dt id="scot.utils.cuthill_mckee">
 <tt class="descclassname">scot.utils.</tt><tt class="descname">cuthill_mckee</tt><big>(</big><em>matrix</em><big>)</big><a class="headerlink" href="#scot.utils.cuthill_mckee" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cuthill-McKee algorithm</p>
@@ -2080,51 +2441,173 @@ was invoked. All arguments passed to a method decorated with memoize must
 be hashable.</p>
 <p>If a memoized method is invoked directly on its class the result will not
 be cached. Instead the method will be invoked like a static method:</p>
-<p class="rubric">Examples</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="k">class</span> <span class="nc">Obj</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-<span class="go">        @memoize</span>
-<span class="go">        def add_to(self, arg):</span>
-<span class="go">            return self + arg</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Obj</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="c"># not enough arguments</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">Obj</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c"># returns 3, result is not cached</span>
-</pre></div>
-</div>
 </dd></dl>
 
 </div>
 <div class="section" id="module-scot.var">
 <span id="scot-var-module"></span><h2>scot.var module<a class="headerlink" href="#module-scot.var" title="Permalink to this headline">¶</a></h2>
+<p>Vector autoregressive (VAR) model implementation</p>
+<dl class="class">
+<dt id="scot.var.VAR">
+<em class="property">class </em><tt class="descclassname">scot.var.</tt><tt class="descname">VAR</tt><big>(</big><em>model_order</em>, <em>delta=0</em>, <em>xvschema=&lt;function multitrial at 0x7fde0494ef28&gt;</em><big>)</big><a class="headerlink" href="#scot.var.VAR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#scot.varbase.VARBase" title="scot.varbase.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">scot.varbase.VARBase</span></tt></a></p>
+<p>Builtin implementation of VARBase.</p>
+<p>This class provides least squares VAR model fitting with optional ridge regression.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>model_order</strong> : int</p>
+<blockquote>
+<div><p>Autoregressive model order</p>
+</div></blockquote>
+<p><strong>delta</strong> : float, optional</p>
+<blockquote>
+<div><p>Ridge penalty parameter</p>
+</div></blockquote>
+<p><strong>xvschema</strong> : func, optional</p>
+<blockquote class="last">
+<div><p>Function that creates training and test sets for cross-validation. The function takes two parameters: the current cross-validation run (int) and the numer of trials (int). It returns a tuple of two arrays: the training set and the testing set.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="scot.var.VAR.fit">
+<tt class="descname">fit</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.var.VAR.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit VAR model to data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.var.VAR.optimize">
+<tt class="descname">optimize</tt><big>(</big><em>data</em>, <em>skipstep=1</em><big>)</big><a class="headerlink" href="#scot.var.VAR.optimize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find optimal ridge penalty with bisection search.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+<p><strong>skipstep</strong> : int, optional</p>
+<blockquote>
+<div><p>Speed up calculation by skipping samples during cost function calculation</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.var.VAR.optimize_delta_bisection">
+<tt class="descname">optimize_delta_bisection</tt><big>(</big><em>data</em>, <em>skipstep=1</em><big>)</big><a class="headerlink" href="#scot.var.VAR.optimize_delta_bisection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find optimal ridge penalty with bisection search.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : array-like, shape = [n_samples, n_channels, n_trials] or [n_samples, n_channels]</p>
+<blockquote>
+<div><p>Continuous or segmented data set.</p>
+</div></blockquote>
+<p><strong>skipstep</strong> : int, optional</p>
+<blockquote>
+<div><p>Speed up calculation by skipping samples during cost function calculation</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a></p>
+<blockquote class="last">
+<div><p>The <a class="reference internal" href="#scot.var.VAR" title="scot.var.VAR"><tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></a> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.var.VAR.optimize_order">
+<tt class="descname">optimize_order</tt><big>(</big><em>data</em>, <em>min_p=1</em>, <em>max_p=None</em>, <em>skipstep=1</em>, <em>verbose=False</em><big>)</big><a class="headerlink" href="#scot.var.VAR.optimize_order" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine optimal model order by cross-validating the mean-squared
+generalization error.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>min_p</strong> : int</p>
+<blockquote>
+<div><p>minimal model order to check</p>
+</div></blockquote>
+<p><strong>max_p</strong> : int</p>
+<blockquote class="last">
+<div><p>maximum model order to check</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.varbase">
+<span id="scot-varbase-module"></span><h2>scot.varbase module<a class="headerlink" href="#module-scot.varbase" title="Permalink to this headline">¶</a></h2>
 <p>vector autoregressive (VAR) model</p>
 <dl class="class">
-<dt id="scot.var.Defaults">
-<em class="property">class </em><tt class="descclassname">scot.var.</tt><tt class="descname">Defaults</tt><a class="headerlink" href="#scot.var.Defaults" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.Defaults">
+<em class="property">class </em><tt class="descclassname">scot.varbase.</tt><tt class="descname">Defaults</tt><a class="headerlink" href="#scot.varbase.Defaults" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <dl class="method">
-<dt id="scot.var.Defaults.xvschema">
-<tt class="descname">xvschema</tt><big>(</big><em>t</em>, <em>num_trials</em><big>)</big><a class="headerlink" href="#scot.var.Defaults.xvschema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single-trial cross-validation schema</p>
+<dt id="scot.varbase.Defaults.xvschema">
+<tt class="descname">xvschema</tt><big>(</big><em>num_trials</em>, <em>skipstep</em><big>)</big><a class="headerlink" href="#scot.varbase.Defaults.xvschema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-trial cross-validation schema</p>
 <p>Use one trial for testing, all others for training.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>t</strong> : int</p>
-<blockquote>
-<div><p>Current cross-validation run</p>
-</div></blockquote>
-<p><strong>num_trials</strong> : int</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>num_trials</strong> : int</p>
 <blockquote>
 <div><p>Total number of trials</p>
 </div></blockquote>
+<p><strong>skipstep</strong> : int</p>
+<blockquote>
+<div><p>only use every <cite>skipstep</cite> trial for testing</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>trainset</strong> : list of int</p>
-<blockquote>
-<div><p>trials in the training set</p>
-</div></blockquote>
-<p><strong>testset</strong> : list of int</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gen</strong> : generator object</p>
 <blockquote class="last">
-<div><p>trials in the testing set</p>
+<div><p>the generator returns tuples (trainset, testset)</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2135,8 +2618,8 @@ be cached. Instead the method will be invoked like a static method:</p>
 </dd></dl>
 
 <dl class="class">
-<dt id="scot.var.VARBase">
-<em class="property">class </em><tt class="descclassname">scot.var.</tt><tt class="descname">VARBase</tt><big>(</big><em>model_order</em><big>)</big><a class="headerlink" href="#scot.var.VARBase" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase">
+<em class="property">class </em><tt class="descclassname">scot.varbase.</tt><tt class="descname">VARBase</tt><big>(</big><em>model_order</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
 <p>Represents a vector autoregressive (VAR) model.</p>
 <div class="admonition warning">
@@ -2191,14 +2674,14 @@ be cached. Instead the method will be invoked like a static method:</p>
 <p>Each sub matrix b_ij is a column vector of length p that contains the
 filter coefficients from channel j (source) to channel i (sink).</p>
 <dl class="method">
-<dt id="scot.var.VARBase.copy">
-<tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.var.VARBase.copy" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.copy">
+<tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a copy of the VAR model.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.fit">
-<tt class="descname">fit</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.fit" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.fit">
+<tt class="descname">fit</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.fit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Fit VAR model to data.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2225,8 +2708,34 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.is_stable">
-<tt class="descname">is_stable</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.var.VARBase.is_stable" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.from_yw">
+<tt class="descname">from_yw</tt><big>(</big><em>acms</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.from_yw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine VAR model from autocorrelation matrices by solving the
+Yule-Walker equations.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>acms</strong> : array-like, shape = [n_lags, n_channels, n_channels]</p>
+<blockquote>
+<div><p>acms[l] contains the autocorrelation matrix at lag l. The highest
+lag must equal the model order.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>self</strong> : <tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt></p>
+<blockquote class="last">
+<div><p>The <tt class="xref py py-class docutils literal"><span class="pre">VAR</span></tt> object to facilitate method chaining (see usage example)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="scot.varbase.VARBase.is_stable">
+<tt class="descname">is_stable</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.is_stable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if the VAR model is stable.</p>
 <p>This function tests stability of the VAR model as described in <a class="reference internal" href="#r4" id="id8">[R4]</a>.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2254,8 +2763,8 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.optimize">
-<tt class="descname">optimize</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.optimize" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.optimize">
+<tt class="descname">optimize</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.optimize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Optimize model fitting hyperparameters (such as regularization penalty)</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
@@ -2276,8 +2785,8 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.predict">
-<tt class="descname">predict</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.predict" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.predict">
+<tt class="descname">predict</tt><big>(</big><em>data</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.predict" title="Permalink to this definition">¶</a></dt>
 <dd><p>Predict samples on actual data.</p>
 <p>The result of this function is used for calculating the residuals.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2303,8 +2812,8 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.simulate">
-<tt class="descname">simulate</tt><big>(</big><em>l</em>, <em>noisefunc=None</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.simulate" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.simulate">
+<tt class="descname">simulate</tt><big>(</big><em>l</em>, <em>noisefunc=None</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.simulate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Simulate vector autoregressive (VAR) model</p>
 <p>This function generates data from the VAR model.</p>
 <table class="docutils field-list" frame="void" rules="none">
@@ -2329,8 +2838,8 @@ filter coefficients from channel j (source) to channel i (sink).</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="scot.var.VARBase.test_whiteness">
-<tt class="descname">test_whiteness</tt><big>(</big><em>h</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.var.VARBase.test_whiteness" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.VARBase.test_whiteness">
+<tt class="descname">test_whiteness</tt><big>(</big><em>h</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.varbase.VARBase.test_whiteness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if the VAR model residuals are white (uncorrelated up to a lag of h).</p>
 <p>This function calculates the Li-McLeod as Portmanteau test statistic Q to
 test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r5" id="id10">[R5]</a>.
@@ -2397,8 +2906,8 @@ describe the data.</p>
 </dd></dl>
 
 <dl class="function">
-<dt id="scot.var.test_whiteness">
-<tt class="descclassname">scot.var.</tt><tt class="descname">test_whiteness</tt><big>(</big><em>data</em>, <em>h</em>, <em>p=0</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.var.test_whiteness" title="Permalink to this definition">¶</a></dt>
+<dt id="scot.varbase.test_whiteness">
+<tt class="descclassname">scot.varbase.</tt><tt class="descname">test_whiteness</tt><big>(</big><em>data</em>, <em>h</em>, <em>p=0</em>, <em>repeats=100</em>, <em>get_q=False</em><big>)</big><a class="headerlink" href="#scot.varbase.test_whiteness" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if signals are white (serially uncorrelated up to a lag of h).</p>
 <p>This function calculates the Li-McLeod as Portmanteau test statistic Q to
 test against the null hypothesis H0: &#8220;the residuals are white&#8221; <a class="reference internal" href="#r7" id="id14">[R7]</a>.
@@ -2486,7 +2995,7 @@ describe the data.</p>
 <blockquote>
 <div><p>data set</p>
 </div></blockquote>
-<p><strong>var</strong> : <a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object</p>
+<p><strong>var</strong> : <tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt>-like object</p>
 <blockquote>
 <div><p>Vector autoregressive model (VAR) object that is used for model fitting.</p>
 </div></blockquote>
@@ -2583,7 +3092,7 @@ describe the data.</p>
 <blockquote>
 <div><p>data set</p>
 </div></blockquote>
-<p><strong>var</strong> : <a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object</p>
+<p><strong>var</strong> : <tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt>-like object</p>
 <blockquote>
 <div><p>Vector autoregressive model (VAR) object that is used for model fitting.</p>
 </div></blockquote>
@@ -2675,31 +3184,52 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 <span id="scot-xvschema-module"></span><h2>scot.xvschema module<a class="headerlink" href="#module-scot.xvschema" title="Permalink to this headline">¶</a></h2>
 <p>Cross-validation schemas</p>
 <dl class="function">
+<dt id="scot.xvschema.make_nfold">
+<tt class="descclassname">scot.xvschema.</tt><tt class="descname">make_nfold</tt><big>(</big><em>n</em><big>)</big><a class="headerlink" href="#scot.xvschema.make_nfold" title="Permalink to this definition">¶</a></dt>
+<dd><p>n-fold cross validation</p>
+<p>Use each of n blocks for testing once.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>n</strong> : int</p>
+<blockquote>
+<div><p>number of blocks</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gengen</strong> : func</p>
+<blockquote class="last">
+<div><p>a function that returns the generator</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="scot.xvschema.multitrial">
-<tt class="descclassname">scot.xvschema.</tt><tt class="descname">multitrial</tt><big>(</big><em>t</em>, <em>num_trials</em><big>)</big><a class="headerlink" href="#scot.xvschema.multitrial" title="Permalink to this definition">¶</a></dt>
-<dd><p>Single-trial cross-validation schema</p>
+<tt class="descclassname">scot.xvschema.</tt><tt class="descname">multitrial</tt><big>(</big><em>num_trials</em>, <em>skipstep</em><big>)</big><a class="headerlink" href="#scot.xvschema.multitrial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Multi-trial cross-validation schema</p>
 <p>Use one trial for testing, all others for training.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>t</strong> : int</p>
-<blockquote>
-<div><p>Current cross-validation run</p>
-</div></blockquote>
-<p><strong>num_trials</strong> : int</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>num_trials</strong> : int</p>
 <blockquote>
 <div><p>Total number of trials</p>
 </div></blockquote>
+<p><strong>skipstep</strong> : int</p>
+<blockquote>
+<div><p>only use every <cite>skipstep</cite> trial for testing</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>trainset</strong> : list of int</p>
-<blockquote>
-<div><p>trials in the training set</p>
-</div></blockquote>
-<p><strong>testset</strong> : list of int</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gen</strong> : generator object</p>
 <blockquote class="last">
-<div><p>trials in the testing set</p>
+<div><p>the generator returns tuples (trainset, testset)</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2709,30 +3239,56 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 
 <dl class="function">
 <dt id="scot.xvschema.singletrial">
-<tt class="descclassname">scot.xvschema.</tt><tt class="descname">singletrial</tt><big>(</big><em>t</em>, <em>num_trials</em><big>)</big><a class="headerlink" href="#scot.xvschema.singletrial" title="Permalink to this definition">¶</a></dt>
+<tt class="descclassname">scot.xvschema.</tt><tt class="descname">singletrial</tt><big>(</big><em>num_trials</em>, <em>skipstep</em><big>)</big><a class="headerlink" href="#scot.xvschema.singletrial" title="Permalink to this definition">¶</a></dt>
 <dd><p>Single-trial cross-validation schema</p>
 <p>Use one trial for training, all others for testing.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>t</strong> : int</p>
-<blockquote>
-<div><p>Current cross-validation run</p>
-</div></blockquote>
-<p><strong>num_trials</strong> : int</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>num_trials</strong> : int</p>
 <blockquote>
 <div><p>Total number of trials</p>
 </div></blockquote>
+<p><strong>skipstep</strong> : int</p>
+<blockquote>
+<div><p>only use every <cite>skipstep</cite> trial for training</p>
+</div></blockquote>
 </td>
 </tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>trainset</strong> : list of int</p>
-<blockquote>
-<div><p>trials in the training set</p>
-</div></blockquote>
-<p><strong>testset</strong> : list of int</p>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gen</strong> : generator object</p>
 <blockquote class="last">
-<div><p>trials in the testing set</p>
+<div><p>the generator returns tuples (trainset, testset)</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.xvschema.splitset">
+<tt class="descclassname">scot.xvschema.</tt><tt class="descname">splitset</tt><big>(</big><em>num_trials</em>, <em>skipstep</em><big>)</big><a class="headerlink" href="#scot.xvschema.splitset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Split-set cross validation</p>
+<p>Use half the trials for training, and the other half for testing. Then
+repeat the other way round.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>num_trials</strong> : int</p>
+<blockquote>
+<div><p>Total number of trials</p>
+</div></blockquote>
+<p><strong>skipstep</strong> : int</p>
+<blockquote>
+<div><p>unused</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>gen</strong> : generator object</p>
+<blockquote class="last">
+<div><p>the generator returns tuples (trainset, testset)</p>
 </div></blockquote>
 </td>
 </tr>
@@ -2754,7 +3310,7 @@ If set to &#8216;no_pca&#8217; the PCA step is skipped.</p>
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : {<a class="reference internal" href="#scot.var.VARBase" title="scot.var.VARBase"><tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt></a>-like object, dict}</p>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>var</strong> : {<tt class="xref py py-class docutils literal"><span class="pre">VARBase</span></tt>-like object, dict}</p>
 <blockquote>
 <div><p>Vector autoregressive model (VAR) object that is used for model fitting.
 This can also be a dictionary that is passed as <cite>**kwargs</cite> to backend[&#8216;var&#8217;]() in order to
@@ -3255,6 +3811,11 @@ figure object.</p>
 </table>
 </dd></dl>
 
+<dl class="attribute">
+<dt id="scot.Workspace.plotting">
+<tt class="descname">plotting</tt><a class="headerlink" href="#scot.Workspace.plotting" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="scot.Workspace.remove_sources">
 <tt class="descname">remove_sources</tt><big>(</big><em>sources</em><big>)</big><a class="headerlink" href="#scot.Workspace.remove_sources" title="Permalink to this definition">¶</a></dt>
@@ -3367,9 +3928,9 @@ transformed with e.g. PCA.</p>
 </table>
 </dd></dl>
 
-<dl class="staticmethod">
+<dl class="method">
 <dt id="scot.Workspace.show_plots">
-<em class="property">static </em><tt class="descname">show_plots</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.show_plots" title="Permalink to this definition">¶</a></dt>
+<tt class="descname">show_plots</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.Workspace.show_plots" title="Permalink to this definition">¶</a></dt>
 <dd><p>Show current plots.</p>
 <p>This is only a convenience wrapper around <tt class="xref py py-func docutils literal"><span class="pre">matplotlib.pyplot.show_plots()</span></tt>.</p>
 </dd></dl>
@@ -3674,9 +4235,13 @@ spectral estimates in the study of electrical brain activity. Biol. Cybernetics 
 <li><a class="reference internal" href="#">scot package</a><ul>
 <li><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-scot.backend_builtin">scot.backend_builtin module</a></li>
+<li><a class="reference internal" href="#module-scot.backend_sklearn">scot.backend_sklearn module</a></li>
+<li><a class="reference internal" href="#module-scot.binica">scot.binica module</a></li>
 <li><a class="reference internal" href="#module-scot.config">scot.config module</a></li>
 <li><a class="reference internal" href="#module-scot.connectivity">scot.connectivity module</a></li>
 <li><a class="reference internal" href="#module-scot.connectivity_statistics">scot.connectivity_statistics module</a></li>
+<li><a class="reference internal" href="#module-scot.csp">scot.csp module</a></li>
 <li><a class="reference internal" href="#module-scot.datatools">scot.datatools module</a><ul>
 <li><a class="reference internal" href="#summary">Summary</a></li>
 </ul>
@@ -3690,10 +4255,12 @@ spectral estimates in the study of electrical brain activity. Biol. Cybernetics 
 <li><a class="reference internal" href="#extended-summary">Extended Summary</a></li>
 </ul>
 </li>
+<li><a class="reference internal" href="#module-scot.pca">scot.pca module</a></li>
 <li><a class="reference internal" href="#module-scot.plainica">scot.plainica module</a></li>
 <li><a class="reference internal" href="#module-scot.plotting">scot.plotting module</a></li>
 <li><a class="reference internal" href="#module-scot.utils">scot.utils module</a></li>
 <li><a class="reference internal" href="#module-scot.var">scot.var module</a></li>
+<li><a class="reference internal" href="#module-scot.varbase">scot.varbase module</a></li>
 <li><a class="reference internal" href="#module-scot.varica">scot.varica module</a></li>
 <li><a class="reference internal" href="#module-scot.xvschema">scot.xvschema module</a></li>
 <li><a class="reference internal" href="#module-scot">Module contents</a></li>
@@ -3705,8 +4272,8 @@ spectral estimates in the study of electrical brain activity. Biol. Cybernetics 
   <p class="topless"><a href="modules.html"
                         title="previous chapter">scot</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="scot.backend.html"
-                        title="next chapter">backend Package</a></p>
+  <p class="topless"><a href="scot.eegtopo.html"
+                        title="next chapter">scot.eegtopo package</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="../../_sources/api/scot/scot.txt"
@@ -3739,7 +4306,7 @@ spectral estimates in the study of electrical brain activity. Biol. Cybernetics 
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="scot.backend.html" title="backend Package"
+          <a href="scot.eegtopo.html" title="scot.eegtopo package"
              >next</a> |</li>
         <li class="right" >
           <a href="modules.html" title="scot"

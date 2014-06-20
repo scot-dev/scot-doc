@@ -70,18 +70,25 @@
   <div class="section" id="misc-example-code-circular-py">
 <span id="misc-circular"></span><h1>misc example code: circular.py<a class="headerlink" href="#misc-example-code-circular-py" title="Permalink to this headline">¶</a></h1>
 <p>(<a class="reference external" href="../../scot_examples/misc/circular.py">Source code</a>)</p>
+<div class="figure">
+<img alt="../../_images/circular_00.png" src="../../_images/circular_00.png" />
+<p class="caption">(<a class="reference external" href="../../scot_examples/misc/circular_00.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.pdf">pdf</a>)</p>
+</div>
+<div class="figure">
+<img alt="../../_images/circular_01.png" src="../../_images/circular_01.png" />
+<p class="caption">(<a class="reference external" href="../../scot_examples/misc/circular_01.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.pdf">pdf</a>)</p>
+</div>
 <div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This example shows how to decompose EEG signals into source activations with</span>
 <span class="sd">MVARICA, and visualize a connectivity.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">scot.backend.builtin</span>     <span class="c"># use builtin (default) backend</span>
-<span class="kn">import</span> <span class="nn">scot</span>
-
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">scot.utils</span> <span class="kn">import</span> <span class="n">cuthill_mckee</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">eegtopo.topoplot</span> <span class="kn">import</span> <span class="n">Topoplot</span>
+
+<span class="kn">import</span> <span class="nn">scot</span>
+<span class="kn">from</span> <span class="nn">scot.utils</span> <span class="kn">import</span> <span class="n">cuthill_mckee</span>
+<span class="kn">from</span> <span class="nn">scot.eegtopo.topoplot</span> <span class="kn">import</span> <span class="n">Topoplot</span>
 <span class="kn">from</span> <span class="nn">scot</span> <span class="kn">import</span> <span class="n">plotting</span>
 
 
