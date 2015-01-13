@@ -79,10 +79,8 @@
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
-<span class="kn">from</span> <span class="nn">scot</span> <span class="kn">import</span> <span class="n">pca</span>
-
+<span class="kn">from</span> <span class="nn">scot.pca</span> <span class="kn">import</span> <span class="n">pca</span>
 <span class="kn">from</span> <span class="nn">scot.var</span> <span class="kn">import</span> <span class="n">VAR</span>
-
 
 
 <span class="c"># Generate data from a VAR(1) process</span>
@@ -110,7 +108,8 @@
 <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">(1) True VAR coefficients:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">model0</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">(2) VAR coefficients estimated on x:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">model1</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">(3) VAR coefficients estimated on y:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">(4) VAR coefficients estimated on y and transformed back:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">(4) VAR coefficients estimated on y and transformed back:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span>
+      <span class="n">w</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
@@ -175,8 +174,8 @@
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, Martin Billinger.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+        &copy; Copyright 2015, SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

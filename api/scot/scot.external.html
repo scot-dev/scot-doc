@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>scot.external package &mdash; SCoT 0.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <link rel="up" title="scot package" href="scot.html" />
+    <link rel="next" title="Miscellaneous Topics" href="../../misc.html" />
+    <link rel="prev" title="scot.eegtopo package" href="scot.eegtopo.html" /> 
+  </head>
+  <body>
+
+<div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
+<a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
+</div>
+
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../misc.html" title="Miscellaneous Topics"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="scot.eegtopo.html" title="scot.eegtopo package"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" >scot</a> &raquo;</li>
+          <li><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
+      </ul>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="scot-external-package">
+<h1>scot.external package<a class="headerlink" href="#scot-external-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-scot.external.infomax_">
+<span id="scot-external-infomax-module"></span><h2><a href="#id3"><span class="problematic" id="id4">scot.external.infomax_</span></a> module<a class="headerlink" href="#module-scot.external.infomax_" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="scot.external.infomax_.check_random_state">
+<tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">check_random_state</tt><big>(</big><em>seed</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.check_random_state" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn seed into a np.random.RandomState instance</p>
+<p>If seed is None, return the RandomState singleton used by np.random.
+If seed is an int, return a new RandomState instance seeded with seed.
+If seed is already a RandomState instance, return it.
+Otherwise raise ValueError.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="scot.external.infomax_.infomax">
+<tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">infomax</tt><big>(</big><em>data</em>, <em>weights=None</em>, <em>l_rate=None</em>, <em>block=None</em>, <em>w_change=1e-12</em>, <em>anneal_deg=60.0</em>, <em>anneal_step=0.9</em>, <em>extended=False</em>, <em>n_subgauss=1</em>, <em>kurt_size=6000</em>, <em>ext_blocks=1</em>, <em>max_iter=200</em>, <em>random_state=None</em>, <em>verbose=None</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.infomax" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the (extended) Infomax ICA decomposition on raw data</p>
+<p>based on the publications of Bell &amp; Sejnowski 1995 (Infomax)
+and Lee, Girolami &amp; Sejnowski, 1999 (extended Infomax)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : np.ndarray, shape (n_samples, n_features)</p>
+<blockquote>
+<div><p>The data to unmix.</p>
+</div></blockquote>
+<p><strong>w_init</strong> : np.ndarray, shape (n_features, n_features)</p>
+<blockquote>
+<div><p>The initialized unmixing matrix. Defaults to None. If None, the
+identity matrix is used.</p>
+</div></blockquote>
+<p><strong>l_rate</strong> : float</p>
+<blockquote>
+<div><p>This quantity indicates the relative size of the change in weights.
+Note. Smaller learining rates will slow down the procedure.
+Defaults to 0.010d / alog(n_features ^ 2.0)</p>
+</div></blockquote>
+<p><strong>block</strong> : int</p>
+<blockquote>
+<div><p>The block size of randomly chosen data segment.
+Defaults to floor(sqrt(n_times / 3d))</p>
+</div></blockquote>
+<p><strong>w_change</strong> : float</p>
+<blockquote>
+<div><p>The change at which to stop iteration. Defaults to 1e-12.</p>
+</div></blockquote>
+<p><strong>anneal_deg</strong> : float</p>
+<blockquote>
+<div><p>The angle at which (in degree) the learning rate will be reduced.
+Defaults to 60.0</p>
+</div></blockquote>
+<p><strong>anneal_step</strong> : float</p>
+<blockquote>
+<div><p>The factor by which the learning rate will be reduced once
+<tt class="docutils literal"><span class="pre">anneal_deg</span></tt> is exceeded:</p>
+<blockquote>
+<div><p>l_rate <a href="#id1"><span class="problematic" id="id2">*</span></a>= anneal_step</p>
+</div></blockquote>
+<p>Defaults to 0.9</p>
+</div></blockquote>
+<p><strong>extended</strong> : bool</p>
+<blockquote>
+<div><p>Wheather to use the extended infomax algorithm or not. Defaults to
+True.</p>
+</div></blockquote>
+<p><strong>n_subgauss</strong> : int</p>
+<blockquote>
+<div><p>The number of subgaussian components. Only considered for extended
+Infomax.</p>
+</div></blockquote>
+<p><strong>kurt_size</strong> : int</p>
+<blockquote>
+<div><p>The window size for kurtosis estimation. Only considered for extended
+Infomax.</p>
+</div></blockquote>
+<p><strong>ext_blocks</strong> : int</p>
+<blockquote>
+<div><p>The number of blocks after which to recompute Kurtosis.
+Only considered for extended Infomax.</p>
+</div></blockquote>
+<p><strong>max_iter</strong> : int</p>
+<blockquote>
+<div><p>The maximum number of iterations. Defaults to 200.</p>
+</div></blockquote>
+<p><strong>verbose</strong> : bool, str, int, or None</p>
+<blockquote>
+<div><p>If not None, override default verbose level (see mne.verbose).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>unmixing_matrix</strong> : np.ndarray of float, shape (n_features, n_features)</p>
+<blockquote class="last">
+<div><p>The linear unmixing operator.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="class">
+<dt id="scot.external.infomax_.logger">
+<em class="property">class </em><tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">logger</tt><a class="headerlink" href="#scot.external.infomax_.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<dl class="staticmethod">
+<dt id="scot.external.infomax_.logger.info">
+<em class="property">static </em><tt class="descname">info</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.logger.info" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-scot.external">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scot.external" title="Permalink to this headline">¶</a></h2>
+<p>External sources and code snippets</p>
+<div class="section" id="files">
+<h3>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
+<p><a href="#id5"><span class="problematic" id="id6">infomax_</span></a>.py : (Extended) Infomax ICA, implemented in MNE-python, <a class="reference external" href="https://github.com/mne-tools/mne-python/blob/16d5538d76bf08278aa95b8546e45f4a5c19d42b/mne/preprocessing/">https://github.com/mne-tools/mne-python/blob/16d5538d76bf08278aa95b8546e45f4a5c19d42b/mne/preprocessing/</a><a href="#id7"><span class="problematic" id="id8">infomax_</span></a>.py</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">scot.external package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-scot.external.infomax_">scot.external.infomax_ module</a></li>
+<li><a class="reference internal" href="#module-scot.external">Module contents</a><ul>
+<li><a class="reference internal" href="#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="scot.eegtopo.html"
+                        title="previous chapter">scot.eegtopo package</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../../misc.html"
+                        title="next chapter">Miscellaneous Topics</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/api/scot/scot.external.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../../misc.html" title="Miscellaneous Topics"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="scot.eegtopo.html" title="scot.eegtopo package"
+             >previous</a> |</li>
+        <li><a href="../../index.html">home</a>|&nbsp;</li>
+        <li><a href="../../examples/index.html">examples</a>|&nbsp;</li>
+        <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
+        <li><a href="../../search.html">search</a>|&nbsp;</li>
+
+          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li><a href="modules.html" >scot</a> &raquo;</li>
+          <li><a href="scot.html" >scot package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2015, SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    </div>
+  </body>
+</html>

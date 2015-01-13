@@ -5,7 +5,7 @@ test example code: plot_test.py
 
 
 
-.. plot:: /home/billinger/git-working/SCoT/doc/source/scot_examples/test/plot_test.py
+.. plot:: /Users/clemens/Repositories/scot/doc/source/scot_examples/test/plot_test.py
 
 ::
 

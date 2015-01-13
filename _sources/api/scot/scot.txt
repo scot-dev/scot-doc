@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
     scot.eegtopo
+    scot.external
 
 Submodules
 ----------
@@ -23,14 +24,6 @@ scot.backend_sklearn module
 ---------------------------
 
 .. automodule:: scot.backend_sklearn
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
-scot.binica module
-------------------
-
-.. automodule:: scot.binica
     :members:
     :undoc-members:
     :show-inheritance:
@@ -87,6 +80,14 @@ scot.ooapi module
 -----------------
 
 .. automodule:: scot.ooapi
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+scot.parallel module
+--------------------
+
+.. automodule:: scot.parallel
     :members:
     :undoc-members:
     :show-inheritance:

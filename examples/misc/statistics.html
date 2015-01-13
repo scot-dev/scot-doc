@@ -74,19 +74,19 @@
 <img alt="../../_images/statistics.png" src="../../_images/statistics.png" />
 </div>
 <div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This example shows how to create surrogate connectivity to determine</span>
-<span class="sd">if connectivity is statistically significant.</span>
+<span class="sd">This example shows how to create surrogate connectivity to determine if</span>
+<span class="sd">connectivity is statistically significant.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">scot</span>
 
-<span class="c"># The example data set contains a continuous 45 channel EEG recording of a motor</span>
-<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement artifacts</span>
-<span class="c"># and resampled to a sampling rate of 100 Hz.</span>
-<span class="c"># With a visual cue the subject was instructed to perform either hand of foot</span>
-<span class="c"># motor imagery. The the trigger time points of the cues are stored in &#39;tr&#39;, and</span>
-<span class="c"># &#39;cl&#39; contains the class labels (hand: 1, foot: -1). Duration of the motor</span>
-<span class="c"># imagery period was approximately 6 seconds.</span>
+<span class="c"># The data set contains a continuous 45 channel EEG recording of a motor</span>
+<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement</span>
+<span class="c"># artifacts and resampled to a sampling rate of 100 Hz. With a visual cue, the</span>
+<span class="c"># subject was instructed to perform either hand or foot motor imagery. The</span>
+<span class="c"># trigger time points of the cues are stored in &#39;triggers&#39;, and &#39;classes&#39;</span>
+<span class="c"># contains the class labels. Duration of the motor imagery period was</span>
+<span class="c"># approximately six seconds.</span>
 <span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
 
 <span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
@@ -96,23 +96,21 @@
 <span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
 
 
-<span class="c"># Prepare the data</span>
+<span class="c"># Prepare data</span>
 <span class="c">#</span>
-<span class="c"># Here we cut segments from 3s to 4s following each trigger out of the EEG. This</span>
-<span class="c"># is right in the middle of the motor imagery period.</span>
+<span class="c"># Here we cut out segments from 3s to 4s after each trigger. This is right in</span>
+<span class="c"># the middle of the motor imagery period.</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
 
 
-<span class="c"># Set up the analysis object</span>
+<span class="c"># Set up analysis object</span>
 <span class="c">#</span>
 <span class="c"># We choose a VAR model order of 35, and reduction to 4 components.</span>
 <span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">35</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="n">locs</span><span class="p">)</span>
 
-
 <span class="n">fig</span> <span class="o">=</span> <span class="bp">None</span>
 
-
-<span class="c"># Perform MVARICA and plot the components</span>
+<span class="c"># Perform MVARICA and plot components</span>
 <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">classes</span><span class="p">)</span>
 <span class="n">ws</span><span class="o">.</span><span class="n">do_mvarica</span><span class="p">(</span><span class="n">varfit</span><span class="o">=</span><span class="s">&#39;class&#39;</span><span class="p">)</span>
 
@@ -121,36 +119,10 @@
 
 <span class="n">fig</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">plot_connectivity_topos</span><span class="p">(</span><span class="n">fig</span><span class="o">=</span><span class="n">fig</span><span class="p">)</span>
 
-<span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">compare_conditions</span><span class="p">([</span><span class="s">&#39;hand&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;foot&#39;</span><span class="p">],</span> <span class="s">&#39;ffDTF&#39;</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">plot</span><span class="o">=</span><span class="n">fig</span><span class="p">)</span>
+<span class="n">p</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">compare_conditions</span><span class="p">([</span><span class="s">&#39;hand&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s">&#39;foot&#39;</span><span class="p">],</span> <span class="s">&#39;ffDTF&#39;</span><span class="p">,</span> <span class="n">repeats</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span>
+                                <span class="n">plot</span><span class="o">=</span><span class="n">fig</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
-
-<span class="c"># brep = 10</span>
-<span class="c">#</span>
-<span class="c"># print(&#39;foot&#39;)</span>
-<span class="c"># ws.set_data(data[:,:,classes==&#39;foot&#39;])</span>
-<span class="c"># b = ws.get_bootstrap_connectivity(&#39;ffDTF&#39;, brep)</span>
-<span class="c"># #ws.fit_var()</span>
-<span class="c"># #fig = ws.plot_connectivity(&#39;ffDTF&#39;, freq_range=[0, 30], fig=fig)</span>
-<span class="c"># fig = ws.plot_connectivity_bootstrap(&#39;ffDTF&#39;, freq_range=[0, 30], repeats=brep, fig=fig)</span>
-<span class="c">#</span>
-<span class="c"># print(&#39;hand&#39;)</span>
-<span class="c"># ws.set_data(data[:,:,classes==&#39;hand&#39;])</span>
-<span class="c"># a = ws.get_bootstrap_connectivity(&#39;ffDTF&#39;, brep)</span>
-<span class="c"># #ws.fit_var()</span>
-<span class="c"># #fig = ws.plot_connectivity(&#39;ffDTF&#39;, freq_range=[0, 30], fig=fig)</span>
-<span class="c"># fig = ws.plot_connectivity_bootstrap(&#39;ffDTF&#39;, freq_range=[0, 30], repeats=brep, fig=fig)</span>
-<span class="c">#</span>
-<span class="c"># print(&#39;diff&#39;)</span>
-<span class="c">#</span>
-<span class="c"># p = test_bootstrap_difference(a, b)</span>
-<span class="c"># for i in range(4):</span>
-<span class="c">#     p[i,i,:] = np.nan</span>
-<span class="c"># s = significance_fdr(p, 0.01)</span>
-<span class="c"># #fig = splt.plot_connectivity_spectrum(s*50, fs, freq_range=[0, 30], diagonal=-1, border=True, fig=fig)</span>
-<span class="c">#</span>
-<span class="c"># splt.plot_connectivity_significance(s, fs, freq_range=[0, 30], diagonal=-1, border=True, fig=fig)</span>
-
 <span class="n">ws</span><span class="o">.</span><span class="n">show_plots</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -216,8 +188,8 @@
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, Martin Billinger.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+        &copy; Copyright 2015, SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>

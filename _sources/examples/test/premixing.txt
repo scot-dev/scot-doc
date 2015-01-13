@@ -5,7 +5,7 @@ test example code: premixing.py
 
 
 
-.. plot:: /home/billinger/git-working/SCoT/doc/source/scot_examples/test/premixing.py
+.. plot:: /Users/clemens/Repositories/scot/doc/source/scot_examples/test/premixing.py
 
 ::
 

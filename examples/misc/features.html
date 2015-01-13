@@ -71,7 +71,9 @@
 <span id="misc-features"></span><h1>misc example code: features.py<a class="headerlink" href="#misc-example-code-features-py" title="Permalink to this headline">¶</a></h1>
 <p>(<a class="reference external" href="../../scot_examples/misc/features.py">Source code</a>)</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">This example shows how to decompose EEG signals into source activations with MVARICA, and subsequently extract single-trial connectivity as features for LDA.</span>
+<span class="sd">This example shows how to decompose EEG signals into source activations with</span>
+<span class="sd">CSPVARICA, and subsequently extract single-trial connectivity as features for</span>
+<span class="sd">LDA classification.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
@@ -85,15 +87,13 @@
 <span class="kn">import</span> <span class="nn">scot.backend_sklearn</span>  <span class="c"># use scikit-learn backend</span>
 <span class="kn">import</span> <span class="nn">scot.xvschema</span>
 
-
-
-<span class="c"># The example data set contains a continuous 45 channel EEG recording of a motor</span>
-<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement artifacts</span>
-<span class="c"># and resampled to a sampling rate of 100 Hz.</span>
-<span class="c"># With a visual cue the subject was instructed to perform either hand of foot</span>
-<span class="c"># motor imagery. The the trigger time points of the cues are stored in &#39;tr&#39;, and</span>
-<span class="c"># &#39;cl&#39; contains the class labels (hand: 1, foot: -1). Duration of the motor</span>
-<span class="c"># imagery period was approximately 6 seconds.</span>
+<span class="c"># The data set contains a continuous 45 channel EEG recording of a motor</span>
+<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement</span>
+<span class="c"># artifacts and resampled to a sampling rate of 100 Hz. With a visual cue, the</span>
+<span class="c"># subject was instructed to perform either hand or foot motor imagery. The</span>
+<span class="c"># trigger time points of the cues are stored in &#39;triggers&#39;, and &#39;classes&#39;</span>
+<span class="c"># contains the class labels. Duration of the motor imagery period was</span>
+<span class="c"># approximately six seconds.</span>
 <span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
 
 <span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
@@ -103,46 +103,48 @@
 <span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
 
 
-<span class="c"># Set up the analysis object</span>
+<span class="c"># Set up analysis object</span>
+<span class="c">#</span>
 <span class="c"># We simply choose a VAR model order of 30, and reduction to 4 components.</span>
 <span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">nfft_</span><span class="p">)</span>
 
 
-<span class="c"># Prepare the data</span>
+<span class="c"># Prepare data</span>
 <span class="c">#</span>
-<span class="c"># Here we cut segments from 3s to 4s following each trigger out of the EEG. This</span>
-<span class="c"># is right in the middle of the motor imagery period.</span>
+<span class="c"># Here we cut out segments from 3s to 4s after each trigger. This is right in</span>
+<span class="c"># the middle of the motor imagery period.</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
 
-<span class="c"># Initialize Cross Validation</span>
+<span class="c"># Initialize cross-validation</span>
 <span class="n">nfolds</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">),</span> <span class="n">n_folds</span><span class="o">=</span><span class="n">nfolds</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
 <span class="c"># LDA requires numeric class labels</span>
-<span class="n">clunique</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
-<span class="n">classids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">clunique</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">clunique</span><span class="p">))))[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">])</span>
+<span class="n">cl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
+<span class="n">classids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">cl</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cl</span><span class="p">))))[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">])</span>
 
-<span class="c"># Perform Cross Validation</span>
+<span class="c"># Perform cross-validation</span>
 <span class="n">lda</span> <span class="o">=</span> <span class="n">LDA</span><span class="p">()</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">fold</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">kf</span><span class="p">:</span>
     <span class="n">fold</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="c"># Perform MVARICA</span>
+    <span class="c"># Perform CSPVARICA</span>
     <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">train</span><span class="p">],</span> <span class="n">classes</span><span class="p">[</span><span class="n">train</span><span class="p">])</span>
     <span class="n">ws</span><span class="o">.</span><span class="n">do_cspvarica</span><span class="p">()</span>
 
     <span class="c"># Find optimal regularization parameter for single-trial fitting</span>
-    <span class="c">#ws.var_.xvschema = scot.xvschema.singletrial</span>
-    <span class="c">#ws.optimize_var()</span>
+    <span class="c"># ws.var_.xvschema = scot.xvschema.singletrial</span>
+    <span class="c"># ws.optimize_var()</span>
     <span class="n">ws</span><span class="o">.</span><span class="n">var_</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="mi">1</span>
 
-    <span class="c"># Single-Trial Fitting and feature extraction</span>
+    <span class="c"># Single-trial fitting and feature extraction</span>
     <span class="n">features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">),</span> <span class="mi">32</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">)):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold </span><span class="si">%d</span><span class="s">/</span><span class="si">%d</span><span class="s">, Trial: </span><span class="si">%d</span><span class="s">   &#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span> <span class="n">end</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\r</span><span class="s">&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold {:2d}/{:2d}, trial: {:d}   &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span>
+              <span class="n">end</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\r</span><span class="s">&#39;</span><span class="p">)</span>
         <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">t</span><span class="p">])</span>
         <span class="n">ws</span><span class="o">.</span><span class="n">fit_var</span><span class="p">()</span>
 
@@ -158,13 +160,15 @@
     <span class="n">acc_train</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="p">:],</span> <span class="n">classids</span><span class="p">[</span><span class="n">train</span><span class="p">])</span>
     <span class="n">acc_test</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">test</span><span class="p">,</span> <span class="p">:],</span> <span class="n">classids</span><span class="p">[</span><span class="n">test</span><span class="p">])</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold </span><span class="si">%d</span><span class="s">/</span><span class="si">%d</span><span class="s">, Acc Train: </span><span class="si">%.4f</span><span class="s">, Acc Test: </span><span class="si">%.4f</span><span class="s">&#39;</span> <span class="o">%</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">acc_train</span><span class="p">,</span> <span class="n">acc_test</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold {:2d}/{:2d}, &#39;</span>
+          <span class="s">&#39;acc train: {:.3f}, &#39;</span>
+          <span class="s">&#39;acc test: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">acc_train</span><span class="p">,</span> <span class="n">acc_test</span><span class="p">))</span>
 
     <span class="n">pred</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">test</span><span class="p">,</span> <span class="p">:])</span>
     <span class="n">cm</span> <span class="o">+=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">classids</span><span class="p">[</span><span class="n">test</span><span class="p">],</span> <span class="n">pred</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Confusion Matrix:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">cm</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;Total Accuracy: </span><span class="si">%.4f</span><span class="s">&#39;</span><span class="o">%</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">cm</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cm</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Confusion Matrix:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">cm</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Total Accuracy: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">cm</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cm</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -229,8 +233,8 @@
       </ul>
     </div>
     <div class="footer">
-        &copy; Copyright 2014, Martin Billinger.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+        &copy; Copyright 2015, SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
     </div>
   </body>
 </html>
