@@ -7,12 +7,14 @@ LDA classification.
 from __future__ import print_function
 
 import numpy as np
-from sklearn.lda import LDA
+try:  # new in sklearn 0.19
+    from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA
+except ImportError:
+    from sklearn.lda import LDA
 from sklearn.cross_validation import KFold
 from sklearn.metrics import confusion_matrix
 
 import scot
-import scot.backend_sklearn  # use scikit-learn backend
 import scot.xvschema
 
 # The data set contains a continuous 45 channel EEG recording of a motor
@@ -24,11 +26,19 @@ import scot.xvschema
 # approximately six seconds.
 import scotdata.motorimagery as midata
 
-raweeg = midata.eeg
-triggers = midata.triggers
+raweeg = midata.eeg.T
+triggers = np.asarray(midata.triggers, dtype=int)
 classes = midata.classes
 fs = midata.samplerate
 locs = midata.locations
+
+
+# Set random seed for repeatable results
+np.random.seed(42)
+
+
+# Switch backend to scikit-learn
+scot.backend.activate('sklearn')
 
 
 # Set up analysis object
@@ -46,7 +56,7 @@ data = scot.datatools.cut_segments(raweeg, triggers, 3 * fs, 4 * fs)
 
 # Initialize cross-validation
 nfolds = 10
-kf = KFold(len(triggers), n_folds=nfolds, indices=False)
+kf = KFold(len(triggers), n_folds=nfolds)
 
 # LDA requires numeric class labels
 cl = np.unique(midata.classes)
@@ -60,7 +70,7 @@ for train, test in kf:
     fold += 1
 
     # Perform CSPVARICA
-    ws.set_data(data[:, :, train], classes[train])
+    ws.set_data(data[train, :, :], classes[train])
     ws.do_cspvarica()
 
     # Find optimal regularization parameter for single-trial fitting
@@ -73,7 +83,7 @@ for train, test in kf:
     for t in range(len(triggers)):
         print('Fold {:2d}/{:2d}, trial: {:d}   '.format(fold, nfolds, t),
               end='\r')
-        ws.set_data(data[:, :, t])
+        ws.set_data(data[t, :, :])
         ws.fit_var()
 
         con = ws.get_connectivity('ffPDC')

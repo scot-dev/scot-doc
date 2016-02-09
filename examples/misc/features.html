@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>misc example code: features.py &mdash; SCoT 0.1.0 documentation</title>
+    <title>misc example code: features.py &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="misc Examples" href="index.html" />
-    <link rel="next" title="misc example code: pca.py" href="pca.html" />
+    <link rel="next" title="misc example code: parallelization.py" href="parallelization.html" />
     <link rel="prev" title="misc example code: connectivity.py" href="connectivity.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -45,7 +45,7 @@
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="pca.html" title="misc example code: pca.py"
+          <a href="parallelization.html" title="misc example code: parallelization.py"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="connectivity.html" title="misc example code: connectivity.py"
@@ -55,9 +55,9 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -65,7 +65,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="misc-example-code-features-py">
 <span id="misc-features"></span><h1>misc example code: features.py<a class="headerlink" href="#misc-example-code-features-py" title="Permalink to this headline">¶</a></h1>
@@ -79,76 +79,86 @@
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.lda</span> <span class="kn">import</span> <span class="n">LDA</span>
+<span class="k">try</span><span class="p">:</span>  <span class="c1"># new in sklearn 0.19</span>
+    <span class="kn">from</span> <span class="nn">sklearn.discriminant_analysis</span> <span class="kn">import</span> <span class="n">LinearDiscriminantAnalysis</span> <span class="k">as</span> <span class="n">LDA</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">sklearn.lda</span> <span class="kn">import</span> <span class="n">LDA</span>
 <span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">KFold</span>
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 
 <span class="kn">import</span> <span class="nn">scot</span>
-<span class="kn">import</span> <span class="nn">scot.backend_sklearn</span>  <span class="c"># use scikit-learn backend</span>
 <span class="kn">import</span> <span class="nn">scot.xvschema</span>
 
-<span class="c"># The data set contains a continuous 45 channel EEG recording of a motor</span>
-<span class="c"># imagery experiment. The data was preprocessed to reduce eye movement</span>
-<span class="c"># artifacts and resampled to a sampling rate of 100 Hz. With a visual cue, the</span>
-<span class="c"># subject was instructed to perform either hand or foot motor imagery. The</span>
-<span class="c"># trigger time points of the cues are stored in &#39;triggers&#39;, and &#39;classes&#39;</span>
-<span class="c"># contains the class labels. Duration of the motor imagery period was</span>
-<span class="c"># approximately six seconds.</span>
+<span class="c1"># The data set contains a continuous 45 channel EEG recording of a motor</span>
+<span class="c1"># imagery experiment. The data was preprocessed to reduce eye movement</span>
+<span class="c1"># artifacts and resampled to a sampling rate of 100 Hz. With a visual cue, the</span>
+<span class="c1"># subject was instructed to perform either hand or foot motor imagery. The</span>
+<span class="c1"># trigger time points of the cues are stored in &#39;triggers&#39;, and &#39;classes&#39;</span>
+<span class="c1"># contains the class labels. Duration of the motor imagery period was</span>
+<span class="c1"># approximately six seconds.</span>
 <span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
 
-<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
-<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">triggers</span>
+<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span><span class="o">.</span><span class="n">T</span>
+<span class="n">triggers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">midata</span><span class="o">.</span><span class="n">triggers</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
 <span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span>
 <span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">samplerate</span>
 <span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
 
 
-<span class="c"># Set up analysis object</span>
-<span class="c">#</span>
-<span class="c"># We simply choose a VAR model order of 30, and reduction to 4 components.</span>
-<span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="c1"># Set random seed for repeatable results</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+
+<span class="c1"># Switch backend to scikit-learn</span>
+<span class="n">scot</span><span class="o">.</span><span class="n">backend</span><span class="o">.</span><span class="n">activate</span><span class="p">(</span><span class="s1">&#39;sklearn&#39;</span><span class="p">)</span>
+
+
+<span class="c1"># Set up analysis object</span>
+<span class="c1">#</span>
+<span class="c1"># We simply choose a VAR model order of 30, and reduction to 4 components.</span>
+<span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s1">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">30</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
 <span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">fs</span><span class="p">,</span> <span class="n">ws</span><span class="o">.</span><span class="n">nfft_</span><span class="p">)</span>
 
 
-<span class="c"># Prepare data</span>
-<span class="c">#</span>
-<span class="c"># Here we cut out segments from 3s to 4s after each trigger. This is right in</span>
-<span class="c"># the middle of the motor imagery period.</span>
+<span class="c1"># Prepare data</span>
+<span class="c1">#</span>
+<span class="c1"># Here we cut out segments from 3s to 4s after each trigger. This is right in</span>
+<span class="c1"># the middle of the motor imagery period.</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
 
-<span class="c"># Initialize cross-validation</span>
+<span class="c1"># Initialize cross-validation</span>
 <span class="n">nfolds</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">),</span> <span class="n">n_folds</span><span class="o">=</span><span class="n">nfolds</span><span class="p">,</span> <span class="n">indices</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<span class="n">kf</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">),</span> <span class="n">n_folds</span><span class="o">=</span><span class="n">nfolds</span><span class="p">)</span>
 
-<span class="c"># LDA requires numeric class labels</span>
+<span class="c1"># LDA requires numeric class labels</span>
 <span class="n">cl</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">)</span>
 <span class="n">classids</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">cl</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">cl</span><span class="p">))))[</span><span class="n">c</span><span class="p">]</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span><span class="p">])</span>
 
-<span class="c"># Perform cross-validation</span>
+<span class="c1"># Perform cross-validation</span>
 <span class="n">lda</span> <span class="o">=</span> <span class="n">LDA</span><span class="p">()</span>
 <span class="n">cm</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
 <span class="n">fold</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="k">for</span> <span class="n">train</span><span class="p">,</span> <span class="n">test</span> <span class="ow">in</span> <span class="n">kf</span><span class="p">:</span>
     <span class="n">fold</span> <span class="o">+=</span> <span class="mi">1</span>
 
-    <span class="c"># Perform CSPVARICA</span>
-    <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">train</span><span class="p">],</span> <span class="n">classes</span><span class="p">[</span><span class="n">train</span><span class="p">])</span>
+    <span class="c1"># Perform CSPVARICA</span>
+    <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:],</span> <span class="n">classes</span><span class="p">[</span><span class="n">train</span><span class="p">])</span>
     <span class="n">ws</span><span class="o">.</span><span class="n">do_cspvarica</span><span class="p">()</span>
 
-    <span class="c"># Find optimal regularization parameter for single-trial fitting</span>
-    <span class="c"># ws.var_.xvschema = scot.xvschema.singletrial</span>
-    <span class="c"># ws.optimize_var()</span>
+    <span class="c1"># Find optimal regularization parameter for single-trial fitting</span>
+    <span class="c1"># ws.var_.xvschema = scot.xvschema.singletrial</span>
+    <span class="c1"># ws.optimize_var()</span>
     <span class="n">ws</span><span class="o">.</span><span class="n">var_</span><span class="o">.</span><span class="n">delta</span> <span class="o">=</span> <span class="mi">1</span>
 
-    <span class="c"># Single-trial fitting and feature extraction</span>
+    <span class="c1"># Single-trial fitting and feature extraction</span>
     <span class="n">features</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">),</span> <span class="mi">32</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">triggers</span><span class="p">)):</span>
-        <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold {:2d}/{:2d}, trial: {:d}   &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span>
-              <span class="n">end</span><span class="o">=</span><span class="s">&#39;</span><span class="se">\r</span><span class="s">&#39;</span><span class="p">)</span>
-        <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">t</span><span class="p">])</span>
+        <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fold {:2d}/{:2d}, trial: {:d}   &#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">t</span><span class="p">),</span>
+              <span class="n">end</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="n">ws</span><span class="o">.</span><span class="n">set_data</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">t</span><span class="p">,</span> <span class="p">:,</span> <span class="p">:])</span>
         <span class="n">ws</span><span class="o">.</span><span class="n">fit_var</span><span class="p">()</span>
 
-        <span class="n">con</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_connectivity</span><span class="p">(</span><span class="s">&#39;ffPDC&#39;</span><span class="p">)</span>
+        <span class="n">con</span> <span class="o">=</span> <span class="n">ws</span><span class="o">.</span><span class="n">get_connectivity</span><span class="p">(</span><span class="s1">&#39;ffPDC&#39;</span><span class="p">)</span>
 
         <span class="n">alpha</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">con</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">7</span> <span class="o">&lt;</span> <span class="n">freq</span><span class="p">,</span> <span class="n">freq</span> <span class="o">&lt;</span> <span class="mi">13</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
         <span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">con</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">np</span><span class="o">.</span><span class="n">logical_and</span><span class="p">(</span><span class="mi">15</span> <span class="o">&lt;</span> <span class="n">freq</span><span class="p">,</span> <span class="n">freq</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">)],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -160,15 +170,15 @@
     <span class="n">acc_train</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">train</span><span class="p">,</span> <span class="p">:],</span> <span class="n">classids</span><span class="p">[</span><span class="n">train</span><span class="p">])</span>
     <span class="n">acc_test</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">test</span><span class="p">,</span> <span class="p">:],</span> <span class="n">classids</span><span class="p">[</span><span class="n">test</span><span class="p">])</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="s">&#39;Fold {:2d}/{:2d}, &#39;</span>
-          <span class="s">&#39;acc train: {:.3f}, &#39;</span>
-          <span class="s">&#39;acc test: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">acc_train</span><span class="p">,</span> <span class="n">acc_test</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Fold {:2d}/{:2d}, &#39;</span>
+          <span class="s1">&#39;acc train: {:.3f}, &#39;</span>
+          <span class="s1">&#39;acc test: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fold</span><span class="p">,</span> <span class="n">nfolds</span><span class="p">,</span> <span class="n">acc_train</span><span class="p">,</span> <span class="n">acc_test</span><span class="p">))</span>
 
     <span class="n">pred</span> <span class="o">=</span> <span class="n">lda</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">features</span><span class="p">[</span><span class="n">test</span><span class="p">,</span> <span class="p">:])</span>
     <span class="n">cm</span> <span class="o">+=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">classids</span><span class="p">[</span><span class="n">test</span><span class="p">],</span> <span class="n">pred</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Confusion Matrix:</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">,</span> <span class="n">cm</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">Total Accuracy: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">cm</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cm</span><span class="p">)))</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Confusion Matrix:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">cm</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Total Accuracy: {:.3f}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diag</span><span class="p">(</span><span class="n">cm</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">cm</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -177,20 +187,22 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="connectivity.html"
                         title="previous chapter">misc example code: connectivity.py</a></p>
   <h4>Next topic</h4>
-  <p class="topless"><a href="pca.html"
-                        title="next chapter">misc example code: pca.py</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/examples/misc/features.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <p class="topless"><a href="parallelization.html"
+                        title="next chapter">misc example code: parallelization.py</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/examples/misc/features.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -207,7 +219,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -217,7 +229,7 @@
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="pca.html" title="misc example code: pca.py"
+          <a href="parallelization.html" title="misc example code: parallelization.py"
              >next</a> |</li>
         <li class="right" >
           <a href="connectivity.html" title="misc example code: connectivity.py"
@@ -227,14 +239,14 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li><a href="index.html" >misc Examples</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >misc Examples</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

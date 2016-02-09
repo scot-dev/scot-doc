@@ -1,7 +1,13 @@
+# Released under The MIT License (MIT)
+# http://opensource.org/licenses/MIT
+# Copyright (c) 2013-2015 SCoT Development Team
+
 """
 This example shows how to decompose EEG signals into source activations with
 MVARICA, and visualize a connectivity measure.
 """
+
+import numpy as np
 
 import matplotlib.pyplot as plt
 
@@ -20,11 +26,15 @@ import scot.plotting as splot
 # approximately six seconds.
 import scotdata.motorimagery as midata
 
-raweeg = midata.eeg
+raweeg = midata.eeg.T
 triggers = midata.triggers
 classes = midata.classes
 fs = midata.samplerate
 locs = midata.locations
+
+
+# Set random seed for repeatable results
+np.random.seed(42)
 
 
 # Prepare data
@@ -42,7 +52,7 @@ for p in [22, 33]:
     print('Model order:', p)
 
     print('    Performing CSPVARICA')
-    var = scot.config.backend['var'](p)
+    var = scot.backend['var'](p)
     result = cspvarica(data, var, classes, m)
 
     if result.a.is_stable():
@@ -59,10 +69,10 @@ for p in [22, 33]:
                               axis=plt.subplot(2, 1, i))
 
     if pr < 0.05:
-        plt.gca().set_title('model order {}: residuals significantly'
+        plt.gca().set_title('model order {}: residuals significantly '
                             'non-white with p={:f}'.format(p, pr))
     else:
-        plt.gca().set_title('model order {}: residuals white'
+        plt.gca().set_title('model order {}: residuals white '
                             'with p={:f}'.format(p, pr))
 
 splot.show_plots()

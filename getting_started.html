@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Getting started &mdash; SCoT 0.1.0 documentation</title>
+    <title>Getting started &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="index.html" />
     <link rel="up" title="Manual" href="manual.html" />
     <link rel="next" title="API Reference" href="api_reference.html" />
     <link rel="prev" title="Manual" href="manual.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,7 +55,7 @@
         <li><a href="gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="search.html">search</a>|&nbsp;</li>
 
-          <li><a href="manual.html" accesskey="U">Manual</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="manual.html" accesskey="U">Manual</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -63,7 +63,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="getting-started">
 <span id="id1"></span><h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
@@ -71,18 +71,26 @@
 <h2>Obtaining SCoT<a class="headerlink" href="#obtaining-scot" title="Permalink to this headline">¶</a></h2>
 <p>The SCoT source repository is available at github: <a class="reference external" href="https://github.com/scot-dev/scot">https://github.com/scot-dev/scot</a></p>
 </div>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<p>SCoT depends on the packages numpy (<a class="reference external" href="http://www.numpy.org/">http://www.numpy.org/</a>) and scipy (<a class="reference external" href="http://scipy.org/">http://scipy.org/</a>). Furthermore, it supports
+scikit-learn (<a class="reference external" href="http://scikit-learn.org/">http://scikit-learn.org/</a>) and matplotlib (<a class="reference external" href="http://matplotlib.org/">http://matplotlib.org/</a>).</p>
+<p>The lowest supported versions of these libraries are numpy 1.8.0, scipy 0.13.3, scikit-learn 0.15.0, and
+matplotlib 1.4.0. Lower versions may work but are not tested.</p>
+</div>
 </div>
 
 
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Getting started</a><ul>
 <li><a class="reference internal" href="#obtaining-scot">Obtaining SCoT</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
 </ul>
 </li>
 </ul>
@@ -93,12 +101,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="api_reference.html"
                         title="next chapter">API Reference</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/getting_started.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/getting_started.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -115,7 +125,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -135,12 +145,12 @@
         <li><a href="gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="search.html">search</a>|&nbsp;</li>
 
-          <li><a href="manual.html" >Manual</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="manual.html" >Manual</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

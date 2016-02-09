@@ -1,7 +1,13 @@
+# Released under The MIT License (MIT)
+# http://opensource.org/licenses/MIT
+# Copyright (c) 2013-2015 SCoT Development Team
+
 """
 This example shows how to decompose EEG signals into source activations with
 CSPVARICA, and visualize a connectivity.
 """
+
+import numpy as np
 
 import scot
 
@@ -15,11 +21,15 @@ import scot
 import scotdata.motorimagery as midata
 
 
-raweeg = midata.eeg
+raweeg = midata.eeg.T
 triggers = midata.triggers
 classes = midata.classes
 fs = midata.samplerate
 locs = midata.locations
+
+
+# Set random seed for repeatable results
+np.random.seed(42)
 
 
 # Prepare data
@@ -33,7 +43,7 @@ data = scot.datatools.cut_segments(raweeg, triggers, 3 * fs, 4 * fs)
 #
 # We simply choose a VAR model order of 35, and reduction to 4 components
 # (that's not a lot).
-ws = scot.Workspace({'model_order': 35}, reducedim=4, fs=fs, locations=locs)
+ws = scot.Workspace({'model_order': 40}, reducedim=4, fs=fs, locations=locs)
 
 
 # Perform CSPVARICA and plot components

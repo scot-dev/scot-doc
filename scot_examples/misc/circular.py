@@ -21,11 +21,15 @@ from scot import plotting
 # approximately six seconds.
 import scotdata.motorimagery as midata
 
-raweeg = midata.eeg
-triggers = midata.triggers
+raweeg = midata.eeg.T
+triggers = np.asarray(midata.triggers, dtype=int)
 classes = midata.classes
 fs = midata.samplerate
 locs = midata.locations
+
+
+# Set random seed for repeatable results
+np.random.seed(42)
 
 
 # Prepare data

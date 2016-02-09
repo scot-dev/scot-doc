@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>scot &mdash; SCoT 0.1.0 documentation</title>
+    <title>scot &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="API Reference" href="../../api_reference.html" />
     <link rel="next" title="scot package" href="scot.html" />
     <link rel="prev" title="API Reference" href="../../api_reference.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,7 +55,7 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" accesskey="U">API Reference</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -63,7 +63,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="scot">
 <h1>scot<a class="headerlink" href="#scot" title="Permalink to this headline">¶</a></h1>
@@ -79,6 +79,7 @@
 <li class="toctree-l4"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.projections">scot.eegtopo.projections module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.tools">scot.eegtopo.tools module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.topoplot">scot.eegtopo.topoplot module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo.warp_layout">scot.eegtopo.warp_layout module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="scot.eegtopo.html#module-scot.eegtopo">Module contents</a></li>
 </ul>
 </li>
@@ -93,6 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="scot.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.backend_builtin">scot.backend_builtin module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.backend_sklearn">scot.backend_sklearn module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.backendmanager">scot.backendmanager module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.config">scot.config module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.connectivity">scot.connectivity module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scot.html#module-scot.connectivity_statistics">scot.connectivity_statistics module</a></li>
@@ -130,7 +132,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
   <p class="topless"><a href="../../api_reference.html"
@@ -138,12 +140,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="scot.html"
                         title="next chapter">scot package</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/api/scot/modules.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/scot/modules.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -160,7 +164,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -180,12 +184,12 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

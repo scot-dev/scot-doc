@@ -28,6 +28,14 @@ scot.backend_sklearn module
     :undoc-members:
     :show-inheritance:
 
+scot.backendmanager module
+--------------------------
+
+.. automodule:: scot.backendmanager
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 scot.config module
 ------------------
 

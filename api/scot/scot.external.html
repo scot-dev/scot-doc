@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>scot.external package &mdash; SCoT 0.1.0 documentation</title>
+    <title>scot.external package &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="scot package" href="scot.html" />
     <link rel="next" title="Miscellaneous Topics" href="../../misc.html" />
     <link rel="prev" title="scot.eegtopo package" href="scot.eegtopo.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,9 +55,9 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li><a href="modules.html" >scot</a> &raquo;</li>
-          <li><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -65,7 +65,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="scot-external-package">
 <h1>scot.external package<a class="headerlink" href="#scot-external-package" title="Permalink to this headline">¶</a></h1>
@@ -76,7 +76,7 @@
 <span id="scot-external-infomax-module"></span><h2><a href="#id3"><span class="problematic" id="id4">scot.external.infomax_</span></a> module<a class="headerlink" href="#module-scot.external.infomax_" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="scot.external.infomax_.check_random_state">
-<tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">check_random_state</tt><big>(</big><em>seed</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.check_random_state" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.external.infomax_.</code><code class="descname">check_random_state</code><span class="sig-paren">(</span><em>seed</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.check_random_state" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turn seed into a np.random.RandomState instance</p>
 <p>If seed is None, return the RandomState singleton used by np.random.
 If seed is an int, return a new RandomState instance seeded with seed.
@@ -86,7 +86,7 @@ Otherwise raise ValueError.</p>
 
 <dl class="function">
 <dt id="scot.external.infomax_.infomax">
-<tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">infomax</tt><big>(</big><em>data</em>, <em>weights=None</em>, <em>l_rate=None</em>, <em>block=None</em>, <em>w_change=1e-12</em>, <em>anneal_deg=60.0</em>, <em>anneal_step=0.9</em>, <em>extended=False</em>, <em>n_subgauss=1</em>, <em>kurt_size=6000</em>, <em>ext_blocks=1</em>, <em>max_iter=200</em>, <em>random_state=None</em>, <em>verbose=None</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.infomax" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.external.infomax_.</code><code class="descname">infomax</code><span class="sig-paren">(</span><em>data</em>, <em>weights=None</em>, <em>l_rate=None</em>, <em>block=None</em>, <em>w_change=1e-12</em>, <em>anneal_deg=60.0</em>, <em>anneal_step=0.9</em>, <em>extended=False</em>, <em>n_subgauss=1</em>, <em>kurt_size=6000</em>, <em>ext_blocks=1</em>, <em>max_iter=200</em>, <em>random_state=None</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.infomax" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the (extended) Infomax ICA decomposition on raw data</p>
 <p>based on the publications of Bell &amp; Sejnowski 1995 (Infomax)
 and Lee, Girolami &amp; Sejnowski, 1999 (extended Infomax)</p>
@@ -126,7 +126,7 @@ Defaults to 60.0</p>
 <p><strong>anneal_step</strong> : float</p>
 <blockquote>
 <div><p>The factor by which the learning rate will be reduced once
-<tt class="docutils literal"><span class="pre">anneal_deg</span></tt> is exceeded:</p>
+<code class="docutils literal"><span class="pre">anneal_deg</span></code> is exceeded:</p>
 <blockquote>
 <div><p>l_rate <a href="#id1"><span class="problematic" id="id2">*</span></a>= anneal_step</p>
 </div></blockquote>
@@ -174,11 +174,11 @@ Only considered for extended Infomax.</p>
 
 <dl class="class">
 <dt id="scot.external.infomax_.logger">
-<em class="property">class </em><tt class="descclassname">scot.external.infomax_.</tt><tt class="descname">logger</tt><a class="headerlink" href="#scot.external.infomax_.logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.external.infomax_.</code><code class="descname">logger</code><a class="headerlink" href="#scot.external.infomax_.logger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="staticmethod">
 <dt id="scot.external.infomax_.logger.info">
-<em class="property">static </em><tt class="descname">info</tt><big>(</big><em>*args</em>, <em>**kwargs</em><big>)</big><a class="headerlink" href="#scot.external.infomax_.logger.info" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">info</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.logger.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -198,7 +198,7 @@ Only considered for extended Infomax.</p>
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -219,12 +219,14 @@ Only considered for extended Infomax.</p>
   <h4>Next topic</h4>
   <p class="topless"><a href="../../misc.html"
                         title="next chapter">Miscellaneous Topics</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/api/scot/scot.external.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/scot/scot.external.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -241,7 +243,7 @@ Only considered for extended Infomax.</p>
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -261,14 +263,14 @@ Only considered for extended Infomax.</p>
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li><a href="modules.html" >scot</a> &raquo;</li>
-          <li><a href="scot.html" >scot package</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" >scot package</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

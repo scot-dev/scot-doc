@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Is VAR model fitting invariant to PCA transformations? &mdash; SCoT 0.1.0 documentation</title>
+    <title>Is VAR model fitting invariant to PCA transformations? &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="index.html" />
     <link rel="up" title="Miscellaneous Topics" href="misc.html" />
     <link rel="next" title="Testing SPHINX Features" href="mytest.html" />
     <link rel="prev" title="Miscellaneous Topics" href="misc.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,7 +55,7 @@
         <li><a href="gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="search.html">search</a>|&nbsp;</li>
 
-          <li><a href="misc.html" accesskey="U">Miscellaneous Topics</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="misc.html" accesskey="U">Miscellaneous Topics</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -63,11 +63,11 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="is-var-model-fitting-invariant-to-pca-transformations">
 <h1>Is VAR model fitting invariant to PCA transformations?<a class="headerlink" href="#is-var-model-fitting-invariant-to-pca-transformations" title="Permalink to this headline">¶</a></h1>
-<p><a class="reference internal" href="glossary.html#term-mvarica"><em class="xref std std-term">MVARICA</em></a> usually applies a PCA transform to the EEG prior to VAR model fitting. This is intended as a
+<p><a class="reference internal" href="glossary.html#term-mvarica"><span class="xref std std-term">MVARICA</span></a> usually applies a PCA transform to the EEG prior to VAR model fitting. This is intended as a
 dimensionality reduction step; PCA components that contribute little to total EEG variance are removed. However, the PCA
 produces orthogonal components. In other words, PCA transformed signals are uncorrelated.</p>
 <p>The question was raised whether it is possible to reconstruct (fit) a VAR model from PCA transformed signals. Here we
@@ -88,11 +88,11 @@ VAR process too: <span class="math">\(\vec{y}_n = \mathrm{VAR}(\mathbf{B},\vec{r
 </div></blockquote>
 <p>The first requirement is obvious. Only when the models can be transformed into each other it is possible to reconstruct one model from another.
 Since the PCA transformation <span class="math">\(\mathbf{W}\)</span> is a rotation matrix, its inverse is the transpose <span class="math">\(\mathbf{W}^{-1} = \mathbf{W}^\intercal\)</span>.
-In section <a class="reference internal" href="#lintransvar"><em>Linear transformation of a VAR model</em></a> we show that transformation of VAR models is possible if <span class="math">\(\mathbf{S} \mathbf{R} = \mathbf{I}\)</span> and <span class="math">\(\mathbf{R} \mathbf{S} = \mathbf{I}\)</span>.
+In section <a class="reference internal" href="#lintransvar"><span>Linear transformation of a VAR model</span></a> we show that transformation of VAR models is possible if <span class="math">\(\mathbf{S} \mathbf{R} = \mathbf{I}\)</span> and <span class="math">\(\mathbf{R} \mathbf{S} = \mathbf{I}\)</span>.
 This is the case with PCA since <span class="math">\(\mathbf{W}^\intercal \mathbf{W} = \mathbf{W} \mathbf{W}^\intercal = \mathbf{I}\)</span>.</p>
 <p>The second requirement relates to the fact that in order to reconstruct model A from model B all information about A must be present in B.
 Thus, information about the causal structure of A must be preserved in B, although <span class="math">\(\vec{y}_n = \mathrm{VAR}(\mathbf{B},\vec{r})\)</span> is uncorrelated.
-<a class="reference internal" href="#covbivar1"><em>Covariance of a bivariate AR(1) process</em></a> shows that it is possible to construct models where causal structure cancels cross-correlation.</p>
+<a class="reference internal" href="#covbivar1"><span>Covariance of a bivariate AR(1) process</span></a> shows that it is possible to construct models where causal structure cancels cross-correlation.</p>
 <p>In conclusion, it is possible to fit VAR models on PCA transformed signals and reconstruct the original model.</p>
 <div class="section" id="linear-transformation-of-a-var-model">
 <span id="lintransvar"></span><h2>Linear transformation of a VAR model<a class="headerlink" href="#linear-transformation-of-a-var-model" title="Permalink to this headline">¶</a></h2>
@@ -163,7 +163,7 @@ transformations that satisfy <span class="math">\(\mathbf{S} \mathbf{R} = \mathb
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
@@ -180,12 +180,14 @@ transformations that satisfy <span class="math">\(\mathbf{S} \mathbf{R} = \mathb
   <h4>Next topic</h4>
   <p class="topless"><a href="mytest.html"
                         title="next chapter">Testing SPHINX Features</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="_sources/vartransform.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/vartransform.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" />
@@ -202,7 +204,7 @@ transformations that satisfy <span class="math">\(\mathbf{S} \mathbf{R} = \mathb
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -222,12 +224,12 @@ transformations that satisfy <span class="math">\(\mathbf{S} \mathbf{R} = \mathb
         <li><a href="gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="search.html">search</a>|&nbsp;</li>
 
-          <li><a href="misc.html" >Miscellaneous Topics</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="misc.html" >Miscellaneous Topics</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

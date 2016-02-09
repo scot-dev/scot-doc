@@ -6,15 +6,15 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>scot.eegtopo package &mdash; SCoT 0.1.0 documentation</title>
+    <title>scot.eegtopo package &mdash; SCoT 0.2.0 documentation</title>
     
-    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.1.0',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,19 +23,19 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT 0.1.0 documentation" href="../../index.html" />
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="SCoT 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="scot package" href="scot.html" />
     <link rel="next" title="scot.external package" href="scot.external.html" />
     <link rel="prev" title="scot package" href="scot.html" /> 
   </head>
-  <body>
+  <body role="document">
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
 </div>
 
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -55,9 +55,9 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li><a href="modules.html" >scot</a> &raquo;</li>
-          <li><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
       </ul>
     </div>
   
@@ -65,7 +65,7 @@
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
-          <div class="body">
+          <div class="body" role="main">
             
   <div class="section" id="scot-eegtopo-package">
 <h1>scot.eegtopo package<a class="headerlink" href="#scot-eegtopo-package" title="Permalink to this headline">¶</a></h1>
@@ -77,12 +77,12 @@
 <p>Module to generate 3d EEG locations</p>
 <dl class="function">
 <dt id="scot.eegtopo.eegpos3d.construct_1020_easycap">
-<tt class="descclassname">scot.eegtopo.eegpos3d.</tt><tt class="descname">construct_1020_easycap</tt><big>(</big><em>variant=0</em><big>)</big><a class="headerlink" href="#scot.eegtopo.eegpos3d.construct_1020_easycap" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.eegpos3d.</code><code class="descname">construct_1020_easycap</code><span class="sig-paren">(</span><em>variant=0</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.eegpos3d.construct_1020_easycap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="scot.eegtopo.eegpos3d.intersection">
-<tt class="descclassname">scot.eegtopo.eegpos3d.</tt><tt class="descname">intersection</tt><big>(</big><em>a</em>, <em>b</em>, <em>expr=&lt;function &lt;lambda&gt; at 0x108ce57b8&gt;</em><big>)</big><a class="headerlink" href="#scot.eegtopo.eegpos3d.intersection" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.eegpos3d.</code><code class="descname">intersection</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>expr=&lt;function &lt;lambda&gt;&gt;</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.eegpos3d.intersection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -91,77 +91,77 @@
 <p>Euclidean geometry support module</p>
 <dl class="class">
 <dt id="scot.eegtopo.geo_euclidean.Vector">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.geo_euclidean.</tt><tt class="descname">Vector</tt><big>(</big><em>x=0.0</em>, <em>y=0.0</em>, <em>z=0.0</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.geo_euclidean.</code><code class="descname">Vector</code><span class="sig-paren">(</span><em>x=0.0</em>, <em>y=0.0</em>, <em>z=0.0</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>3D-Vector class</p>
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.close">
-<tt class="descname">close</tt><big>(</big><em>other</em>, <em>epsilon=1e-10</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.close" title="Permalink to this definition">¶</a></dt>
+<code class="descname">close</code><span class="sig-paren">(</span><em>other</em>, <em>epsilon=1e-10</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.copy">
-<tt class="descname">copy</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.copy" title="Permalink to this definition">¶</a></dt>
+<code class="descname">copy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.copy" title="Permalink to this definition">¶</a></dt>
 <dd><p>return a copy of this vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.cross">
-<tt class="descname">cross</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.cross" title="Permalink to this definition">¶</a></dt>
+<code class="descname">cross</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.cross" title="Permalink to this definition">¶</a></dt>
 <dd><p>Cross product with another vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.dot">
-<tt class="descname">dot</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.dot" title="Permalink to this definition">¶</a></dt>
+<code class="descname">dot</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.dot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Dot product with another vector</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="scot.eegtopo.geo_euclidean.Vector.fromiterable">
-<em class="property">classmethod </em><tt class="descname">fromiterable</tt><big>(</big><em>itr</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.fromiterable" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">fromiterable</code><span class="sig-paren">(</span><em>itr</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.fromiterable" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize from iterable</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="scot.eegtopo.geo_euclidean.Vector.fromvector">
-<em class="property">classmethod </em><tt class="descname">fromvector</tt><big>(</big><em>v</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.fromvector" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">fromvector</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.fromvector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Copy another vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.norm">
-<tt class="descname">norm</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.norm" title="Permalink to this definition">¶</a></dt>
+<code class="descname">norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.norm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Length of the vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.norm2">
-<tt class="descname">norm2</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.norm2" title="Permalink to this definition">¶</a></dt>
+<code class="descname">norm2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.norm2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Squared norm of the vector</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.normalize">
-<tt class="descname">normalize</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.normalize" title="Permalink to this definition">¶</a></dt>
+<code class="descname">normalize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.normalize" title="Permalink to this definition">¶</a></dt>
 <dd><p>Normalize vector to length 1</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.normalized">
-<tt class="descname">normalized</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.normalized" title="Permalink to this definition">¶</a></dt>
+<code class="descname">normalized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.normalized" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return normalized vector, but don&#8217;t change original</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.rotate">
-<tt class="descname">rotate</tt><big>(</big><em>l</em>, <em>u</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.rotate" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotate</code><span class="sig-paren">(</span><em>l</em>, <em>u</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.rotate" title="Permalink to this definition">¶</a></dt>
 <dd><p>rotate l radians around axis u</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_euclidean.Vector.rotated">
-<tt class="descname">rotated</tt><big>(</big><em>l</em>, <em>u</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.rotated" title="Permalink to this definition">¶</a></dt>
+<code class="descname">rotated</code><span class="sig-paren">(</span><em>l</em>, <em>u</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_euclidean.Vector.rotated" title="Permalink to this definition">¶</a></dt>
 <dd><p>rotate l radians around axis, but don&#8217;t change original</p>
 </dd></dl>
 
@@ -173,54 +173,54 @@
 <p>Spherical geometry support module</p>
 <dl class="class">
 <dt id="scot.eegtopo.geo_spherical.Circle">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.geo_spherical.</tt><tt class="descname">Circle</tt><big>(</big><em>a</em>, <em>b</em>, <em>c=None</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.geo_spherical.</code><code class="descname">Circle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em>, <em>c=None</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Arbitrary circle on the spherical surface</p>
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Circle.angle">
-<tt class="descname">angle</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.angle" title="Permalink to this definition">¶</a></dt>
+<code class="descname">angle</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.angle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Circle.distance">
-<tt class="descname">distance</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.distance" title="Permalink to this definition">¶</a></dt>
+<code class="descname">distance</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.distance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Circle.get_point">
-<tt class="descname">get_point</tt><big>(</big><em>l</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.get_point" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_point</code><span class="sig-paren">(</span><em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.get_point" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Circle.get_radius">
-<tt class="descname">get_radius</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.get_radius" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_radius</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Circle.get_radius" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="scot.eegtopo.geo_spherical.Construct">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.geo_spherical.</tt><tt class="descname">Construct</tt><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.geo_spherical.</code><code class="descname">Construct</code><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Collection of methods for geometric construction on a sphere</p>
 <dl class="staticmethod">
 <dt id="scot.eegtopo.geo_spherical.Construct.circle_intersect_circle">
-<em class="property">static </em><tt class="descname">circle_intersect_circle</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.circle_intersect_circle" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">circle_intersect_circle</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.circle_intersect_circle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="scot.eegtopo.geo_spherical.Construct.line_intersect_circle">
-<em class="property">static </em><tt class="descname">line_intersect_circle</tt><big>(</big><em>line</em>, <em>circle</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.line_intersect_circle" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">line_intersect_circle</code><span class="sig-paren">(</span><em>line</em>, <em>circle</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.line_intersect_circle" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="scot.eegtopo.geo_spherical.Construct.line_intersect_line">
-<em class="property">static </em><tt class="descname">line_intersect_line</tt><big>(</big><em>k</em>, <em>l</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.line_intersect_line" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">line_intersect_line</code><span class="sig-paren">(</span><em>k</em>, <em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.line_intersect_line" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="scot.eegtopo.geo_spherical.Construct.midpoint">
-<em class="property">static </em><tt class="descname">midpoint</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.midpoint" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">midpoint</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Construct.midpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Point exactly between a and b</p>
 </dd></dl>
 
@@ -228,47 +228,53 @@
 
 <dl class="class">
 <dt id="scot.eegtopo.geo_spherical.Line">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.geo_spherical.</tt><tt class="descname">Line</tt><big>(</big><em>a</em>, <em>b</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.geo_spherical.</code><code class="descname">Line</code><span class="sig-paren">(</span><em>a</em>, <em>b</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Line on the spherical surface (also known as grand circle)</p>
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Line.distance">
-<tt class="descname">distance</tt><big>(</big><em>p</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line.distance" title="Permalink to this definition">¶</a></dt>
+<code class="descname">distance</code><span class="sig-paren">(</span><em>p</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line.distance" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Line.get_point">
-<tt class="descname">get_point</tt><big>(</big><em>l</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line.get_point" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_point</code><span class="sig-paren">(</span><em>l</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Line.get_point" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="class">
 <dt id="scot.eegtopo.geo_spherical.Point">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.geo_spherical.</tt><tt class="descname">Point</tt><big>(</big><em>x=None</em>, <em>y=None</em>, <em>z=None</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.geo_spherical.</code><code class="descname">Point</code><span class="sig-paren">(</span><em>x=None</em>, <em>y=None</em>, <em>z=None</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Point on the surface of a sphere</p>
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Point.distance">
-<tt class="descname">distance</tt><big>(</big><em>other</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.distance" title="Permalink to this definition">¶</a></dt>
+<code class="descname">distance</code><span class="sig-paren">(</span><em>other</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.distance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Distance to another point on the sphere</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.geo_spherical.Point.distances">
-<tt class="descname">distances</tt><big>(</big><em>points</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.distances" title="Permalink to this definition">¶</a></dt>
+<code class="descname">distances</code><span class="sig-paren">(</span><em>points</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.distances" title="Permalink to this definition">¶</a></dt>
 <dd><p>Distance to other points on the sphere</p>
 </dd></dl>
 
 <dl class="classmethod">
 <dt id="scot.eegtopo.geo_spherical.Point.fromvector">
-<em class="property">classmethod </em><tt class="descname">fromvector</tt><big>(</big><em>v</em><big>)</big><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.fromvector" title="Permalink to this definition">¶</a></dt>
+<em class="property">classmethod </em><code class="descname">fromvector</code><span class="sig-paren">(</span><em>v</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.fromvector" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize from euclidean vector</p>
 </dd></dl>
 
 <dl class="attribute">
+<dt id="scot.eegtopo.geo_spherical.Point.list">
+<code class="descname">list</code><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.list" title="Permalink to this definition">¶</a></dt>
+<dd><p>position in 3d space</p>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="scot.eegtopo.geo_spherical.Point.vector">
-<tt class="descname">vector</tt><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.vector" title="Permalink to this definition">¶</a></dt>
+<code class="descname">vector</code><a class="headerlink" href="#scot.eegtopo.geo_spherical.Point.vector" title="Permalink to this definition">¶</a></dt>
 <dd><p>position in 3d space</p>
 </dd></dl>
 
@@ -279,22 +285,22 @@
 <span id="scot-eegtopo-projections-module"></span><h2>scot.eegtopo.projections module<a class="headerlink" href="#module-scot.eegtopo.projections" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="scot.eegtopo.projections.array_project_radial_to2d">
-<tt class="descclassname">scot.eegtopo.projections.</tt><tt class="descname">array_project_radial_to2d</tt><big>(</big><em>points_3d</em><big>)</big><a class="headerlink" href="#scot.eegtopo.projections.array_project_radial_to2d" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.projections.</code><code class="descname">array_project_radial_to2d</code><span class="sig-paren">(</span><em>points_3d</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.projections.array_project_radial_to2d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="scot.eegtopo.projections.array_project_radial_to3d">
-<tt class="descclassname">scot.eegtopo.projections.</tt><tt class="descname">array_project_radial_to3d</tt><big>(</big><em>points_2d</em><big>)</big><a class="headerlink" href="#scot.eegtopo.projections.array_project_radial_to3d" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.projections.</code><code class="descname">array_project_radial_to3d</code><span class="sig-paren">(</span><em>points_2d</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.projections.array_project_radial_to3d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="scot.eegtopo.projections.project_radial_to2d">
-<tt class="descclassname">scot.eegtopo.projections.</tt><tt class="descname">project_radial_to2d</tt><big>(</big><em>point_3d</em><big>)</big><a class="headerlink" href="#scot.eegtopo.projections.project_radial_to2d" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.projections.</code><code class="descname">project_radial_to2d</code><span class="sig-paren">(</span><em>point_3d</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.projections.project_radial_to2d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="function">
 <dt id="scot.eegtopo.projections.project_radial_to3d">
-<tt class="descclassname">scot.eegtopo.projections.</tt><tt class="descname">project_radial_to3d</tt><big>(</big><em>point_2d</em><big>)</big><a class="headerlink" href="#scot.eegtopo.projections.project_radial_to3d" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.projections.</code><code class="descname">project_radial_to3d</code><span class="sig-paren">(</span><em>point_2d</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.projections.project_radial_to3d" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -302,11 +308,11 @@
 <span id="scot-eegtopo-tools-module"></span><h2>scot.eegtopo.tools module<a class="headerlink" href="#module-scot.eegtopo.tools" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="scot.eegtopo.tools.Struct">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.tools.</tt><tt class="descname">Struct</tt><big>(</big><em>content=None</em><big>)</big><a class="headerlink" href="#scot.eegtopo.tools.Struct" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.tools.</code><code class="descname">Struct</code><span class="sig-paren">(</span><em>content=None</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.tools.Struct" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <dl class="method">
 <dt id="scot.eegtopo.tools.Struct.keys">
-<tt class="descname">keys</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.tools.Struct.keys" title="Permalink to this definition">¶</a></dt>
+<code class="descname">keys</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.tools.Struct.keys" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -316,78 +322,137 @@
 <span id="scot-eegtopo-topoplot-module"></span><h2>scot.eegtopo.topoplot module<a class="headerlink" href="#module-scot.eegtopo.topoplot" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="scot.eegtopo.topoplot.Topoplot">
-<em class="property">class </em><tt class="descclassname">scot.eegtopo.topoplot.</tt><tt class="descname">Topoplot</tt><big>(</big><em>m=4, num_lterms=10, headcolor=[0, 0, 0, 1], clipping='head', electrodescale=1, interpolationrange=2.356194490192345, head_radius=2.356194490192345</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">builtins.object</span></tt></p>
+<em class="property">class </em><code class="descclassname">scot.eegtopo.topoplot.</code><code class="descname">Topoplot</code><span class="sig-paren">(</span><em>m=4, num_lterms=10, headcolor=[0, 0, 0, 1], clipping='head', electrodescale=1, interpolationrange=2.356194490192345, head_radius=2.356194490192345</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
 <p>Creates 2D scalp maps.</p>
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.calc_g">
-<tt class="descname">calc_g</tt><big>(</big><em>x</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_g" title="Permalink to this definition">¶</a></dt>
+<code class="descname">calc_g</code><span class="sig-paren">(</span><em>x</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_g" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.calc_gmap">
-<tt class="descname">calc_gmap</tt><big>(</big><em>pixels</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_gmap" title="Permalink to this definition">¶</a></dt>
+<code class="descname">calc_gmap</code><span class="sig-paren">(</span><em>pixels</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_gmap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="staticmethod">
 <dt id="scot.eegtopo.topoplot.Topoplot.calc_legendre_factors">
-<em class="property">static </em><tt class="descname">calc_legendre_factors</tt><big>(</big><em>m</em>, <em>num_lterms</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_legendre_factors" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="descname">calc_legendre_factors</code><span class="sig-paren">(</span><em>m</em>, <em>num_lterms</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.calc_legendre_factors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.create_map">
-<tt class="descname">create_map</tt><big>(</big><em>pixels=32</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.create_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">create_map</code><span class="sig-paren">(</span><em>pixels=32</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.create_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.get_map">
-<tt class="descname">get_map</tt><big>(</big><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.get_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">get_map</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.get_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.plot_circles">
-<tt class="descname">plot_circles</tt><big>(</big><em>radius</em>, <em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_circles" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot_circles</code><span class="sig-paren">(</span><em>radius</em>, <em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_circles" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.plot_head">
-<tt class="descname">plot_head</tt><big>(</big><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_head" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot_head</code><span class="sig-paren">(</span><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_head" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.plot_locations">
-<tt class="descname">plot_locations</tt><big>(</big><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_locations" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot_locations</code><span class="sig-paren">(</span><em>axes=None</em>, <em>offset=(0</em>, <em>0)</em>, <em>fmt='k.'</em>, <em>alpha=1.0</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_locations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.plot_map">
-<tt class="descname">plot_map</tt><big>(</big><em>axes=None</em>, <em>crange=None</em>, <em>offset=(0</em>, <em>0)</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">plot_map</code><span class="sig-paren">(</span><em>axes=None</em>, <em>crange=None</em>, <em>offset=(0</em>, <em>0)</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.plot_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.set_locations">
-<tt class="descname">set_locations</tt><big>(</big><em>locations</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_locations" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_locations</code><span class="sig-paren">(</span><em>locations</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_locations" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.set_map">
-<tt class="descname">set_map</tt><big>(</big><em>img</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_map" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_map</code><span class="sig-paren">(</span><em>img</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_map" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="scot.eegtopo.topoplot.Topoplot.set_values">
-<tt class="descname">set_values</tt><big>(</big><em>z</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_values" title="Permalink to this definition">¶</a></dt>
+<code class="descname">set_values</code><span class="sig-paren">(</span><em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.Topoplot.set_values" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="function">
 <dt id="scot.eegtopo.topoplot.topoplot">
-<tt class="descclassname">scot.eegtopo.topoplot.</tt><tt class="descname">topoplot</tt><big>(</big><em>values, locations, headcolor=[0, 0, 0, 1], axes=None, offset=(0, 0)</em><big>)</big><a class="headerlink" href="#scot.eegtopo.topoplot.topoplot" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">scot.eegtopo.topoplot.</code><code class="descname">topoplot</code><span class="sig-paren">(</span><em>values</em>, <em>locations</em>, <em>axes=None</em>, <em>offset=(0</em>, <em>0)</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.topoplot.topoplot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wrapper function for :class:<a href="#id1"><span class="problematic" id="id2">`</span></a>Topoplot.</p>
-<p>This function is only provided for convenience.</p>
 </dd></dl>
 
+</div>
+<div class="section" id="module-scot.eegtopo.warp_layout">
+<span id="scot-eegtopo-warp-layout-module"></span><h2>scot.eegtopo.warp_layout module<a class="headerlink" href="#module-scot.eegtopo.warp_layout" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="summary">
+<h3>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h3>
+<p>Provides functions to warp electrode layouts.</p>
+<dl class="function">
+<dt id="scot.eegtopo.warp_layout.warp_locations">
+<code class="descclassname">scot.eegtopo.warp_layout.</code><code class="descname">warp_locations</code><span class="sig-paren">(</span><em>locations</em>, <em>y_center=None</em>, <em>return_ellipsoid=False</em>, <em>verbose=False</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.eegtopo.warp_layout.warp_locations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Warp EEG electrode locations to spherical layout.</p>
+<dl class="docutils">
+<dt>EEG Electrodes are warped to a spherical layout in three steps:</dt>
+<dd><ol class="first last arabic simple">
+<li>An ellipsoid is least-squares-fitted to the electrode locations.</li>
+<li>Electrodes are displaced to the nearest point on the ellipsoid&#8217;s surface.</li>
+<li>The ellipsoid is transformed to a sphere, causing the new locations to lie exactly on a spherical surface
+with unit radius.</li>
+</ol>
+</dd>
+</dl>
+<p>This procedure intends to minimize electrode displacement in the original coordinate space. Simply projecting
+electrodes on a sphere (e.g. by normalizing the x/y/z coordinates) typically gives much larger displacements.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>locations</strong> : array-like, shape = [n_electrodes, 3]</p>
+<blockquote>
+<div><p>Eeach row of <cite>locations</cite> corresponds to the location of an EEG electrode in cartesian x/y/z coordinates.</p>
+</div></blockquote>
+<p><strong>y_center</strong> : float, optional</p>
+<blockquote>
+<div><p>Fix the y-coordinate of the ellipsoid&#8217;s center to this value (optional). This is useful to align the ellipsoid
+with the central electrodes.</p>
+</div></blockquote>
+<p><strong>return_ellipsoid</strong> : bool, optional</p>
+<blockquote>
+<div><p>If <cite>true</cite> center and radii of the ellipsoid are returned.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>newlocs</strong> : array-like, shape = [n_electrodes, 3]</p>
+<blockquote>
+<div><p>Electrode locations on unit sphere.</p>
+</div></blockquote>
+<p><strong>c</strong> : array-like, shape = [3], (only returned if <cite>return_ellipsoid</cite> evaluates to <cite>True</cite>)</p>
+<blockquote>
+<div><p>Center of the ellipsoid in the original location&#8217;s coordinate space.</p>
+</div></blockquote>
+<p><strong>r</strong> : array-like, shape = [3], (only returned if <cite>return_ellipsoid</cite> evaluates to <cite>True</cite>)</p>
+<blockquote class="last">
+<div><p>Radii (x, y, z) of the ellipsoid in the original location&#8217;s coordinate space.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
 </div>
 <div class="section" id="module-scot.eegtopo">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scot.eegtopo" title="Permalink to this headline">¶</a></h2>
@@ -398,7 +463,7 @@
           </div>
         </div>
       </div>
-      <div class="sphinxsidebar">
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table Of Contents</a></h3>
   <ul>
@@ -410,6 +475,10 @@
 <li><a class="reference internal" href="#module-scot.eegtopo.projections">scot.eegtopo.projections module</a></li>
 <li><a class="reference internal" href="#module-scot.eegtopo.tools">scot.eegtopo.tools module</a></li>
 <li><a class="reference internal" href="#module-scot.eegtopo.topoplot">scot.eegtopo.topoplot module</a></li>
+<li><a class="reference internal" href="#module-scot.eegtopo.warp_layout">scot.eegtopo.warp_layout module</a><ul>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#module-scot.eegtopo">Module contents</a></li>
 </ul>
 </li>
@@ -421,12 +490,14 @@
   <h4>Next topic</h4>
   <p class="topless"><a href="scot.external.html"
                         title="next chapter">scot.external package</a></p>
-  <h3>This Page</h3>
-  <ul class="this-page-menu">
-    <li><a href="../../_sources/api/scot/scot.eegtopo.txt"
-           rel="nofollow">Show Source</a></li>
-  </ul>
-<div id="searchbox" style="display: none">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/api/scot/scot.eegtopo.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="../../search.html" method="get">
       <input type="text" name="q" />
@@ -443,7 +514,7 @@
       </div>
       <div class="clearer"></div>
     </div>
-    <div class="related">
+    <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
@@ -463,14 +534,14 @@
         <li><a href="../../gallery.html">gallery</a>|&nbsp;</li>
         <li><a href="../../search.html">search</a>|&nbsp;</li>
 
-          <li><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li><a href="modules.html" >scot</a> &raquo;</li>
-          <li><a href="scot.html" >scot package</a> &raquo;</li> 
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" >scot package</a> &raquo;</li> 
       </ul>
     </div>
-    <div class="footer">
-        &copy; Copyright 2015, SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.3.
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
     </div>
   </body>
 </html>

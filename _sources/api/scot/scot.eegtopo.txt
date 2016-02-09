@@ -52,6 +52,14 @@ scot.eegtopo.topoplot module
     :undoc-members:
     :show-inheritance:
 
+scot.eegtopo.warp_layout module
+-------------------------------
+
+.. automodule:: scot.eegtopo.warp_layout
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
 
 Module contents
 ---------------

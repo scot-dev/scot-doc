@@ -16,6 +16,7 @@ misc Examples
     circular <circular.rst>
     connectivity <connectivity.rst>
     features <features.rst>
+    parallelization <parallelization.rst>
     pca <pca.rst>
     statistics <statistics.rst>
     timefrequency <timefrequency.rst>
