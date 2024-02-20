@@ -1,34 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="./">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Testing SPHINX Features &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     
-    <title>Testing SPHINX Features &mdash; SCoT</title>
+    <script src="_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="index.html" />
-    <link rel="up" title="Miscellaneous Topics" href="misc.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Is VAR model fitting invariant to PCA transformations?" href="vartransform.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
@@ -46,8 +36,9 @@
         <li class="right" >
           <a href="vartransform.html" title="Is VAR model fitting invariant to PCA transformations?"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="misc.html" accesskey="U">Miscellaneous Topics</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="misc.html" accesskey="U">Miscellaneous Topics</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Testing SPHINX Features</a></li> 
       </ul>
     </div>
   
@@ -56,32 +47,32 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="testing-sphinx-features">
-<h1>Testing SPHINX Features<a class="headerlink" href="#testing-sphinx-features" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="syntax-highlighting">
-<h2>Syntax Highlighting<a class="headerlink" href="#syntax-highlighting" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-ipython"><div class="highlight"><pre><span class="gp">In [69]: </span><span class="n">lines</span> <span class="o">=</span> <span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+  <section id="testing-sphinx-features">
+<h1>Testing SPHINX Features<a class="headerlink" href="#testing-sphinx-features" title="Link to this heading">¶</a></h1>
+<section id="syntax-highlighting">
+<h2>Syntax Highlighting<a class="headerlink" href="#syntax-highlighting" title="Link to this heading">¶</a></h2>
+<div class="highlight-ipython notranslate"><div class="highlight"><pre><span></span><span class="gp">In [69]: </span><span class="n">lines</span> <span class="o">=</span> <span class="n">plot</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
 
 <span class="gp">In [70]: </span><span class="n">setp</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
 <span class="go">  alpha: float</span>
 <span class="go">  ...snip</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="math">
-<h2>Math<a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
-<div class="math">
+</section>
+<section id="math">
+<h2>Math<a class="headerlink" href="#math" title="Link to this heading">¶</a></h2>
+<div class="math notranslate nohighlight">
 \[x_n = \sum_{i=1}^{p}a_ix_{n-i} + e_n\]</div>
-</div>
-<div class="section" id="plots">
-<h2>Plots<a class="headerlink" href="#plots" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
+</section>
+<section id="plots">
+<h2>Plots<a class="headerlink" href="#plots" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Ellipse</span>
 
 <span class="n">delta</span> <span class="o">=</span> <span class="mf">45.0</span> <span class="c1"># degrees</span>
 
 <span class="n">angles</span> <span class="o">=</span> <span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">360</span><span class="o">+</span><span class="n">delta</span><span class="p">,</span> <span class="n">delta</span><span class="p">)</span>
-<span class="n">ells</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ellipse</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">angles</span><span class="p">]</span>
+<span class="n">ells</span> <span class="o">=</span> <span class="p">[</span><span class="n">Ellipse</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">angle</span><span class="o">=</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">angles</span><span class="p">]</span>
 
 <span class="n">a</span> <span class="o">=</span> <span class="n">subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">,</span> <span class="n">aspect</span><span class="o">=</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
 
@@ -96,18 +87,19 @@
 <span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>(<a class="reference external" href="./pyplots/ellipses.py">Source code</a>, <a class="reference external" href="./pyplots/ellipses.png">png</a>, <a class="reference external" href="./pyplots/ellipses.hires.png">hires.png</a>, <a class="reference external" href="./pyplots/ellipses.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/ellipses.png" src="_images/ellipses.png" />
-</div>
-<p>(<a class="reference external" href=".//mytest-1.py">Source code</a>, <a class="reference external" href=".//mytest-1.png">png</a>, <a class="reference external" href=".//mytest-1.hires.png">hires.png</a>, <a class="reference external" href=".//mytest-1.pdf">pdf</a>)</p>
-<div class="figure">
-<img alt="_images/mytest-1.png" src="_images/mytest-1.png" />
-</div>
-</div>
-</div>
+<p>(<a class="reference download internal" download="" href="_downloads/c66b1cdaedfb1ef829c0814f8c2ffcc6/ellipses.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/76441a3731c7586625a21ddf0518d1ad/ellipses.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/560fb358264bcf40c9fc1c576509f105/ellipses.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/d9d83c4057a1f5e7aacdfdbaa7ec250f/ellipses.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/ellipses.png" class="plot-directive" src="_images/ellipses.png" />
+</figure>
+<p>(<a class="reference download internal" download="" href="_downloads/9deb9fd691b0910a27a7e4bfc7fc791d/mytest-1.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="_downloads/d9528a67b6d8d0c50c72addd4345c352/mytest-1.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="_downloads/2947df5e0b25d175e972fc3ce7c9211f/mytest-1.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="_downloads/9241cd87a10f6f733b0973a7349a61bd/mytest-1.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="_images/mytest-1.png" class="plot-directive" src="_images/mytest-1.png" />
+</figure>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -124,13 +116,14 @@
         <li class="right" >
           <a href="vartransform.html" title="Is VAR model fitting invariant to PCA transformations?"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="misc.html" >Miscellaneous Topics</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="misc.html" >Miscellaneous Topics</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Testing SPHINX Features</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

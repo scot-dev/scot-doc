@@ -1,35 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="./">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Acknowledgments &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     
-    <title>Acknowledgments &mdash; SCoT</title>
+    <script src="_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="index.html" />
-    <link rel="up" title="About SCoT" href="info.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="SCoT Examples" href="examples/index.html" />
     <link rel="prev" title="Introduction" href="introduction.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
@@ -50,8 +39,9 @@
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="info.html" accesskey="U">About SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="info.html" accesskey="U">About SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Acknowledgments</a></li> 
       </ul>
     </div>
   
@@ -60,29 +50,31 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="acknowledgments">
-<h1>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="acknowledgments">
+<h1>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
 <p>SCoT has been developed to provide connectivity estimation between brain sources for the Python community. SCoT was mainly developed by Martin Billinger as part of his PhD thesis at the <a class="reference external" href="http://bci.tugraz.at/">Institute for Knowledge Discovery</a>, <a class="reference external" href="http://www.tugraz.at/">Graz University of Technology</a>, Graz, Austria. Although all source code was written from scratch, there are several existing sources that contributed directly or indirectly to this toolbox. Furthermore, there are a number of related connectivity toolboxes available for non-Python programming languages. In the following paragraphs, we would like to acknowledge these sources.</p>
-</div>
-<div class="section" id="related-toolboxes">
-<h2>Related toolboxes<a class="headerlink" href="#related-toolboxes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="related-toolboxes">
+<h2>Related toolboxes<a class="headerlink" href="#related-toolboxes" title="Link to this heading">¶</a></h2>
 <p><a class="reference external" href="http://sccn.ucsd.edu/wiki/SIFT">SIFT</a>, the Source Information Flow Toolbox, is a connectivity toolbox for MATLAB. It has close ties with <a class="reference external" href="http://sccn.ucsd.edu/eeglab/">EEGLAB</a>, a widely used toolbox for EEG signal processing. Although SCoT has been developed independently, we would like to mention the excellent SIFT user manual (available on the SIFT website), which provides a very nice overview of connectivity estimation. Parts of SCoT, for instance the methods available for statistical significance tests, were inspired by the SIFT manual.</p>
 <p>SCoT optionally uses <a class="reference external" href="http://scikit-learn.org/stable/">scikit-learn</a>, a great machine learning package for Python, for some of its backend functionality. SCoT supports <a class="reference external" href="http://dx.doi.org/10.1162/neco.1995.7.6.1129">Infomax ICA</a> from <a class="reference external" href="http://martinos.org/mne/stable/index.html">MNE</a>.</p>
 <p><a class="reference external" href="http://biosig.sourceforge.net/">BioSig</a> is also a MATLAB-based toolbox for biosignal processing. Besides providing I/O functionality for many biosignal file formats, it supports various signal processing and machine learning routines. It also provides functions to fit vector autoregressive models and derive various connectivity measures from the model parameters.</p>
-</div>
-<div class="section" id="relevant-literature">
-<h2>Relevant literature<a class="headerlink" href="#relevant-literature" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="relevant-literature">
+<h2>Relevant literature<a class="headerlink" href="#relevant-literature" title="Link to this heading">¶</a></h2>
 <p>If you use SCoT, please consider citing the following reference publication:</p>
 <blockquote>
-<div>Martin Billinger, Clemens Brunner, Gernot R. Müller-Putz. SCoT: a Python toolbox for EEG source connectivity. Frontiers in Neuroinformatics, 8:22, 2014. <a class="reference external" href="http://dx.doi.org/10.3389/fninf.2014.00022">doi:10.3389/fninf.2014.00022</a></div></blockquote>
-<p><a class="reference external" href="http://dx.doi.org/10.1016/S0079-6123(06)59009-0">Schlögl and Supp (2006)</a> provide an excellent overview of the various connectivity measures used in SCoT. The <a class="reference internal" href="api_reference.html#api-reference"><span>API Reference</span></a> provides references to the original publication for each connectivity measure.</p>
+<div><p>Martin Billinger, Clemens Brunner, Gernot R. Müller-Putz. SCoT: a Python toolbox for EEG source connectivity. Frontiers in Neuroinformatics, 8:22, 2014. <a class="reference external" href="http://dx.doi.org/10.3389/fninf.2014.00022">doi:10.3389/fninf.2014.00022</a></p>
+</div></blockquote>
+<p><a class="reference external" href="http://dx.doi.org/10.1016/S0079-6123(06)59009-0">Schlögl and Supp (2006)</a> provide an excellent overview of the various connectivity measures used in SCoT. The <a class="reference internal" href="api_reference.html#api-reference"><span class="std std-ref">API Reference</span></a> provides references to the original publication for each connectivity measure.</p>
 <p>The MVARICA approach implemented in SCoT was developed by <a class="reference external" href="http://dx.doi.org/10.1016/j.neuroimage.2008.07.032">Gómez-Herrero et al. (2008)</a>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -102,13 +94,14 @@
         <li class="right" >
           <a href="introduction.html" title="Introduction"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="info.html" >About SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="info.html" >About SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Acknowledgments</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

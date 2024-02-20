@@ -1,35 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../../">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>misc example code: circular.py &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     
-    <title>misc example code: circular.py &mdash; SCoT</title>
+    <script src="../../_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="../../index.html" />
-    <link rel="up" title="misc Examples" href="index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="misc example code: connectivity.py" href="connectivity.html" />
     <link rel="prev" title="misc example code: MVARICAvsCSPVARICA.py" href="MVARICAvsCSPVARICA.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
@@ -50,10 +39,11 @@
         <li class="right" >
           <a href="MVARICAvsCSPVARICA.html" title="misc example code: MVARICAvsCSPVARICA.py"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">misc Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">misc example code: circular.py</a></li> 
       </ul>
     </div>
   
@@ -62,24 +52,28 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="misc-example-code-circular-py">
-<span id="misc-circular"></span><h1>misc example code: circular.py<a class="headerlink" href="#misc-example-code-circular-py" title="Permalink to this headline">¶</a></h1>
-<p>(<a class="reference external" href="../../scot_examples/misc/circular.py">Source code</a>)</p>
-<div class="figure" id="id1">
-<img alt="../../_images/circular_00.png" src="../../_images/circular_00.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../scot_examples/misc/circular_00.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_00.pdf">pdf</a>)</span></p>
-</div>
-<div class="figure" id="id2">
-<img alt="../../_images/circular_01.png" src="../../_images/circular_01.png" />
-<p class="caption"><span class="caption-text">(<a class="reference external" href="../../scot_examples/misc/circular_01.png">png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.hires.png">hires.png</a>, <a class="reference external" href="../../scot_examples/misc/circular_01.pdf">pdf</a>)</span></p>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="sd">&quot;&quot;&quot;</span>
+  <section id="misc-example-code-circular-py">
+<span id="misc-circular"></span><h1>misc example code: circular.py<a class="headerlink" href="#misc-example-code-circular-py" title="Link to this heading">¶</a></h1>
+<p>(<a class="reference download internal" download="" href="../../_downloads/358ab65ca75c41ba818c0c603fbbac02/circular.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/circular_00.png" class="plot-directive" src="../../_images/circular_00.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../../_downloads/ecb7323c5cafd4f61136d508afc280c4/circular_00.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/2f1bb447daba15a84fcc44ab63ba57b5/circular_00.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ad1f2676f54a8b24fcdb745836e1a559/circular_00.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id1" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id2">
+<img alt="../../_images/circular_01.png" class="plot-directive" src="../../_images/circular_01.png" />
+<figcaption>
+<p><span class="caption-text">(<a class="reference download internal" download="" href="../../_downloads/3d3e1de0cc2f3dcc0616c9d5c4380a2f/circular_01.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/39b46b98e4e3384aaa9ffd58f3737ab8/circular_01.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/af8b984e758d77e18e18a9d9fd014677/circular_01.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</span><a class="headerlink" href="#id2" title="Link to this image">¶</a></p>
+</figcaption>
+</figure>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">This example shows how to decompose EEG signals into source activations with</span>
 <span class="sd">CSPVARICA and visualize connectivity.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">import</span> <span class="nn">scot</span>
 <span class="kn">from</span> <span class="nn">scot.utils</span> <span class="kn">import</span> <span class="n">cuthill_mckee</span>
@@ -94,13 +88,16 @@
 <span class="c1"># trigger time points of the cues are stored in &#39;triggers&#39;, and &#39;classes&#39;</span>
 <span class="c1"># contains the class labels. Duration of the motor imagery period was</span>
 <span class="c1"># approximately six seconds.</span>
-<span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
+<span class="kn">from</span> <span class="nn">scot.datasets</span> <span class="kn">import</span> <span class="n">fetch</span>
 
-<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span><span class="o">.</span><span class="n">T</span>
-<span class="n">triggers</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">midata</span><span class="o">.</span><span class="n">triggers</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
-<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span>
-<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">samplerate</span>
-<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
+
+<span class="n">midata</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;mi&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;eeg&quot;</span><span class="p">]</span>
+<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;triggers&quot;</span><span class="p">]</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;fs&quot;</span><span class="p">]</span>
+<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;locations&quot;</span><span class="p">]</span>
 
 
 <span class="c1"># Set random seed for repeatable results</span>
@@ -148,12 +145,12 @@
 <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;hand&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;foot&#39;</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 
-<span class="n">order</span> <span class="o">=</span> <span class="bp">None</span>
-<span class="k">for</span> <span class="n">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;hand&#39;</span><span class="p">,</span> <span class="s1">&#39;foot&#39;</span><span class="p">]:</span>
-    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">order</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="k">for</span> <span class="bp">cls</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;hand&#39;</span><span class="p">,</span> <span class="s1">&#39;foot&#39;</span><span class="p">]:</span>
+    <span class="n">np</span><span class="o">.</span><span class="n">fill_diagonal</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="bp">cls</span><span class="p">],</span> <span class="mi">0</span><span class="p">)</span>
 
-    <span class="n">w</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span>
-    <span class="n">m</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">4</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">alpha</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">4</span>
 
     <span class="c1"># use same ordering of components for each class</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">order</span><span class="p">:</span>
@@ -163,19 +160,20 @@
     <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
     <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="n">cls</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;hand&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;foot&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">)</span> <span class="o">/</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;hand&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">alpha</span><span class="p">[</span><span class="s1">&#39;foot&#39;</span><span class="p">]</span><span class="o">-</span><span class="mi">4</span><span class="p">))</span>
     <span class="n">c</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dstack</span><span class="p">([</span><span class="n">r</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">])</span>
 
     <span class="n">plotting</span><span class="o">.</span><span class="n">plot_circular</span><span class="p">(</span><span class="n">colors</span><span class="o">=</span><span class="n">c</span><span class="p">,</span> <span class="n">widths</span><span class="o">=</span><span class="n">w</span><span class="p">,</span> <span class="n">mask</span><span class="o">=</span><span class="n">m</span><span class="p">,</span> <span class="n">topo</span><span class="o">=</span><span class="n">topo</span><span class="p">,</span>
                            <span class="n">topomaps</span><span class="o">=</span><span class="n">mixmaps</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="n">order</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">cls</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="bp">cls</span><span class="p">)</span>
 
 <span class="n">plotting</span><span class="o">.</span><span class="n">show_plots</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -195,15 +193,16 @@
         <li class="right" >
           <a href="MVARICAvsCSPVARICA.html" title="misc example code: MVARICAvsCSPVARICA.py"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >misc Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >misc Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">misc example code: circular.py</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,0 +1,29 @@
+scot.tests.test\_eegtopo.test\_geometry package
+===============================================
+
+Submodules
+----------
+
+scot.tests.test\_eegtopo.test\_geometry.test\_euclidean module
+--------------------------------------------------------------
+
+.. automodule:: scot.tests.test_eegtopo.test_geometry.test_euclidean
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_eegtopo.test\_geometry.test\_spherical module
+--------------------------------------------------------------
+
+.. automodule:: scot.tests.test_eegtopo.test_geometry.test_spherical
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: scot.tests.test_eegtopo.test_geometry
+   :members:
+   :undoc-members:
+   :show-inheritance:

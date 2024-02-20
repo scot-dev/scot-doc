@@ -1,0 +1,21 @@
+scot.external package
+=====================
+
+Submodules
+----------
+
+scot.external.infomax\_ module
+------------------------------
+
+.. automodule:: scot.external.infomax_
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: scot.external
+   :members:
+   :undoc-members:
+   :show-inheritance:

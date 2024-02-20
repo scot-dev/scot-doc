@@ -1,35 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../../">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>scot.external package &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     
-    <title>scot.external package &mdash; SCoT</title>
+    <script src="../../_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="../../index.html" />
-    <link rel="up" title="scot package" href="scot.html" />
-    <link rel="next" title="Miscellaneous Topics" href="../../misc.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="scot.tests package" href="scot.tests.html" />
     <link rel="prev" title="scot.eegtopo package" href="scot.eegtopo.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
@@ -45,15 +34,16 @@
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../../misc.html" title="Miscellaneous Topics"
+          <a href="scot.tests.html" title="scot.tests package"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="scot.eegtopo.html" title="scot.eegtopo package"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="scot.html" accesskey="U">scot package</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" accesskey="U">scot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scot.external package</a></li> 
       </ul>
     </div>
   
@@ -62,134 +52,90 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="scot-external-package">
-<h1>scot.external package<a class="headerlink" href="#scot-external-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-scot.external.infomax_">
-<span id="scot-external-infomax-module"></span><h2><a href="#id3"><span class="problematic" id="id4">scot.external.infomax_</span></a> module<a class="headerlink" href="#module-scot.external.infomax_" title="Permalink to this headline">¶</a></h2>
-<dl class="function">
-<dt id="scot.external.infomax_.check_random_state">
-<code class="descclassname">scot.external.infomax_.</code><code class="descname">check_random_state</code><span class="sig-paren">(</span><em>seed</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.check_random_state" title="Permalink to this definition">¶</a></dt>
-<dd><p>Turn seed into a np.random.RandomState instance</p>
-<p>If seed is None, return the RandomState singleton used by np.random.
-If seed is an int, return a new RandomState instance seeded with seed.
-If seed is already a RandomState instance, return it.
-Otherwise raise ValueError.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="scot.external.infomax_.infomax">
-<code class="descclassname">scot.external.infomax_.</code><code class="descname">infomax</code><span class="sig-paren">(</span><em>data</em>, <em>weights=None</em>, <em>l_rate=None</em>, <em>block=None</em>, <em>w_change=1e-12</em>, <em>anneal_deg=60.0</em>, <em>anneal_step=0.9</em>, <em>extended=False</em>, <em>n_subgauss=1</em>, <em>kurt_size=6000</em>, <em>ext_blocks=1</em>, <em>max_iter=200</em>, <em>random_state=None</em>, <em>verbose=None</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.infomax" title="Permalink to this definition">¶</a></dt>
+  <section id="scot-external-package">
+<h1>scot.external package<a class="headerlink" href="#scot-external-package" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+</section>
+<section id="module-scot.external.infomax_">
+<span id="scot-external-infomax-module"></span><h2>scot.external.infomax_ module<a class="headerlink" href="#module-scot.external.infomax_" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="scot.external.infomax_.infomax">
+<span class="sig-prename descclassname"><span class="pre">scot.external.infomax_.</span></span><span class="sig-name descname"><span class="pre">infomax</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">weights</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">l_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">block</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_change</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-12</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anneal_deg</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">60.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">anneal_step</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.9</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extended</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n_subgauss</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kurt_size</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ext_blocks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">random_state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.infomax" title="Link to this definition">¶</a></dt>
 <dd><p>Run the (extended) Infomax ICA decomposition on raw data</p>
 <p>based on the publications of Bell &amp; Sejnowski 1995 (Infomax)
 and Lee, Girolami &amp; Sejnowski, 1999 (extended Infomax)</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>data</strong> : np.ndarray, shape (n_samples, n_features)</p>
-<blockquote>
-<div><p>The data to unmix.</p>
-</div></blockquote>
-<p><strong>w_init</strong> : np.ndarray, shape (n_features, n_features)</p>
-<blockquote>
-<div><p>The initialized unmixing matrix. Defaults to None. If None, the
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>data</strong><span class="classifier">np.ndarray, shape (n_samples, n_features)</span></dt><dd><p>The data to unmix.</p>
+</dd>
+<dt><strong>w_init</strong><span class="classifier">np.ndarray, shape (n_features, n_features)</span></dt><dd><p>The initialized unmixing matrix. Defaults to None. If None, the
 identity matrix is used.</p>
-</div></blockquote>
-<p><strong>l_rate</strong> : float</p>
-<blockquote>
-<div><p>This quantity indicates the relative size of the change in weights.
+</dd>
+<dt><strong>l_rate</strong><span class="classifier">float</span></dt><dd><p>This quantity indicates the relative size of the change in weights.
 Note. Smaller learining rates will slow down the procedure.
 Defaults to 0.010d / alog(n_features ^ 2.0)</p>
-</div></blockquote>
-<p><strong>block</strong> : int</p>
-<blockquote>
-<div><p>The block size of randomly chosen data segment.
+</dd>
+<dt><strong>block</strong><span class="classifier">int</span></dt><dd><p>The block size of randomly chosen data segment.
 Defaults to floor(sqrt(n_times / 3d))</p>
-</div></blockquote>
-<p><strong>w_change</strong> : float</p>
-<blockquote>
-<div><p>The change at which to stop iteration. Defaults to 1e-12.</p>
-</div></blockquote>
-<p><strong>anneal_deg</strong> : float</p>
-<blockquote>
-<div><p>The angle at which (in degree) the learning rate will be reduced.
+</dd>
+<dt><strong>w_change</strong><span class="classifier">float</span></dt><dd><p>The change at which to stop iteration. Defaults to 1e-12.</p>
+</dd>
+<dt><strong>anneal_deg</strong><span class="classifier">float</span></dt><dd><p>The angle at which (in degree) the learning rate will be reduced.
 Defaults to 60.0</p>
-</div></blockquote>
-<p><strong>anneal_step</strong> : float</p>
-<blockquote>
-<div><p>The factor by which the learning rate will be reduced once
-<code class="docutils literal"><span class="pre">anneal_deg</span></code> is exceeded:</p>
-<blockquote>
-<div><p>l_rate <a href="#id1"><span class="problematic" id="id2">*</span></a>= anneal_step</p>
-</div></blockquote>
-<p>Defaults to 0.9</p>
-</div></blockquote>
-<p><strong>extended</strong> : bool</p>
-<blockquote>
-<div><p>Wheather to use the extended infomax algorithm or not. Defaults to
+</dd>
+<dt><strong>anneal_step</strong><span class="classifier">float</span></dt><dd><p>The factor by which the learning rate will be reduced once
+anneal_deg is exceeded: l_rate <a href="#id1"><span class="problematic" id="id2">*</span></a>= anneal_step
+Defaults to 0.9</p>
+</dd>
+<dt><strong>extended</strong><span class="classifier">bool</span></dt><dd><p>Wheather to use the extended infomax algorithm or not. Defaults to
 True.</p>
-</div></blockquote>
-<p><strong>n_subgauss</strong> : int</p>
-<blockquote>
-<div><p>The number of subgaussian components. Only considered for extended
+</dd>
+<dt><strong>n_subgauss</strong><span class="classifier">int</span></dt><dd><p>The number of subgaussian components. Only considered for extended
 Infomax.</p>
-</div></blockquote>
-<p><strong>kurt_size</strong> : int</p>
-<blockquote>
-<div><p>The window size for kurtosis estimation. Only considered for extended
+</dd>
+<dt><strong>kurt_size</strong><span class="classifier">int</span></dt><dd><p>The window size for kurtosis estimation. Only considered for extended
 Infomax.</p>
-</div></blockquote>
-<p><strong>ext_blocks</strong> : int</p>
-<blockquote>
-<div><p>The number of blocks after which to recompute Kurtosis.
+</dd>
+<dt><strong>ext_blocks</strong><span class="classifier">int</span></dt><dd><p>The number of blocks after which to recompute Kurtosis.
 Only considered for extended Infomax.</p>
-</div></blockquote>
-<p><strong>max_iter</strong> : int</p>
-<blockquote>
-<div><p>The maximum number of iterations. Defaults to 200.</p>
-</div></blockquote>
-<p><strong>verbose</strong> : bool, str, int, or None</p>
-<blockquote>
-<div><p>If not None, override default verbose level (see mne.verbose).</p>
-</div></blockquote>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>unmixing_matrix</strong> : np.ndarray of float, shape (n_features, n_features)</p>
-<blockquote class="last">
-<div><p>The linear unmixing operator.</p>
-</div></blockquote>
-</td>
-</tr>
-</tbody>
-</table>
+</dd>
+<dt><strong>max_iter</strong><span class="classifier">int</span></dt><dd><p>The maximum number of iterations. Defaults to 200.</p>
+</dd>
+<dt><strong>verbose</strong><span class="classifier">bool, str, int, or None</span></dt><dd><p>If not None, override default verbose level (see mne.verbose).</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>unmixing_matrix</strong><span class="classifier">np.ndarray of float, shape (n_features, n_features)</span></dt><dd><p>The linear unmixing operator.</p>
+</dd>
+</dl>
+</dd>
+</dl>
 </dd></dl>
 
-<dl class="class">
-<dt id="scot.external.infomax_.logger">
-<em class="property">class </em><code class="descclassname">scot.external.infomax_.</code><code class="descname">logger</code><a class="headerlink" href="#scot.external.infomax_.logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<dl class="staticmethod">
-<dt id="scot.external.infomax_.logger.info">
-<em class="property">static </em><code class="descname">info</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.logger.info" title="Permalink to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="scot.external.infomax_.logger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">scot.external.infomax_.</span></span><span class="sig-name descname"><span class="pre">logger</span></span><a class="headerlink" href="#scot.external.infomax_.logger" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="scot.external.infomax_.logger.info">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">info</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#scot.external.infomax_.logger.info" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-scot.external">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scot.external" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-scot.external">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-scot.external" title="Link to this heading">¶</a></h2>
 <p>External sources and code snippets</p>
-<div class="section" id="files">
-<h3>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h3>
-<p><a href="#id5"><span class="problematic" id="id6">infomax_</span></a>.py : (Extended) Infomax ICA, implemented in MNE-python, <a class="reference external" href="https://github.com/mne-tools/mne-python/blob/16d5538d76bf08278aa95b8546e45f4a5c19d42b/mne/preprocessing/">https://github.com/mne-tools/mne-python/blob/16d5538d76bf08278aa95b8546e45f4a5c19d42b/mne/preprocessing/</a><a href="#id7"><span class="problematic" id="id8">infomax_</span></a>.py</p>
-</div>
-</div>
-</div>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -204,20 +150,21 @@ Only considered for extended Infomax.</p>
           <a href="../../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
         <li class="right" >
-          <a href="../../misc.html" title="Miscellaneous Topics"
+          <a href="scot.tests.html" title="scot.tests package"
              >next</a> |</li>
         <li class="right" >
           <a href="scot.eegtopo.html" title="scot.eegtopo package"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="scot.html" >scot package</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../api_reference.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="modules.html" >scot</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="scot.html" >scot package</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">scot.external package</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

@@ -1,0 +1,29 @@
+scot.tests.test\_eegtopo package
+================================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   scot.tests.test_eegtopo.test_geometry
+
+Submodules
+----------
+
+scot.tests.test\_eegtopo.test\_warp module
+------------------------------------------
+
+.. automodule:: scot.tests.test_eegtopo.test_warp
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: scot.tests.test_eegtopo
+   :members:
+   :undoc-members:
+   :show-inheritance:

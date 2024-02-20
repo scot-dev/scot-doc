@@ -1,34 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="./">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>API Reference &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     
-    <title>API Reference &mdash; SCoT</title>
+    <script src="_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="scot" href="api/scot/modules.html" />
     <link rel="prev" title="Getting started" href="getting_started.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="index.html"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
@@ -49,7 +39,8 @@
         <li class="right" >
           <a href="getting_started.html" title="Getting started"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Reference</a></li> 
       </ul>
     </div>
   
@@ -58,8 +49,8 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="api-reference">
-<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
+  <section id="api-reference">
+<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/scot/modules.html">scot</a><ul>
@@ -67,48 +58,149 @@
 <li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#subpackages">Subpackages</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.eegtopo.html">scot.eegtopo package</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.external.html">scot.external package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.tests.html">scot.tests package</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backend_builtin">scot.backend_builtin module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backend_sklearn">scot.backend_sklearn module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backendmanager">scot.backendmanager module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.config">scot.config module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.connectivity">scot.connectivity module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.connectivity_statistics">scot.connectivity_statistics module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.csp">scot.csp module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backend_builtin">scot.backend_builtin module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.backend_builtin.generate"><code class="docutils literal notranslate"><span class="pre">generate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backend_mne">scot.backend_mne module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.backend_mne.generate"><code class="docutils literal notranslate"><span class="pre">generate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backend_sklearn">scot.backend_sklearn module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.backend_sklearn.generate"><code class="docutils literal notranslate"><span class="pre">generate()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.backendmanager">scot.backendmanager module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.backendmanager.BackendManager"><code class="docutils literal notranslate"><span class="pre">BackendManager</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.config">scot.config module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.config.load_configuration"><code class="docutils literal notranslate"><span class="pre">load_configuration()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.connectivity">scot.connectivity module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity"><code class="docutils literal notranslate"><span class="pre">Connectivity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity.connectivity"><code class="docutils literal notranslate"><span class="pre">connectivity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.connectivity_statistics">scot.connectivity_statistics module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity_statistics.bootstrap_connectivity"><code class="docutils literal notranslate"><span class="pre">bootstrap_connectivity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity_statistics.convert_output_"><code class="docutils literal notranslate"><span class="pre">convert_output_()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity_statistics.jackknife_connectivity"><code class="docutils literal notranslate"><span class="pre">jackknife_connectivity()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity_statistics.significance_fdr"><code class="docutils literal notranslate"><span class="pre">significance_fdr()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.connectivity_statistics.surrogate_connectivity"><code class="docutils literal notranslate"><span class="pre">surrogate_connectivity()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.csp">scot.csp module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.csp.csp"><code class="docutils literal notranslate"><span class="pre">csp()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.datasets">scot.datasets module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datasets.MD5MismatchError"><code class="docutils literal notranslate"><span class="pre">MD5MismatchError</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datasets.convert"><code class="docutils literal notranslate"><span class="pre">convert()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datasets.fetch"><code class="docutils literal notranslate"><span class="pre">fetch()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.datatools">scot.datatools module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#summary">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.acm"><code class="docutils literal notranslate"><span class="pre">acm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.atleast_3d"><code class="docutils literal notranslate"><span class="pre">atleast_3d()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.cat_trials"><code class="docutils literal notranslate"><span class="pre">cat_trials()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.cut_segments"><code class="docutils literal notranslate"><span class="pre">cut_segments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.dot_special"><code class="docutils literal notranslate"><span class="pre">dot_special()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.datatools.randomize_phase"><code class="docutils literal notranslate"><span class="pre">randomize_phase()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.matfiles">scot.matfiles module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#id6">Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.matfiles.loadmat"><code class="docutils literal notranslate"><span class="pre">loadmat()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.ooapi">scot.ooapi module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#id7">Summary</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#extended-summary">Extended Summary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.ooapi.Workspace"><code class="docutils literal notranslate"><span class="pre">Workspace</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.parallel">scot.parallel module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.pca">scot.pca module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.plainica">scot.plainica module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.plotting">scot.plotting module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.utils">scot.utils module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.var">scot.var module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.varbase">scot.varbase module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.varica">scot.varica module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.xvschema">scot.xvschema module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.parallel">scot.parallel module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.parallel.parallel_loop"><code class="docutils literal notranslate"><span class="pre">parallel_loop()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.pca">scot.pca module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.pca.pca"><code class="docutils literal notranslate"><span class="pre">pca()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.pca.pca_eig"><code class="docutils literal notranslate"><span class="pre">pca_eig()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.pca.pca_svd"><code class="docutils literal notranslate"><span class="pre">pca_svd()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.plainica">scot.plainica module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plainica.ResultICA"><code class="docutils literal notranslate"><span class="pre">ResultICA</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plainica.plainica"><code class="docutils literal notranslate"><span class="pre">plainica()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.plotting">scot.plotting module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.MaxNLocator"><code class="docutils literal notranslate"><span class="pre">MaxNLocator()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.current_axis"><code class="docutils literal notranslate"><span class="pre">current_axis()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.new_figure"><code class="docutils literal notranslate"><span class="pre">new_figure()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_circular"><code class="docutils literal notranslate"><span class="pre">plot_circular()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_connectivity_significance"><code class="docutils literal notranslate"><span class="pre">plot_connectivity_significance()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_connectivity_spectrum"><code class="docutils literal notranslate"><span class="pre">plot_connectivity_spectrum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_connectivity_timespectrum"><code class="docutils literal notranslate"><span class="pre">plot_connectivity_timespectrum()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_connectivity_topos"><code class="docutils literal notranslate"><span class="pre">plot_connectivity_topos()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_sources"><code class="docutils literal notranslate"><span class="pre">plot_sources()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_topo"><code class="docutils literal notranslate"><span class="pre">plot_topo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.plot_whiteness"><code class="docutils literal notranslate"><span class="pre">plot_whiteness()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.prepare_topoplots"><code class="docutils literal notranslate"><span class="pre">prepare_topoplots()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.plotting.show_plots"><code class="docutils literal notranslate"><span class="pre">show_plots()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.utils">scot.utils module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.utils.cartesian"><code class="docutils literal notranslate"><span class="pre">cartesian()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.utils.check_random_state"><code class="docutils literal notranslate"><span class="pre">check_random_state()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.utils.cuthill_mckee"><code class="docutils literal notranslate"><span class="pre">cuthill_mckee()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.utils.memoize"><code class="docutils literal notranslate"><span class="pre">memoize</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.var">scot.var module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.var.VAR"><code class="docutils literal notranslate"><span class="pre">VAR</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.varbase">scot.varbase module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.varbase.Defaults"><code class="docutils literal notranslate"><span class="pre">Defaults</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.varbase.VARBase"><code class="docutils literal notranslate"><span class="pre">VARBase</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.varbase.test_whiteness"><code class="docutils literal notranslate"><span class="pre">test_whiteness()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.varica">scot.varica module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.varica.cspvarica"><code class="docutils literal notranslate"><span class="pre">cspvarica()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.varica.mvarica"><code class="docutils literal notranslate"><span class="pre">mvarica()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot.xvschema">scot.xvschema module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.xvschema.make_nfold"><code class="docutils literal notranslate"><span class="pre">make_nfold()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.xvschema.multitrial"><code class="docutils literal notranslate"><span class="pre">multitrial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.xvschema.singletrial"><code class="docutils literal notranslate"><span class="pre">singletrial()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.xvschema.splitset"><code class="docutils literal notranslate"><span class="pre">splitset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="api/scot/scot.html#module-scot">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.Connectivity"><code class="docutils literal notranslate"><span class="pre">Connectivity</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/scot/scot.html#scot.Workspace"><code class="docutils literal notranslate"><span class="pre">Workspace</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -128,12 +220,13 @@
         <li class="right" >
           <a href="getting_started.html" title="Getting started"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">API Reference</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

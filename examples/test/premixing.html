@@ -1,35 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../../">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>test example code: premixing.py &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     
-    <title>test example code: premixing.py &mdash; SCoT</title>
+    <script src="../../_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="../../index.html" />
-    <link rel="up" title="test Examples" href="index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Gallery" href="../../gallery.html" />
     <link rel="prev" title="test example code: plot_test.py" href="plot_test.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
@@ -50,10 +39,11 @@
         <li class="right" >
           <a href="plot_test.html" title="test example code: plot_test.py"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">test Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">test Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">test example code: premixing.py</a></li> 
       </ul>
     </div>
   
@@ -62,10 +52,13 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="test-example-code-premixing-py">
-<span id="test-premixing"></span><h1>test example code: premixing.py<a class="headerlink" href="#test-example-code-premixing-py" title="Permalink to this headline">¶</a></h1>
-<p>(<a class="reference external" href="../../scot_examples/test/premixing.py">Source code</a>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Released under The MIT License (MIT)</span>
+  <section id="test-example-code-premixing-py">
+<span id="test-premixing"></span><h1>test example code: premixing.py<a class="headerlink" href="#test-example-code-premixing-py" title="Link to this heading">¶</a></h1>
+<p>(<a class="reference download internal" download="" href="../../_downloads/cc6ca2569c8c58717877e8e819c227e4/premixing.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/0fa768c3cef96959eba0ba8c8d6201f5/premixing.png"><code class="xref download docutils literal notranslate"><span class="pre">png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/b97bedc5cb7a0477c951c82dd277dd1e/premixing.hires.png"><code class="xref download docutils literal notranslate"><span class="pre">hires.png</span></code></a>, <a class="reference download internal" download="" href="../../_downloads/ebff9805e079d20338447f3f3fc0d227/premixing.pdf"><code class="xref download docutils literal notranslate"><span class="pre">pdf</span></code></a>)</p>
+<figure class="align-default">
+<img alt="../../_images/premixing.png" class="plot-directive" src="../../_images/premixing.png" />
+</figure>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Released under The MIT License (MIT)</span>
 <span class="c1"># http://opensource.org/licenses/MIT</span>
 <span class="c1"># Copyright (c) 2013-2015 SCoT Development Team</span>
 
@@ -74,8 +67,8 @@
 <span class="sd">pre-transformed data.</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="kn">import</span> <span class="nn">scot</span>
 
@@ -87,13 +80,16 @@
 <span class="c1"># motor imagery. The the trigger time points of the cues are stored in &#39;tr&#39;, and</span>
 <span class="c1"># &#39;cl&#39; contains the class labels (hand: 1, foot: -1). Duration of the motor</span>
 <span class="c1"># imagery period was approximately 6 seconds.</span>
-<span class="kn">import</span> <span class="nn">scotdata.motorimagery</span> <span class="kn">as</span> <span class="nn">midata</span>
+<span class="kn">from</span> <span class="nn">scot.datasets</span> <span class="kn">import</span> <span class="n">fetch</span>
 
-<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">eeg</span>
-<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">triggers</span>
-<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">classes</span>
-<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">samplerate</span>
-<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="o">.</span><span class="n">locations</span>
+
+<span class="n">midata</span> <span class="o">=</span> <span class="n">fetch</span><span class="p">(</span><span class="s2">&quot;mi&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">raweeg</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;eeg&quot;</span><span class="p">]</span>
+<span class="n">triggers</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;triggers&quot;</span><span class="p">]</span>
+<span class="n">classes</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]</span>
+<span class="n">fs</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;fs&quot;</span><span class="p">]</span>
+<span class="n">locs</span> <span class="o">=</span> <span class="n">midata</span><span class="p">[</span><span class="s2">&quot;locations&quot;</span><span class="p">]</span>
 
 
 <span class="c1"># Prepare the data</span>
@@ -103,13 +99,13 @@
 <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">datatools</span><span class="o">.</span><span class="n">cut_segments</span><span class="p">(</span><span class="n">raweeg</span><span class="p">,</span> <span class="n">triggers</span><span class="p">,</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">fs</span><span class="p">,</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">fs</span><span class="p">)</span>
 
 <span class="c1"># common average reference</span>
-<span class="n">data</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">-=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># pre-transform data with a PCA</span>
-<span class="n">myunmix</span><span class="p">,</span> <span class="n">mymix</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">backend</span><span class="p">[</span><span class="s1">&#39;pca&#39;</span><span class="p">](</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">)</span>
+<span class="n">myunmix</span><span class="p">,</span> <span class="n">mymix</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">backend</span><span class="p">[</span><span class="s1">&#39;pca&#39;</span><span class="p">](</span><span class="n">data</span><span class="p">,</span> <span class="mf">0.99</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Remaining data components:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Note that the Topoplots still map to all 45 EEG channels.&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Remaining data components:&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Note that the Topoplots still map to all 45 EEG channels.&#39;</span><span class="p">)</span>
 
 <span class="n">ws</span> <span class="o">=</span> <span class="n">scot</span><span class="o">.</span><span class="n">Workspace</span><span class="p">({</span><span class="s1">&#39;model_order&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">},</span> <span class="n">reducedim</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">fs</span><span class="o">=</span><span class="n">fs</span><span class="p">,</span> <span class="n">locations</span><span class="o">=</span><span class="n">locs</span><span class="p">)</span>
 
@@ -123,9 +119,10 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -145,15 +142,16 @@
         <li class="right" >
           <a href="plot_test.html" title="test example code: plot_test.py"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >test Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >test Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">test example code: premixing.py</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

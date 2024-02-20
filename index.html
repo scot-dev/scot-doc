@@ -1,33 +1,23 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="./">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Overview &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
     
-    <title>Overview &mdash; SCoT</title>
+    <script src="_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    './',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="_static/jquery.js"></script>
-    <script type="text/javascript" src="_static/underscore.js"></script>
-    <script type="text/javascript" src="_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="About SCoT" href="info.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="#"><img src="_static/logo.png" border="0" alt="py4sci"/></a>
@@ -45,7 +35,8 @@
         <li class="right" >
           <a href="info.html" title="About SCoT"
              accesskey="N">next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
       </ul>
     </div>
   
@@ -54,20 +45,20 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h1>
 <p>This is the documentation of SCoT, the EEG source connectivity toolbox in Python.
 SCoT provides functionality for blind source decomposition and connectivity estimation.
-Connectivity is estimated from spectral measures (such as <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.COH" title="scot.connectivity.Connectivity.COH"><code class="xref py py-func docutils literal"><span class="pre">COH()</span></code></a>, <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.PDC" title="scot.connectivity.Connectivity.PDC"><code class="xref py py-func docutils literal"><span class="pre">PDC()</span></code></a>, or <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.DTF" title="scot.connectivity.Connectivity.DTF"><code class="xref py py-func docutils literal"><span class="pre">DTF()</span></code></a>) using vector autoregressive (VAR) models.</p>
+Connectivity is estimated from spectral measures (such as <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.COH" title="scot.connectivity.Connectivity.COH"><code class="xref py py-func docutils literal notranslate"><span class="pre">COH()</span></code></a>, <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.PDC" title="scot.connectivity.Connectivity.PDC"><code class="xref py py-func docutils literal notranslate"><span class="pre">PDC()</span></code></a>, or <a class="reference internal" href="api/scot/scot.html#scot.connectivity.Connectivity.DTF" title="scot.connectivity.Connectivity.DTF"><code class="xref py py-func docutils literal notranslate"><span class="pre">DTF()</span></code></a>) using vector autoregressive (VAR) models.</p>
 <p>Note that the documentation is work-in-progress. Most sections are still missing, but we will add them in the near future.
-However, the <a class="reference internal" href="api_reference.html#api-reference"><span>API Reference</span></a> is in a usable state.</p>
-</div>
-<div class="section" id="note">
-<h1>Note<a class="headerlink" href="#note" title="Permalink to this headline">¶</a></h1>
+However, the <a class="reference internal" href="api_reference.html#api-reference"><span class="std std-ref">API Reference</span></a> is in a usable state.</p>
+</section>
+<section id="note">
+<h1>Note<a class="headerlink" href="#note" title="Link to this heading">¶</a></h1>
 <p>As of version 0.2, the data format in all SCoT routines has changed. It is now consistent with Scipy and MNE-Python. Specifically, epoched input data is now arranged in three-dimensional arrays of shape <cite>(epochs, channels, samples)</cite>. In addition, continuous data is now arranged in two-dimensional arrays of shape <cite>(channels, samples)</cite>.</p>
-</div>
-<div class="section" id="contents">
-<h1>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h1>
+</section>
+<section id="contents">
+<h1>Contents<a class="headerlink" href="#contents" title="Link to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="info.html">About SCoT</a><ul>
@@ -92,9 +83,10 @@ However, the <a class="reference internal" href="api_reference.html#api-referenc
 </li>
 </ul>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -111,12 +103,13 @@ However, the <a class="reference internal" href="api_reference.html#api-referenc
         <li class="right" >
           <a href="info.html" title="About SCoT"
              >next</a> |</li>
-        <li class="nav-item nav-item-0"><a href="#">SCoT</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="#">SCoT</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Overview</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

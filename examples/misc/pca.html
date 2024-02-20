@@ -1,35 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" data-content_root="../../">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>misc example code: pca.py &#8212; SCoT</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/classic.css?v=514cf933" />
+    <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     
-    <title>misc example code: pca.py &mdash; SCoT</title>
+    <script src="../../_static/documentation_options.js?v=2b62b5d0"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     
-    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../',
-        VERSION:     '0.2',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
-      };
-    </script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <link rel="top" title="SCoT" href="../../index.html" />
-    <link rel="up" title="misc Examples" href="index.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="misc example code: statistics.py" href="statistics.html" />
     <link rel="prev" title="misc example code: parallelization.py" href="parallelization.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
 
 <div style="background-color: white; text-align: left; padding: 10px 10px 15px 15px">
 <a href="../../index.html"><img src="../../_static/logo.png" border="0" alt="py4sci"/></a>
@@ -50,10 +39,11 @@
         <li class="right" >
           <a href="parallelization.html" title="misc example code: parallelization.py"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">misc Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" accesskey="U">misc Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">misc example code: pca.py</a></li> 
       </ul>
     </div>
   
@@ -62,10 +52,10 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  <div class="section" id="misc-example-code-pca-py">
-<span id="misc-pca"></span><h1>misc example code: pca.py<a class="headerlink" href="#misc-example-code-pca-py" title="Permalink to this headline">¶</a></h1>
-<p>(<a class="reference external" href="../../scot_examples/misc/pca.py">Source code</a>)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="c1"># Released under The MIT License (MIT)</span>
+  <section id="misc-example-code-pca-py">
+<span id="misc-pca"></span><h1>misc example code: pca.py<a class="headerlink" href="#misc-example-code-pca-py" title="Link to this heading">¶</a></h1>
+<p>(<a class="reference download internal" download="" href="../../_downloads/3bfd819d91e082605c8002d7e381e039/pca.py"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">code</span></code></a>)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Released under The MIT License (MIT)</span>
 <span class="c1"># http://opensource.org/licenses/MIT</span>
 <span class="c1"># Copyright (c) 2013-2016 SCoT Development Team</span>
 
@@ -75,7 +65,7 @@
 
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
 <span class="kn">from</span> <span class="nn">scot.pca</span> <span class="kn">import</span> <span class="n">pca</span>
 <span class="kn">from</span> <span class="nn">scot.var</span> <span class="kn">import</span> <span class="n">VAR</span>
@@ -94,8 +84,8 @@
 <span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
 
 <span class="c1"># Verify that transformed data y is decorrelated</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;Covariance of x:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()))</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Covariance of y:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Covariance of x:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Covariance of y:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">cov</span><span class="p">(</span><span class="n">y</span><span class="o">.</span><span class="n">squeeze</span><span class="p">()))</span>
 
 <span class="n">model1</span><span class="p">,</span> <span class="n">model2</span> <span class="o">=</span> <span class="n">VAR</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">VAR</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
@@ -107,19 +97,20 @@
 
 <span class="c1"># The coefficients estimated on x (2) are exactly equal to the back-transformed</span>
 <span class="c1"># coefficients estimated on y (4)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(1) True VAR coefficients:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model0</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(2) VAR coefficients estimated on x:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model1</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(3) VAR coefficients estimated on y:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(4) VAR coefficients estimated on y and transformed back:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(1) True VAR coefficients:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model0</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(2) VAR coefficients estimated on x:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model1</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(3) VAR coefficients estimated on y:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(4) VAR coefficients estimated on y and transformed back:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
       <span class="n">w</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">))</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(5) Check if (2) and (4) are equal:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">(5) Check if (2) and (4) are equal:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
       <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">model1</span><span class="o">.</span><span class="n">coef</span><span class="p">,</span> <span class="n">w</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">model2</span><span class="o">.</span><span class="n">coef</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">w</span><span class="o">.</span><span class="n">T</span><span class="p">)))</span>
 </pre></div>
 </div>
-</div>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
       </div>
       <div class="clearer"></div>
@@ -139,15 +130,16 @@
         <li class="right" >
           <a href="parallelization.html" title="misc example code: parallelization.py"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &raquo;</li>
-          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &raquo;</li>
-          <li class="nav-item nav-item-3"><a href="index.html" >misc Examples</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../info.html" >About SCoT</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" >SCoT Examples</a> &#187;</li>
+          <li class="nav-item nav-item-3"><a href="index.html" >misc Examples</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">misc example code: pca.py</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2013-2016 SCoT Development Team.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.5.
+    &#169; Copyright 2013-2016 SCoT Development Team.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     </div>
   </body>
 </html>

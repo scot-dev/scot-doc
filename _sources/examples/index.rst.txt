@@ -1,0 +1,17 @@
+.. _examples-index:
+
+####################
+SCoT Examples
+####################
+
+
+    :Release: |version|
+    :Date: |today|
+
+.. toctree::
+    :maxdepth: 2
+
+    misc/index.rst
+
+    test/index.rst
+

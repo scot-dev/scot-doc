@@ -1,0 +1,149 @@
+scot.tests package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   scot.tests.test_eegtopo
+
+Submodules
+----------
+
+scot.tests.generate\_testdata module
+------------------------------------
+
+.. automodule:: scot.tests.generate_testdata
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_connectivity module
+------------------------------------
+
+.. automodule:: scot.tests.test_connectivity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_csp module
+---------------------------
+
+.. automodule:: scot.tests.test_csp
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_datatools module
+---------------------------------
+
+.. automodule:: scot.tests.test_datatools
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_ooapi module
+-----------------------------
+
+.. automodule:: scot.tests.test_ooapi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_parallel module
+--------------------------------
+
+.. automodule:: scot.tests.test_parallel
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_pca module
+---------------------------
+
+.. automodule:: scot.tests.test_pca
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_plainica module
+--------------------------------
+
+.. automodule:: scot.tests.test_plainica
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_plotting module
+--------------------------------
+
+.. automodule:: scot.tests.test_plotting
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_statistics module
+----------------------------------
+
+.. automodule:: scot.tests.test_statistics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_utils module
+-----------------------------
+
+.. automodule:: scot.tests.test_utils
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_var module
+---------------------------
+
+.. automodule:: scot.tests.test_var
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_var\_builtin module
+------------------------------------
+
+.. automodule:: scot.tests.test_var_builtin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_var\_sklearn module
+------------------------------------
+
+.. automodule:: scot.tests.test_var_sklearn
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_varica module
+------------------------------
+
+.. automodule:: scot.tests.test_varica
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scot.tests.test\_xvschema module
+--------------------------------
+
+.. automodule:: scot.tests.test_xvschema
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: scot.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
